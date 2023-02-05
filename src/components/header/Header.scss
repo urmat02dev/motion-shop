@@ -1,6 +1,5 @@
 #header{
   background: linear-gradient(90deg, #72072D 0%, #FF005C 100%);
-
   .header{
     display: flex;
     align-items: center;
@@ -31,6 +30,7 @@
         height: 40px;
         border-radius: 16px;
         border: 1px solid white;
+        outline: none;
         background: rgba(196, 196, 196, 0.14);
         color: white;
         padding: 10px;
@@ -41,7 +41,7 @@
         font-size: 20px;
         position: absolute;
         right: 27%;
-        top: 7.5%;
+        top: 9%;
       }
     }
   }
