@@ -1,0 +1,110 @@
+#footer  {
+  background: linear-gradient(269.84deg, #FF005C -10.98%, rgba(0, 0, 0, 0.88) 100%);
+  width: 100%;
+  height: 300px;
+  .footer {
+    &--text {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      padding: 23px 0;
+      &__one {
+        padding: 4% 0;
+        text-align: center;
+        color: white;
+      }
+      &__two {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        font-size: 20px;
+        a {
+          padding: 10px 10px;
+          color: white;
+        }
+      }
+      &__three {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        font-size: 20px;
+        a {
+          padding: 10px 0;
+          color: white;
+        }
+      }
+      &__number {
+        padding: 0 0;
+        color: white;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        font-size: 20px;
+        h2 {
+          font-size: 23px;
+        }
+        &--icon {
+          &__1 {
+            background: #fff;
+            color: #FF005C;
+            padding: 5px 5px;
+            font-size: 31px;
+            margin: 5px;
+            border-radius: 10px;
+          }
+          &__2 {
+            background: #fff;
+            color: #FF005C;
+            padding: 5px 5px;
+            margin: 5px;
+            font-size: 31px;
+            border-radius: 10px;
+          }
+          &__3 {
+            background: #fff;
+            color: #FF005C;
+            padding: 5px 5px;
+            font-size: 31px;
+            border-radius: 10px;
+            margin: 5px;
+          }
+          &__4 {
+            background: #fff;
+            color: #FF005C;
+            padding: 5px 5px;
+            font-size: 31px;
+            border-radius: 10px;
+            margin: 5px;
+          }
+        }
+        a {
+          color: white;
+          padding: 10px 0;
+        }
+      }
+      &__end {
+        h3 {
+          text-align: center;
+          color: white;
+          font-size: 22px;
+        }
+        p {
+          color: white;
+          font-size: 18px;
+          line-height: 22px;
+        }
+      }
+    }
+    &--end {
+      h1 {
+        border: 1px solid gray;
+        width: 100%;
+      }
+      h4 {
+        text-align: center;
+        padding: 14px 0;
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
+}
