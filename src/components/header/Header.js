@@ -19,6 +19,7 @@ const Header = () => {
                         <div className="header--search">
                             <input type="search"/>
                             <BsSearch className='search'/>
+
                         </div>
 
                         <div className="header--right">

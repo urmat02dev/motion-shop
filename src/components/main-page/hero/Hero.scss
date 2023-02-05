@@ -1,0 +1,29 @@
+#hero {
+  .hero {
+    display: flex;
+
+    .clothes {
+      background: url("./img/Rectangle 2256.png");
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      h1 {
+        color: #72072D;
+        font-size: 48px;
+        width: 950px;
+        padding: 0 160px 0 76px;
+      }
+    }
+
+    .for {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        color: #FF005C;
+        font-size: 24px;
+        padding: 10px 0 10px 76px;
+      }
+    }
+  }
+}
