@@ -1,10 +1,45 @@
 import React from 'react';
 import "./Header.scss"
+import {HiOutlineQuestionMarkCircle} from "react-icons/hi";
+import {IoIosPaper} from "react-icons/io";
+import {SlBasket} from "react-icons/sl";
+import {BsSearch} from "react-icons/bs";
+
 const Header = () => {
     return (
-        <div>
-            <h1>Header</h1>
-        </div>
+        <>
+            <div id="header">
+                <div className="container">
+                    <div className="header">
+
+                        <div className="header--logo">
+                            <h1>MOTION SHOP</h1>
+                        </div>
+
+                        <div className="header--search">
+                            <input type="search"/>
+                            <BsSearch className='search'/>
+                        </div>
+
+                        <div className="header--right">
+                            <div>
+                                <HiOutlineQuestionMarkCircle className='logo'/>
+                                <h1>FAQ</h1>
+                            </div>
+                            <div>
+                                <IoIosPaper className='logo'/>
+                                <h1>О нас</h1>
+                            </div>
+                            <div>
+                                <SlBasket className='logo'/>
+                                <h1>Корзина</h1>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </>
     );
 };
 
