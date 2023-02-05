@@ -1,0 +1,35 @@
+.products{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  &--card{
+    height: 284px;
+    width: 238px;
+
+  img{
+    width: 200px;
+    height: 250px;
+  }
+    h1{
+      color: #000;
+      font-family: 'Roboto',sans-serif;
+      font-size: 24px;
+      padding-top: 8px;
+
+    }
+    p{
+      padding-top: 11px;
+      font-family: 'Roboto',sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+
+      color: #000000;
+
+    }
+  }
+
+}
