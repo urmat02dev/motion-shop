@@ -1,7 +1,6 @@
 import './App.scss';
 import MainPage from "./components/main-page/MainPage";
 import {Route, Routes} from "react-router-dom";
-import Layout from "./components/layout/layout";
 import Faq from "./components/faq/Faq";
 import About from "./components/about/About";
 import Basket from "./components/basket/Basket";
