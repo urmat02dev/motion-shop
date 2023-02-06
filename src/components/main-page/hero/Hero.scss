@@ -1,27 +1,16 @@
 #hero {
-  background: #fff;
-  border-bottom: 40px;
   .hero {
     display: flex;
-     &--fon {
-       img {
-       }
-     }
+    width: 1440px;
     .clothes {
       background: url("./img/Rectangle 2256.png");
-      border-radius: 30px;
-      width: 1140px;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      //position: relative;
-      //bottom: 10px;
       h1 {
         color: #72072D;
         font-size: 48px;
-        width: 950px;
         padding: 0 160px 0 76px;
-        font-weight: bold;
       }
     }
 

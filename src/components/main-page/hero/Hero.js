@@ -7,7 +7,7 @@ const Hero = () => {
         <div>
             <div id='hero'>
                 <div className='hero'>
-                    <div className="hero--fon">
+                    <div>
                         <img src={family} alt=""/>
                     </div>
 
