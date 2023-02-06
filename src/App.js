@@ -10,7 +10,6 @@ import DetailPage from "./components/detail-page/DetailPage";
 function App() {
   return (
     <>
-
             <Routes>
                 <Route path="/" element={<MainPage/>}/>
                 <Route path="/faq" element={<Faq/>}/>
