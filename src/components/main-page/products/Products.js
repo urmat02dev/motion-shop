@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import "./Products.scss"
 import {backend} from "../../backend";
 import {BsArrowDown} from "react-icons/bs";
+import {NavLink} from "react-router-dom";
 const Products = () => {
     const [view, setView] = useState(15)
     const slice = backend.slice(0, view)
@@ -19,7 +20,9 @@ const Products = () => {
                         {
                             slice.map(el => (
                                 <div className="products--card">
-                                    <img src={el.image}  alt=""/>
+                                    <NavLink to={`/detail-page/${el.id}`}>
+                                        <img src={el.image}  alt=""/>
+                                    </NavLink>
                                     <h1>{el.price} сом</h1>
                                     <p>{el.categories}</p>
                                 </div>
