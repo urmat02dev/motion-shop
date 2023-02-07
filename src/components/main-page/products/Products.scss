@@ -1,6 +1,5 @@
 #products{
   .products {
-    width: 100%;
     h1 {
       font-family: 'Inter', sans-serif;
       font-weight: 700;
@@ -14,17 +13,16 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-
-      flex-wrap:wrap;
+      flex-wrap: wrap;
       margin-top: 35px;
       margin-bottom: 30px;
-
+      width: 1250px;
 
     }
 
     .products--card {
-      height: 380px;
-      width: 200px;
+      height: 400px;
+      width: 220px;
 
 
       img {
@@ -41,13 +39,13 @@
       }
 
       p {
-        width: 200px;
+        width: 300px;
         font-family: 'Roboto', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 15px;
         padding-left: 1px;
-        color: rgba(0, 0, 0, 0.7);
+        color: rgba(0, 0, 0, 0.9);
 
       }
 

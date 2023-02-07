@@ -26,15 +26,15 @@ const Header = () => {
                         </div>
 
                         <div className="header--right">
-                            <div>
+                            <NavLink to={"/faq"}>
                                 <HiOutlineQuestionMarkCircle className='logo'/>
                                 <h1>FAQ</h1>
-                            </div>
-                            <div>
+                            </NavLink>
+                            <NavLink to={"/about"}>
                                 <IoIosPaper className='logo'/>
                                 <h1>О нас</h1>
-                            </div>
-                            <NavLink to="/basket">
+                            </NavLink>
+                            <NavLink to={"/basket"}>
                                 <SlBasket className='logo'/>
                                 <h1>Корзина</h1>
                             </NavLink>
