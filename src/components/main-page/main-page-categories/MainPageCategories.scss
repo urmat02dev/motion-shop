@@ -1,35 +1,13 @@
-#block {
-  .btn {
-    position: fixed;
-    z-index: 99;
-    width: 100%;
-    justify-content: end;
-    left: 90%;
-    button {
-      background: linear-gradient(270.73deg, #FF005C 0.7%, #72072D 89.36%);
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      outline: none;
-      border: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
 
-    .arrow {
-      font-size: 25px;
-      color: white;
-    }
-  }
+#block {
 
   .categor {
     &--text {
-     h1 {
-       color:  #72072D ;
-       font-size: 30px;
-       padding: 10px 0;
-     }
+      h1 {
+        color:  #72072D ;
+        font-size: 30px;
+        padding: 10px 0;
+      }
     }
 
     &--block {
@@ -40,23 +18,29 @@
       &__image {
         position: relative;
         width: 314px;
+        z-index: 1;
       }
       &__fon {
         position: absolute;
+        z-index: 2;
       }
       &__fon2 {
         position: absolute;
         left: 28%;
+        z-index: 2;
       }
       &__fon3 {
         position: absolute;
         right: 421px;
+        z-index: 2;
       }
       &__fon4 {
         position: absolute;
         right: 74.5px;
+        z-index: 2;
       }
       &__name {
+        z-index: 3;
         position: absolute;
         display: flex;
         align-items: center;
@@ -64,11 +48,13 @@
         left: 6rem;
         color: white;
         &--icon {
+          z-index: 3;
           padding: 20px 0;
           font-size: 56px;
         }
       }
       &__name1 {
+        z-index: 3;
         position: absolute;
         display: flex;
         align-items: center;
@@ -76,11 +62,13 @@
         left: 28rem;
         color: white;
         &--icon {
+          z-index: 3;
           padding: 20px 0;
           font-size: 56px;
         }
       }
       &__name2 {
+        z-index: 3;
         position: absolute;
         display: flex;
         align-items: center;
@@ -88,11 +76,13 @@
         right: 35rem;
         color: white;
         &--icon {
+          z-index: 3;
           padding: 20px 0;
           font-size: 56px;
         }
       }
       &__name3 {
+        z-index: 3;
         position: absolute;
         display: flex;
         align-items: center;
@@ -100,6 +90,7 @@
         right: 15rem;
         color: white;
         &--icon {
+          z-index: 3;
           padding: 20px 0;
           font-size: 56px;
         }
