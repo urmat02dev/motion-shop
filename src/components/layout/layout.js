@@ -13,7 +13,7 @@ const Layout = ({children}) => {
     }
     return (
         <>
-         <Header/>
+         <Header />
          <div>{children}</div>
             <div className="btn">
                 <button onClick={scroolTo}>

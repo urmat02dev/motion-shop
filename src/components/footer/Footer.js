@@ -37,7 +37,7 @@ const Footer = () => {
                             </div>
                             <div className="footer--text__end">
                                 <h3>Адрес</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur <br/>
+                                <p><br/>
                                     adipiscing elit. Varius in dolor viverra feugiat <br/>
                                     neque, sed in. Mattis volutpat malesuada <br/>
                                     velit parturient aliquam, est. Mauris vitae velit <br/>
