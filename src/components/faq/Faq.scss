@@ -1,0 +1,107 @@
+#questions{
+  .questions{
+    padding: 0 0 30px 0;
+    h1{
+      color: #72072D;
+      padding: 40px 0;
+      font-size: 40px;
+    }
+    &--card {
+      width: 70%;
+
+      &__provide {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        border-top: 1px solid #72072D;
+
+        h1 {
+          font-size: 16px;
+          font-weight: 200;
+          color: black;
+          padding: 15px 0 10px 0;
+          width: 80%;
+        }
+
+        input {
+          display: none;
+        }
+
+        .plus {
+          font-size: 20px;
+          color: #72072D;
+        }
+
+        #plus:checked ~ .questions--card__provide--lorem {
+          height: 40px;
+        }
+
+        #plus2:checked ~ .questions--card__provide--lorem {
+          height: 40px;
+        }
+
+        #plus3:checked ~ .questions--card__provide--lorem {
+          height: 40px;
+        }
+
+        #plus4:checked ~ .questions--card__provide--lorem {
+          height: 40px;
+        }
+
+        &--lorem {
+          height: 0;
+          overflow: hidden !important;
+          transition: 1s;
+
+          &__paragraph {
+            font-size: 15px;
+            color: black;
+            font-weight: 200;
+          }
+        }
+      }
+      &__provide2 {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        border-top: 1px solid #72072D;
+        border-bottom: 1px solid #72072D;
+
+        h1 {
+          font-size: 16px;
+          font-weight: 200;
+          color: black;
+          padding: 20px 0 10px 0;
+          width: 80%;
+        }
+
+        input {
+          display: none;
+        }
+
+        .plus {
+          font-size: 20px;
+          color: #72072D;
+        }
+
+        #plus4:checked ~ .questions--card__provide2--lorem {
+          height: 40px;
+        }
+
+        &--lorem {
+          height: 0;
+          overflow: hidden !important;
+          transition: 1s;
+
+          &__paragraph {
+            font-size: 15px;
+            color: black;
+            font-weight: 200;
+          }
+        }
+      }
+    }
+
+  }
+}
+

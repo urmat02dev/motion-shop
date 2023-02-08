@@ -1,28 +1,47 @@
 #hero {
   .hero {
     display: flex;
-    width: 1440px;
-    .clothes {
-      background: url("./img/Rectangle 2256.png");
+    width: 1140px;
+    margin-bottom: 500px;
+    &--img{
       display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
+      position: absolute;
+      &--one{
+        margin-top: -10px;
+        position: relative;
+        z-index: 2;
+      }
+      &--two{
+        margin-left: -245px;
+        margin-top: -10px;
+        z-index: 1;
+      }
+    }
+    .clothes{
+      z-index: 3;
+      position: absolute;
+      right: 1px;
+      top: 200px;
       h1 {
+        font-weight: 900;
         color: #72072D;
         font-size: 48px;
         padding: 0 160px 0 76px;
       }
-    }
-
-    .for {
-      display: flex;
-      flex-direction: column;
-
-      a {
-        color: #FF005C;
-        font-size: 24px;
-        padding: 10px 0 10px 76px;
+      .for{
+        display: flex;
+        flex-direction: column;
+        margin-top: 75px;
+        margin-left: 15px;
+        a{
+          color: #FF005C;
+          font-size: 24px;
+          padding: 10px 0 10px 76px;
+          font-weight: 900;
+        }
       }
     }
+
+
   }
 }
