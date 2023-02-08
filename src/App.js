@@ -6,7 +6,6 @@ import About from "./components/about/About";
 import Basket from "./components/basket/Basket";
 import Categories from "./components/categories/Categories";
 import DetailPage from "./components/detail-page/DetailPage";
-
 function App() {
   return (
     <>
@@ -17,7 +16,6 @@ function App() {
                 <Route path="/basket" element={<Basket/>}/>
                 <Route path="/categories" element={<Categories/>}/>
                 <Route path={"/detail-page/:id"} element={<DetailPage/>}/>
-
             </Routes>
 
 
