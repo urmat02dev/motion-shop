@@ -1,40 +1,15 @@
 #header{
   background: linear-gradient(90deg, #72072D 0%, #FF005C 100%);
+
   .header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 160px;
+    height: 150px;
     &--logo{
       h1{
         color: #FFFFFF;
         font-family: 'Inter',sans-serif;
-      }
-    }
-    &--search{
-
-      input::-webkit-input-placeholder {
-        color: rgba(255, 255, 255, 0.6);
-      }
-      input{
-        width: 700px;
-        height: 40px;
-        border-radius: 16px;
-        border: 1px solid white;
-        background: rgba(196, 196, 196, 0.14);
-        color: white;
-        padding: 12px;
-        font-size: 15px;
-        outline: none;
-      }
-      .search{
-        width: 20px;
-        height: 25px;
-        line-height: 26px;
-        margin-left: -50px;
-        margin-bottom: -6px;
-        color: white;
-        cursor: pointer;
       }
     }
     &--right{
@@ -48,6 +23,25 @@
       h1{
         color: white;
         font-size: 16px;
+      }
+    }
+    &--search{
+      input{
+        width: 700px;
+        height: 40px;
+        border-radius: 16px;
+        border: 1px solid white;
+        background: rgba(196, 196, 196, 0.14);
+        color: white;
+        padding: 10px;
+        font-size: 15px;
+      }
+      .search{
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        right: 27%;
+        top: 7.5%;
       }
     }
   }
@@ -72,41 +66,4 @@
 @media (max-width: 360px) {
 }
 @media (max-width: 320px) {
-}
-
-
-
-#new-header{
-  background: linear-gradient(269.84deg, #FF005C -10.98%, rgba(0, 0, 0, 0.88) 100%);
-.new-header{
-  display: flex;
-  align-items: center;
-  width: 1140px;
-  height: 80px;
-  &--logo{
-    display: flex;
-    &--block{
-      display: flex;
-      h1{
-        margin-right: 800px;
-        color: white;
-        font-size: 22px;
-      }
-      &--right{
-        display: flex;
-        align-items: center;
-        &--icon{
-          color: #FFFFFF;
-          font-size: 20px;
-        }
-        p{
-          margin-left: 10px;
-          color: white;
-          font-size: 20px;
-        }
-      }
-    }
-
-  }
-}
 }
