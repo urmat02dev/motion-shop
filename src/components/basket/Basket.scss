@@ -130,6 +130,13 @@
           }
         }
       }
+      &__basket{
+        .basket--basket{
+          display: flex;
+        }
+      }
     }
+
+
   }
 }

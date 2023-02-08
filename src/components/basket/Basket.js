@@ -1,7 +1,12 @@
 import React from 'react';
 import "./Basket.scss"
+import {backend} from "../backend";
+import {useDispatch, useSelector} from "react-redux";
 
 const Basket = () => {
+const dispatch = useDispatch()
+    const {basket} = useSelector(state => state)
+    console.log(basket.image)
     return (
         <>
             <div id="basket">
@@ -28,6 +33,8 @@ const Basket = () => {
 
                         <div className="basket--info__choose">
 
+
+
                             <div>
                                 <h1>Доставка</h1>
                                 <small>Выберите удобный способ доставки для этого заказа.</small>
@@ -52,7 +59,31 @@ const Basket = () => {
                                 </div>
                             </div>
                         </div>
+
+                        <div className="basket--info__basket">
+                            {
+                                basket.map(el => (
+                                    <div className="basket--basket">
+                                        <div className="basket--basket--img">
+                                            <img src={el.image} width={147}  height={177} alt=""/>
+                                        </div>
+                                        <div className="basket--basket--desc">
+                                            <h1>{el.title}</h1>
+                                            <p>Опции: {el.size}, {el.color}</p>
+                                            <h2>{el.price}</h2>
+                                            <div>
+                                                <span>-</span>
+                                                <div></div>
+                                                <span>+</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                ))
+                            }
+                        </div>
                     </div>
+
                 </div>
             </div>
         </>

@@ -1,4 +1,6 @@
 #detail-page{
+  top: 0;
+  left: 0;
   .detail-page{
     margin:  50px 0;
     display: flex;
@@ -52,7 +54,7 @@
         display: flex;
         align-items: center;
         margin-bottom: 40px;
-        div{
+        button{
           display: flex;
           align-items: center;
           justify-content: center;
@@ -68,19 +70,36 @@
         display: flex;
         margin-bottom:40px;
 
-        div{
+        button{
           margin-right: 15px;
           width: 60px;
           height: 55px;
           border: 1px solid black;
           font-size: 1px;
+          &:focus{
+            border: 3px solid green;
+          }
         }
       }
       &--btn{
         display: flex;
         flex-direction: column;
-
-        button{
+        &--one{
+          margin: 10px;
+          width: 271px;
+          height: 51px;
+          background: linear-gradient(90deg, #72072D 0%, #FF005C 100%);
+          border-radius: 5px;
+          font-family: 'Poppins',sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
+          color: white;
+          border: none;
+          cursor: pointer;
+        }
+        &--two{
           margin: 10px;
           width: 271px;
           height: 51px;
