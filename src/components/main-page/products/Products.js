@@ -20,7 +20,7 @@ const Products = () => {
                     <div className="products--store">
                         {
                             slice.map(el => (
-                                <div className="products--card">
+                                <div key={el.id} className="products--card">
                                     <NavLink to={`/detail-page/${el.id}`}>
                                         <img src={el.image}  alt=""/>
                                     </NavLink>

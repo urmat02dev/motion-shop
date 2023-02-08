@@ -74,39 +74,3 @@
 @media (max-width: 320px) {
 }
 
-
-
-#new-header{
-  background: linear-gradient(269.84deg, #FF005C -10.98%, rgba(0, 0, 0, 0.88) 100%);
-.new-header{
-  display: flex;
-  align-items: center;
-  width: 1140px;
-  height: 80px;
-  &--logo{
-    display: flex;
-    &--block{
-      display: flex;
-      h1{
-        margin-right: 800px;
-        color: white;
-        font-size: 22px;
-      }
-      &--right{
-        display: flex;
-        align-items: center;
-        &--icon{
-          color: #FFFFFF;
-          font-size: 20px;
-        }
-        p{
-          margin-left: 10px;
-          color: white;
-          font-size: 20px;
-        }
-      }
-    }
-
-  }
-}
-}
