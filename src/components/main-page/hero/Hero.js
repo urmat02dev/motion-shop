@@ -1,21 +1,14 @@
 import React from 'react';
 import "./Hero.scss"
 import family from './img/image 67.png'
-import img from '../../../assets/img/logo.png'
-import {NavLink} from "react-router-dom";
+import img from './img/Rectangle 2256.png'
 const Hero = () => {
     return (
         <div>
             <div id='hero'>
                 <div className='hero'>
-                    <div className="hero--img">
-                        <div className="hero--img--one">
-                            <img src={family} alt=""/>
-                        </div>
-                        <div className="hero--img--two">
-                            <img src={img} alt=""/>
-                        </div>
-
+                    <div>
+                        <img src={family} alt=""/>
                     </div>
 
                     <div className='clothes'>
@@ -24,9 +17,9 @@ const Hero = () => {
                         </div>
 
                         <div className='for'>
-                            <NavLink to={"/categories"}>•Для женщин</NavLink>
-                            <NavLink to={"/categories"}>•Для мужчин</NavLink>
-                            <NavLink to={"/categories"}>•Для детей</NavLink>
+                            <a href="">•Для женщин</a>
+                            <a href="">•Для мужчин</a>
+                            <a href="">•Для детей</a>
                         </div>
                     </div>
                 </div>
