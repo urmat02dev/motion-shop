@@ -1,24 +1,28 @@
 #hero {
+  margin-top:-10px;
   .hero {
     display: flex;
-    width: 1140px;
+    width: 90%;
     margin-bottom: 500px;
+    z-index: 1;
     &--img{
       display: flex;
       position: absolute;
       &--one{
         margin-top: -10px;
         position: relative;
-        z-index: 2;
+        z-index: 3;
       }
       &--two{
         margin-left: -245px;
         margin-top: -10px;
-        z-index: 1;
+        z-index: 2;
+        background: #fff;
+        border-radius: 0 20px 0 0;
       }
     }
     .clothes{
-      z-index: 3;
+      z-index: 4;
       position: absolute;
       right: 1px;
       top: 200px;
