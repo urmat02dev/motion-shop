@@ -12,6 +12,7 @@ const Products = () => {
     }
 
     return (
+        
         <div id="products">
             <div className="container">
                 <div className="products">
