@@ -80,3 +80,18 @@
     }
   }
 }
+
+
+@media (max-width: 768px){
+  .container {
+    width: 90%;
+  }
+  #products {
+    .products {
+      &--store {
+        width: 500px;
+        text-align: center;
+      }
+    }
+  }
+}

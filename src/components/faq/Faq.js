@@ -64,7 +64,6 @@ const About = () => {
                     </div>
                 </div>
             </div>
-         master
         </>
     );
 };
