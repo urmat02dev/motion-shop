@@ -1,0 +1,45 @@
+.menu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  transform: translateX(-100%);
+  transition: .4s;
+
+  .blur {
+    width: 100vh;
+    height: 100vh;
+    //backdrop-filter: blur(10px);
+    position: absolute;
+  }
+  .content {
+    width:30%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .4s;
+    .header {
+      padding: 10px;
+      font-size: 2rem;
+      color: white;
+      width: 100%;
+      text-align: center;
+    }
+    ul li {
+      margin:20px 0;
+      cursor: pointer;
+    }
+    ul li a{
+      color: white;
+      font-size: 1.5rem;
+
+    }
+  }
+}
+.menu.active {
+    transform: translateX(0);
+  }

@@ -1,23 +1,18 @@
 .btn {
   position: fixed;
   z-index: 99;
-  width: 100%;
-  justify-content: end;
   left: 90%;
   top: 90%;
   button {
     background: linear-gradient(270.73deg, #FF005C 0.7%, #72072D 89.36%);
-    width: 45px;
-    height: 45px;
+    padding: 15px;
     border-radius: 50%;
-    outline: none;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
   }
-
   .arrow {
     font-size: 25px;
     color: white;

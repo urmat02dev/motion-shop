@@ -12,7 +12,7 @@ const Hero = () => {
                     </div>
 
                     <div className='clothes'>
-                        <div>
+                        <div className="clothes--text">
                             <h1>ОДЕЖДА ДЛЯ ВСЕЙ СЕМЬИ!</h1>
                         </div>
 
