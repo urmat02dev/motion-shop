@@ -5,12 +5,9 @@ import {IoIosPaper} from "react-icons/io";
 import {SlBasket} from "react-icons/sl";
 import {BsSearch} from "react-icons/bs";
 import {NavLink} from "react-router-dom";
-import Menu from "./Menu";
+
 
 const Header = () => {
-    const [menuActive, menublock] = useState(false)
-  const items = [{value:"FAQ",href: "faq"},{value:"О нас",href: "faq"},   {value:"Корзина",href: "faq"},]
-
     return (
         <>
             <div id="header">
@@ -18,12 +15,10 @@ const Header = () => {
                     <div className="header">
 
                         <nav>
-                          <div className="header--burger" onClick={() => menublock(!menuActive)}>
+                          <div className="header--burger">
                               <span/>
                           </div>
                         </nav>
-                        <Menu active = {menuActive} setActive = {menublock}
-                              header={"Бургер меню"} items={items}/>
                         <NavLink to="/">
                             <div className="header--logo">
                                 <h1>MOTION SHOP</h1>
