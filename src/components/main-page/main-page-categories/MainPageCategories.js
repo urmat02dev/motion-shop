@@ -10,42 +10,62 @@ import {NavLink} from "react-router-dom";
 const MainPageCategories = () => {
 
     return (
-        <section id="block">
+        <div id="block">
             <div className="container">
-                <div className="categor">
-                    <div className="categor--text">
+                <div className="block">
+                    <div className="block--text">
                         <h1>Категории</h1>
                     </div>
-                    <NavLink to="/categories" className="categor--block">
-                        <img className="categor--block__image" src={man} alt=""/>
-                        <img className="categor--block__image" src={woman} alt=""/>
-                        <img className="categor--block__image" src={children} alt=""/>
-                        <img className="categor--block__image" src={foot} alt=""/>
+                    <div className="block--categor">
 
-                        <img className="categor--block__fon" src={fon} alt=""/>
-                        <img className="categor--block__fon2" src={fon} alt=""/>
-                        <img className="categor--block__fon3" src={fon} alt=""/>
-                        <img className="categor--block__fon4" src={fon} alt=""/>
-                        <div className="categor--block__name">
-                            <h1>Мужская</h1>
-                            <BsArrowRight className="categor--block__name3--icon"/>
+                        <div className="block--categor__row" >
+                            <img className="block--categor__row--img" src={man} alt=""/>
+                            <div className="block--categor__row--arr">
+                                <img src={fon} alt=""/>
+                                <div className="block--categor__row--arr__text">
+                                    <h2>Мужская</h2><BsArrowRight className="icon"/>
+                                </div>
+
+                            </div>
                         </div>
-                        <div className="categor--block__name1">
-                            <h1>Женская</h1>
-                            <BsArrowRight className="categor--block__name3--icon"/>
+
+                        <div className="block--categor__row">
+                            <img className="block--categor__row--img" src={woman} alt=""/>
+                            <div className="block--categor__row--arr">
+                                <img src={fon} alt=""/>
+                                <div className="block--categor__row--arr__text">
+                                    <h2>Женская</h2><BsArrowRight className="icon"/>
+                                </div>
+
+                            </div>
                         </div>
-                        <div className="categor--block__name2">
-                            <h1>Детская</h1>
-                            <BsArrowRight className="categor--block__name3--icon"/>
+
+                        <div className="block--categor__row">
+                            <img className="block--categor__row--img" src={children} alt=""/>
+                            <div className="block--categor__row--arr">
+                                <img src={fon} alt=""/>
+                                <div className="block--categor__row--arr__text">
+                                    <h2>Детская</h2><BsArrowRight className="icon"/>
+                                </div>
+
+                            </div>
                         </div>
-                        <div className="categor--block__name3">
-                            <h1>Обувь</h1>
-                            <BsArrowRight className="categor--block__name3--icon"/>
+
+                        <div className="block--categor__row">
+                            <img className="block--categor__row--img" src={foot} alt=""/>
+                            <div className="block--categor__row--arr">
+                                <img src={fon} alt=""/>
+                                <div className="block--categor__row--arr__text">
+                                    <h2>Обувь</h2><BsArrowRight className="icon"/>
+                                </div>
+
+                            </div>
                         </div>
-                    </NavLink>
+
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
     );
 };
 

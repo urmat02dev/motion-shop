@@ -38,10 +38,10 @@ const Footer = () => {
                             <div className="footer--text__end">
                                 <h3>Адрес</h3>
                                 <p><br/>
-                                    adipiscing elit. Varius in dolor viverra feugiat <br/>
-                                    neque, sed in. Mattis volutpat malesuada <br/>
-                                    velit parturient aliquam, est. Mauris vitae velit <br/>
-                                    laoreet faucibus nec amet velit.</p>
+                                    ЖК Максимум плюс Турусбекова, <br/>
+                                    109/3/3 этаж, 308 кабинет. <br/>
+                                    Ленинский район, Бишкек, <br/>
+                                    720001. Показать вход. Выходной.<br/></p>
                             </div>
                         </div>
                         <div className="footer--end">
