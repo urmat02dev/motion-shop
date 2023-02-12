@@ -13,15 +13,17 @@ const Footer = () => {
                             <div className="footer--text__one">
                                 <h1>MOTION SHOP</h1>
                             </div>
-                            <div className="footer--text__two">
-                                <a href="#">Женщинам </a>
-                                <a href="#">Мужчинам </a>
-                                <a href="#">Детям </a>
-                            </div>
-                            <div className="footer--text__three">
-                                <a href="#">Обувь</a>
-                                <a href="#">FAQ</a>
-                                <a href="#">О нас</a>
+                            <div className="footer--text__think">
+                                <div className="footer--text__think--two">
+                                    <a href="#">Женщинам </a>
+                                    <a href="#">Мужчинам </a>
+                                    <a href="#">Детям </a>
+                                </div>
+                                <div className="footer--text__think--three">
+                                    <a href="#">Обувь</a>
+                                    <a href="#">FAQ</a>
+                                    <a href="#">О нас</a>
+                                </div>
                             </div>
                             <div className="footer--text__number">
                                 <h2>Связаться с нами:</h2>

@@ -5,10 +5,16 @@ import {IoIosPaper} from "react-icons/io";
 import {SlBasket} from "react-icons/sl";
 import {BsSearch} from "react-icons/bs";
 import {NavLink} from "react-router-dom";
+
+
+
+const Header = () => {
+
 import BurgerMenu from "./BurgerMenu";
 
 const Header = () => {
     const [burger, setBurger] = useState(false)
+
     return (
         <>
             <BurgerMenu burger={burger} setBurger={setBurger}/>
@@ -21,9 +27,22 @@ const Header = () => {
                                     </div>
                                 </NavLink>
 
+
+                        <nav>
+                          <div className="header--burger">
+                              <span/>
+                          </div>
+                        </nav>
+                        <NavLink to="/">
+                            <div className="header--logo">
+                                <h1>MOTION SHOP</h1>
+                            </div>
+                        </NavLink>
+
                                 <div className="header--search">
                                     <input type="search" placeholder="Я ищу.." />
                                     <BsSearch className='search'/>
+
 
                                 </div>
 
