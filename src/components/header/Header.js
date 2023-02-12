@@ -1,15 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./Header.scss"
 import {HiOutlineQuestionMarkCircle} from "react-icons/hi";
 import {IoIosPaper} from "react-icons/io";
 import {SlBasket} from "react-icons/sl";
-import {BsSearch,BsTelephoneFill} from "react-icons/bs";
+import {BsSearch} from "react-icons/bs";
 import {NavLink} from "react-router-dom";
+import BurgerMenu from "./BurgerMenu";
 
 const Header = () => {
+    const [burger, setBurger] = useState(false)
     return (
         <>
-           <div id="header">
+            <BurgerMenu burger={burger} setBurger={setBurger}/>
+           <header id="header">
                     <div className="container">
                         <div className="header">
                                 <NavLink to="/">
@@ -39,9 +42,14 @@ const Header = () => {
                                     </NavLink>
                                 </div>
 
+                            <div id="burger-menu">
+                                <div className="burger burger1"></div>
+                                <div className="burger burger2"></div>
+                                <div className="burger burger3"></div>
+                            </div>
                             </div>
                         </div>
-                    </div>
+            </header>
         </>
     );
 };

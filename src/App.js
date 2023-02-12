@@ -6,6 +6,10 @@ import About from "./components/about/About";
 import Basket from "./components/basket/Basket";
 import Categories from "./components/categories/Categories";
 import DetailPage from "./components/detail-page/DetailPage";
+import Man from "./components/categories/Man";
+import Woman from "./components/categories/Woman";
+import Kids from "./components/categories/Kids";
+import Shoes from "./components/categories/Shoes";
 function App() {
   return (
     <>
@@ -15,6 +19,10 @@ function App() {
                 <Route path="/about" element={<About/>}/>
                 <Route path="/basket" element={<Basket/>}/>
                 <Route path="/categories" element={<Categories/>}/>
+                <Route path="/categories/man" element={<Man/>}/>
+                <Route path="/categories/woman" element={<Woman/>}/>
+                <Route path="/categories/kids" element={<Kids/>}/>
+                <Route path="/categories/shoes" element={<Shoes/>}/>
                 <Route path={"/detail-page/:id"} element={<DetailPage/>}/>
             </Routes>
 
