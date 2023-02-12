@@ -1,22 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./Header.scss"
 import {HiOutlineQuestionMarkCircle} from "react-icons/hi";
 import {IoIosPaper} from "react-icons/io";
 import {SlBasket} from "react-icons/sl";
 import {BsSearch} from "react-icons/bs";
 import {NavLink} from "react-router-dom";
+import BurgerMenu from "./BurgerMenu";
+
 const Header = () => {
+    const [burger, setBurger] = useState(false)
     return (
         <>
-           <div id="header">
+            <BurgerMenu burger={burger} setBurger={setBurger}/>
+           <header id="header">
                     <div className="container">
                         <div className="header">
-                        <NavLink to="/">
-                            <div className="header--logo">
-                                <h1>MOTION SHOP</h1>
-                            </div>
-                        </NavLink>
-                             <div className="header--search">
+                                <NavLink to="/">
+                                    <div className="header--logo">
+                                        <h1>MOTION SHOP</h1>
+                                    </div>
+                                </NavLink>
+
+                                <div className="header--search">
                                     <input type="search" placeholder="Я ищу.." />
                                     <BsSearch className='search'/>
 
@@ -36,9 +41,15 @@ const Header = () => {
                                         <h1>Корзина</h1>
                                     </NavLink>
                                 </div>
+
+                            <div id="burger-menu">
+                                <div className="burger burger1"></div>
+                                <div className="burger burger2"></div>
+                                <div className="burger burger3"></div>
+                            </div>
+                            </div>
                         </div>
-                    </div>
-            </div>
+            </header>
         </>
     );
 };
