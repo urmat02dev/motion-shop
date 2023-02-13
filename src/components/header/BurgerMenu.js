@@ -35,7 +35,7 @@ const BurgerMenu = ({burger, setBurger}) => {
             {
                 burger &&
                     <div id="menu" style={{
-                        left: !burger ? '-200px' : ''
+
                     }}>
                         <div className="burger-menu">
                             <div className="burger-menu--menu" onClick={() => setBurger(!burger)}>

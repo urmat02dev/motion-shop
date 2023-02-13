@@ -165,6 +165,15 @@
     z-index: 50;
     border: 1px solid black;
     transition: 1s;
+    animation: menu 2s alternate;
+    @keyframes menu {
+      0%{
+        left: -1000px;
+      }
+      100%{
+        left: 0;
+      }
+    }
     .burger-menu {
       margin-bottom: 100px;
       margin-top: 15px;
