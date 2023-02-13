@@ -18,7 +18,7 @@ const MainPageCategories = () => {
                     </div>
                     <div className="block--categor">
 
-                        <div className="block--categor__row" >
+                        <NavLink to={"/categories/man"} className="block--categor__row" >
                             <img className="block--categor__row--img" src={man} alt=""/>
                             <div className="block--categor__row--arr">
                                 <img src={fon} alt=""/>
@@ -27,9 +27,9 @@ const MainPageCategories = () => {
                                 </div>
 
                             </div>
-                        </div>
+                        </NavLink>
 
-                        <div className="block--categor__row">
+                        <NavLink to={"/categories/woman"} className="block--categor__row">
                             <img className="block--categor__row--img" src={woman} alt=""/>
                             <div className="block--categor__row--arr">
                                 <img src={fon} alt=""/>
@@ -38,9 +38,9 @@ const MainPageCategories = () => {
                                 </div>
 
                             </div>
-                        </div>
+                        </NavLink>
 
-                        <div className="block--categor__row">
+                        <NavLink to={"/categories/kids"} className="block--categor__row">
                             <img className="block--categor__row--img" src={children} alt=""/>
                             <div className="block--categor__row--arr">
                                 <img src={fon} alt=""/>
@@ -49,9 +49,9 @@ const MainPageCategories = () => {
                                 </div>
 
                             </div>
-                        </div>
+                        </NavLink>
 
-                        <div className="block--categor__row">
+                        <NavLink to={"/categories/shoes"} className="block--categor__row">
                             <img className="block--categor__row--img" src={foot} alt=""/>
                             <div className="block--categor__row--arr">
                                 <img src={fon} alt=""/>
@@ -60,7 +60,7 @@ const MainPageCategories = () => {
                                 </div>
 
                             </div>
-                        </div>
+                        </NavLink>
 
                     </div>
                 </div>

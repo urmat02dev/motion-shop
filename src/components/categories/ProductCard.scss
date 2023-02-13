@@ -1,0 +1,28 @@
+.product{
+  display: flex;
+
+  &--card{
+    display: flex;
+    width: 238px;
+    margin-bottom: 50px;
+    height: 350px;
+    div{
+      p{
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 28px;
+        letter-spacing: -0.025em;
+        text-align: left;
+        color: black;
+      }
+      h6{
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        color: #000000;
+        margin-top: 15px;
+        width: 90%;
+      }
+    }
+  }
+}

@@ -19,10 +19,12 @@ const BurgerMenu = ({burger, setBurger}) => {
                         <div className="burger-menu--menu--two"></div>
                         <div className="burger-menu--menu--three"></div>
                     </div>
-                    <div className="burger-menu--title">
-                        <h1>MOTION</h1>
-                        <p>SHOP</p>
-                    </div>
+                    <NavLink to={"/"}>
+                        <div className="burger-menu--title">
+                            <h1>MOTION</h1>
+                            <p>SHOP</p>
+                        </div>
+                    </NavLink>
                     <div className="burger-menu--icons">
                         <BsSearch className='search'/>
                         <SlBasket className='logo'/>
