@@ -8,7 +8,7 @@ import {NavLink} from "react-router-dom";
 
 
 
-const Header = () => {
+
 
 import BurgerMenu from "./BurgerMenu";
 
@@ -27,17 +27,6 @@ const Header = () => {
                                     </div>
                                 </NavLink>
 
-
-                        <nav>
-                          <div className="header--burger">
-                              <span/>
-                          </div>
-                        </nav>
-                        <NavLink to="/">
-                            <div className="header--logo">
-                                <h1>MOTION SHOP</h1>
-                            </div>
-                        </NavLink>
 
                                 <div className="header--search">
                                     <input type="search" placeholder="Я ищу.." />
