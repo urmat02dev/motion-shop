@@ -15,14 +15,14 @@
         position: relative;
         &--img {
           position: relative;
-          width: 16rem;
+          width: 19rem;
         }
         &--arr {
           position: absolute;
           left: 0;
           top: 0;
           img  {
-            width: 16rem;
+            width: 19rem;
           }
           &__text {
             position: absolute;
@@ -41,6 +41,33 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 1370px) {
+  #block .block--categor__row--arr img {
+    width: 18rem;
+  }
+  #block .block--categor__row--img {
+    width: 18rem;
+  }
+}
+
+@media (max-width: 1310px) {
+  #block .block--categor__row--arr img {
+    width: 17rem;
+  }
+  #block .block--categor__row--img {
+    width: 17rem;
+  }
+}
+
+@media (max-width: 1250px) {
+  #block .block--categor__row--arr img {
+    width: 16rem;
+  }
+  #block .block--categor__row--img {
+    width: 16rem;
   }
 }
 
