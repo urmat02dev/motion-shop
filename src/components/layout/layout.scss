@@ -18,3 +18,57 @@
     color: white;
   }
 }
+
+@media (max-width: 1200px){
+  .btn{
+    left: 75%;
+  }
+}
+
+@media (max-width: 992px) {
+}
+@media (max-width: 768px) {
+  .btn button{
+    padding: 10px;
+  }
+}
+@media (max-width: 576px){
+  .btn button{
+    padding: 8px;
+  }
+  .btn .arrow{
+    font-size: 20px;
+
+  }
+}
+
+@media (max-width: 450px) {
+  .btn{
+    left: 70%;
+  }
+  .btn button {
+    padding: 10px;
+  }
+  .btn .arrow{
+    font-size: 22px;
+  }
+}
+@media (max-width: 400px) {
+  .btn{
+    left: 65%;
+  }
+}
+@media (max-width: 375px){
+
+}
+@media (max-width: 320px) {
+  .btn{
+    left: 55%;
+  }
+  .btn button {
+    padding: 7px;
+  }
+  .btn .arrow{
+    font-size: 18px;
+  }
+}

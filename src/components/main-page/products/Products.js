@@ -17,6 +17,7 @@ const Products = () => {
             <div className="container">
                 <div className="products">
                     <h1>Возможно, Вам понравится</h1>
+                    <h2>Для вас</h2>
                     <div className="products--store">
                         {
                             slice.map(el => (
