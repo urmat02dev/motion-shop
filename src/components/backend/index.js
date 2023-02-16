@@ -287,3 +287,5 @@ export const backend = [
         size:"",
     },
 ]
+
+console.log(backend.map(el => el.id))
