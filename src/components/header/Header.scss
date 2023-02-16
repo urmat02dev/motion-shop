@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 190px;
+    height: 140px;
 
     &--logo {
       h1 {
@@ -106,6 +106,10 @@
     height: 35px;
     margin-right: 35px;
   }
+  #header .header--search .search{
+    margin-left: -75px;
+
+  }
 }
 
 @media (max-width: 992px) {
@@ -162,7 +166,7 @@
     margin-left: 20px;
 
     .burger-menu {
-      width: 98%;
+      width: 95%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -238,16 +242,15 @@
     background: #fff;
     z-index: 50;
     transition: 1s;
-    animation: menu 1s alternate;
+    animation: menu 2s alternate;
     @keyframes menu {
       0% {
         left: -1000px;
       }
-      100% {
+      100%{
         left: 0;
       }
     }
-
     .burger-menu {
       margin-bottom: 50px;
       margin-top: 15px;
@@ -256,8 +259,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-
+      cursor: pointer;
       &--menu {
+
         &--one {
           width: 45px;
           background: #D118A8;
@@ -302,11 +306,22 @@
           color: #D118A8;
           font-size: 19px;
           margin-right: 20px;
+
         }
 
         .logo {
           color: #D118A8;
           font-size: 30px;
+        }
+
+      }
+      .basket-input{
+        position: absolute;
+        left: 10px;
+        input{
+          border: 1px solid #FF005C;
+          padding: 5px;
+
         }
       }
     }
@@ -478,13 +493,26 @@
 }
 
 @media (max-width: 576px) {
-
+  #burger-menu .burger-menu--icons .search{
+    font-size: 25px;
+  }
 }
 
 @media (max-width: 450px) {
+  #menu .burger-menu{
+    width: 87%;
+
+  }
 }
 
 @media (max-width: 414px) {
+  #burger-menu .burger-menu--title h1{
+    font-size: 34px;
+  }
+  #burger-menu .burger-menu{
+    width: 95%;
+
+  }
 }
 
 @media (max-width: 380px) {
@@ -494,4 +522,10 @@
 }
 
 @media (max-width: 320px) {
+  #burger-menu .burger-menu--title h1{
+    font-size: 27px;
+  }
+  #menu .burger-menu--title h1{
+    font-size: 30px;
+  }
 }

@@ -4,7 +4,7 @@ import {useNavigate, useParams} from "react-router-dom";
 import {backend} from "../backend";
 import {useDispatch, useSelector} from "react-redux";
 import {GET_BASKET} from "../../redux/ActionTypes";
-import Main from "./main";
+
 const DetailPage = () => {
     const {id} = useParams()
     const dispatch = useDispatch()

@@ -143,9 +143,9 @@
           width: 15px;
         }
         &__card{
-          overflow-block: hidden;
+          overflow-block: auto;
           display: flex;
-          justify-content: space-between;
+          justify-content: space-evenly;
           margin-bottom: 40px;
           &--img{
             margin-right: 15px;

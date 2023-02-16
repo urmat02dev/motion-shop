@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {BsSearch} from "react-icons/bs";
 import {SlBasket} from "react-icons/sl";
 import "./Header.scss"
@@ -10,6 +10,7 @@ import shoes from "../../assets/img/shoes__hover.png"
 import {CgArrowLongRight} from "react-icons/cg";
 import {NavLink} from "react-router-dom";
 const BurgerMenu = ({burger, setBurger}) => {
+    const [input, setInput] = useState(false)
     return (
         <>
             <div id="burger-menu">
@@ -26,19 +27,24 @@ const BurgerMenu = ({burger, setBurger}) => {
                         </div>
                     </NavLink>
                     <div className="burger-menu--icons">
-                        <BsSearch className='search'/>
-                        <SlBasket className='logo'/>
+                        <BsSearch className='search' onClick={() => setInput(!input)}/>
+                        <NavLink to={"/basket"}><SlBasket className='logo'/></NavLink>
                     </div>
+                    {
+                        input && <div className="basket-input">
+                            <input type="search" placeholder="I am"/>
+                        </div>
+                    }
                 </div>
+
             </div>
             {
                 burger &&
-                    <div id="menu" style={{
-
-                    }}>
-
-                        <div className="burger-menu">
-                            <div className="burger-menu--menu" onClick={() => setBurger(!burger)}>
+                    <div id="menu" >
+                        <div className="burger-menu" onClick={ () => setBurger(!burger)} style={{
+                            animation:"close 1s ease"
+                        }}>
+                            <div className="burger-menu--menu" >
                                 <div className="burger-menu--menu--one"></div>
                                 <div className="burger-menu--menu--two"></div>
                             </div>
@@ -48,7 +54,7 @@ const BurgerMenu = ({burger, setBurger}) => {
                             </div>
                             <div className="burger-menu--icons">
                                 <BsSearch className='search'/>
-                                <NavLink to={"/basket"} >
+                                <NavLink to={"/basket"}  onClick={() => setBurger(!burger)}>
                                     <SlBasket className='logo'/>
                                 </NavLink>
                             </div>
