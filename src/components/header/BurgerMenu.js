@@ -29,7 +29,6 @@ const BurgerMenu = ({burger, setBurger}) => {
                         <BsSearch className='search'/>
                         <SlBasket className='logo'/>
                     </div>
-
                 </div>
             </div>
             {
@@ -37,6 +36,7 @@ const BurgerMenu = ({burger, setBurger}) => {
                     <div id="menu" style={{
 
                     }}>
+
                         <div className="burger-menu">
                             <div className="burger-menu--menu" onClick={() => setBurger(!burger)}>
                                 <div className="burger-menu--menu--one"></div>
@@ -52,8 +52,8 @@ const BurgerMenu = ({burger, setBurger}) => {
                                     <SlBasket className='logo'/>
                                 </NavLink>
                             </div>
-
                         </div>
+
                         <div className="menu--categories">
                             <NavLink to={"/categories/man"} className="menu--categories--man" onClick={() => setBurger(!burger)}>
                                 <img src={man} alt="" className="menu--categories--man--img"/>
@@ -89,6 +89,7 @@ const BurgerMenu = ({burger, setBurger}) => {
                             </NavLink>
 
                         </div>
+
                         <div className="menu--link">
                             <NavLink to={"/about"} className="menu--link--about" onClick={() => setBurger(!burger)}>
                                 <p>О нас</p>
