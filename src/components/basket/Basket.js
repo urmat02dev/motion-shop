@@ -2,7 +2,7 @@ import React from 'react';
 import "./Basket.scss"
 import {useDispatch, useSelector} from "react-redux";
 import {DELETE_FROM_BASKET} from "../../redux/ActionTypes";
-import {keyboard} from "@testing-library/user-event/dist/keyboard";
+
 
 const Basket = () => {
     const dispatch = useDispatch()

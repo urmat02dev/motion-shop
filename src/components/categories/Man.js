@@ -31,6 +31,7 @@ const Man = () => {
                             <NavLink to={"/categories/woman"} >
                                 <div className="menu--categories--woman" >
                                 <img src={hover} alt="" className="menu--categories--woman--fon"/>
+                                    <img src={hover} alt="" className="menu--categories--kids--fon"/>
                                 <div className="menu--categories--woman--title">
                                     <p>Женская</p>
                                     <CgArrowLongRight className="menu--categories--woman--title--icon"/>
