@@ -15,7 +15,13 @@ const Basket = () => {
         <>
             <div id="basket">
                 <div className="basket">
-                    <h1 className="basket--order">Оформление товара</h1>
+                   <div className="basket--start">
+                       <h1 className="basket--start__order">Оформление <span>товара</span></h1>
+                       <p>Что у меня в корзине?</p>
+                   </div>
+                    <div className="basket--center">
+                        <p>Общая сумма: <span>3000$</span></p>
+                    </div>
                     <div className="basket--info">
                         <div className="basket--info__about">
                             <h1>Контактные данные</h1>
@@ -34,6 +40,7 @@ const Basket = () => {
                             <h3>Оплата с банковской картой через <span>PayBox</span></h3>
                             <button>Оплатить</button>
                         </div>
+                        
 
                         <div className="basket--info__choose">
 
