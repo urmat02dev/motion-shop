@@ -57,15 +57,16 @@
           position: relative;
           margin-bottom: 20px;
           width: 285px;
-          height: 67px;
-          background: url("../../assets/img/woman__hover.png") no-repeat center/cover;
-          z-index: 6;
-          &:hover {
-            background: url("../../assets/img/woman.png") no-repeat;
+          height: 200px;
+          border-radius: 10%;
+          transition: all 0.3s ease-in-out;
+          background: url("../../assets/img/woman__hover.png") no-repeat;
+          &:hover{
             width: 285px;
-            height: 400px;
-            z-index: -1;
-        }
+            background: url("../../assets/img/woman.png") no-repeat;
+            transform: translateY(1px);
+          }
+
 
           &--title{
             position: absolute;

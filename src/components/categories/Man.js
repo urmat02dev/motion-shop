@@ -5,6 +5,8 @@ import hover from "../../assets/img/hover__1.png";
 import active from "../../assets/img/hover.png";
 import {CgArrowLongDown, CgArrowLongRight} from "react-icons/cg";
 import woman from "../../assets/img/woman__hover.png";
+import womanImg from "../../assets/img/woman.png";
+
 import kids from "../../assets/img/kids__hover.png";
 import shoes from "../../assets/img/shoes__hover.png";
 import children from "../../assets/img/children.png";
@@ -28,10 +30,8 @@ const Man = () => {
                                     <CgArrowLongDown className="menu--categories--man--title--icon"/>
                                 </div>
                             </NavLink>
-                            <NavLink to={"/categories/woman"} >
+                            <NavLink to={"/categories/woman"}  >
                                 <div className="menu--categories--woman" >
-                                <img src={hover} alt="" className="menu--categories--woman--fon"/>
-                                    <img src={hover} alt="" className="menu--categories--kids--fon"/>
                                 <div className="menu--categories--woman--title">
                                     <p>Женская</p>
                                     <CgArrowLongRight className="menu--categories--woman--title--icon"/>
