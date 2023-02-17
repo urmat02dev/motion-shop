@@ -21,6 +21,7 @@ const Hero = () => {
                             <a href="">•Для мужчин</a>
                             <a href="">•Для детей</a>
                         </div>
+                        
                     </div>
                 </div>
             </div>
