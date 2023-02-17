@@ -1,0 +1,12 @@
+.my-component {
+    background: url("../../assets/img/woman__hover.png");
+    padding: 10px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease-in-out;
+}
+
+.my-component:hover {
+    background: url("../../assets/img/woman.png");
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
