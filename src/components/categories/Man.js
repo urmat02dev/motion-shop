@@ -7,6 +7,7 @@ import {CgArrowLongDown, CgArrowLongRight} from "react-icons/cg";
 import woman from "../../assets/img/woman__hover.png";
 import kids from "../../assets/img/kids__hover.png";
 import shoes from "../../assets/img/shoes__hover.png";
+import children from "../../assets/img/children.png";
 import "./Categories.scss"
 import {backend} from "../backend";
 import ProductCard from "./ProductCard";
@@ -27,20 +28,25 @@ const Man = () => {
                                     <CgArrowLongDown className="menu--categories--man--title--icon"/>
                                 </div>
                             </NavLink>
-                            <NavLink to={"/categories/woman"} className="menu--categories--woman" >
-                                <img src={woman} alt="" className="menu--categories--woman--img"/>
+                            <NavLink to={"/categories/woman"} >
+                                <div className="menu--categories--woman" >
                                 <img src={hover} alt="" className="menu--categories--woman--fon"/>
+                                    <img src={hover} alt="" className="menu--categories--kids--fon"/>
                                 <div className="menu--categories--woman--title">
                                     <p>Женская</p>
                                     <CgArrowLongRight className="menu--categories--woman--title--icon"/>
                                 </div>
+                            </div>
                             </NavLink>
-                            <NavLink to={"/categories/kids"} className="menu--categories--kids" >
-                                <img src={kids} alt="" className="menu--categories--kids--img" />
-                                <img src={hover} alt="" className="menu--categories--kids--fon"/>
-                                <div className="menu--categories--kids--title">
-                                    <p>Детская</p>
-                                    <CgArrowLongRight className="menu--categories--kids--title--icon"/>
+                            <NavLink to={"/categories/kids"}>
+                                <div className="menu--categories--kids" >
+                                    <img src={kids} alt="" className="menu--categories--kids--img" />
+                                    <img src={children} alt="" className="menu--categories--kids--photo"/>
+                                    <img src={hover} alt="" className="menu--categories--kids--fon"/>
+                                    <div className="menu--categories--kids--title">
+                                        <p>Детская</p>
+                                        <CgArrowLongRight className="menu--categories--kids--title--icon"/>
+                                    </div>
                                 </div>
                             </NavLink>
                             <NavLink to={"/categories/shoes"} className="menu--categories--shoes" >

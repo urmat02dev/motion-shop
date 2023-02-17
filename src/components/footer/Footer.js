@@ -4,6 +4,7 @@ import {SlSocialInstagram} from "react-icons/sl";
 import {FaTelegramPlane} from "react-icons/fa";
 import {AiFillFacebook} from "react-icons/ai";
 import {AiOutlineWhatsApp} from "react-icons/ai";
+import {Link, NavLink} from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -12,21 +13,23 @@ const Footer = () => {
                 <div className="footer">
 
                     <div className="footer--text">
-                        <div className="footer--text__one">
-                            <h1>MOTION SHOP</h1>
-                        </div>
+                        <NavLink to={"/"}>
+                            <div className="footer--text__one">
+                                <h1>MOTION SHOP</h1>
+                            </div>
+                        </NavLink>
                         <div className="footer--text__start">
                             <div className="footer--text__start--think">
                                 <div className="footer--text__start--think__two">
-                                    <a href="#">Женщинам </a>
-                                    <a href="#">Мужчинам </a>
-                                    <a href="#">Детям </a>
+                                    <Link to={"/categories/woman"}>Женщинам </Link>
+                                    <Link to={"/categories/man"}>Мужчинам </Link>
+                                    <Link to={"/categLink "}>Детям </Link>
                                 </div>
                             </div>
                             <div className="footer--text__start--think2__three">
-                                <a href="#">Обувь</a>
-                                <a href="#">FAQ</a>
-                                <a href="#">О нас</a>
+                                <Link to={"/categories/shoes"}>Обувь</Link>
+                                <Link to={"/faq"}>FAQ</Link>
+                                <Link to={"/about"}>О нас</Link>
                             </div>
                             <div className="footer--text__start--number">
                                 <h2>Связаться с нами:</h2>
