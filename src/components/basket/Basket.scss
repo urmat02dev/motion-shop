@@ -147,6 +147,7 @@
         height: 594px; /* Высота блока */
         padding: 5px; /* Поля вокруг текста */
         ::-webkit-scrollbar-track{
+          width: 15px;
           background: #962525;
         }
         ::-webkit-scrollbar{

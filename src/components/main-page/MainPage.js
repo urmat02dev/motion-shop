@@ -14,7 +14,6 @@ const MainPage = () => {
             <Hero/>
             <MainPageCategories/>
             <Products/>
-<MyComponent/>
         </div>
 
     );

@@ -44,7 +44,6 @@ const DetailPage = () => {
 
 
 
-    console.log(green)
     return (
         <div id="detail-page">
             <div className="container">
