@@ -1,13 +1,23 @@
 #basket {
   .basket {
     padding: 1% 0 5% 0;
+      p {
+        display: none;
+      }
+    &--start {
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+      &__order {
+        color: #72072D;
+        font-size: 40px;
+        padding: 0 0 0 5%;
+      }
 
-    &--order {
-      color: #72072D;
-      font-size: 40px;
-      padding: 0 0 0 5%;
     }
-
+    p{
+      display: none;
+    }
     &--info {
       display: flex;
       justify-content: space-evenly;
