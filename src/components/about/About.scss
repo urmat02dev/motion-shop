@@ -75,11 +75,6 @@
   }
 }
 
-
-@media (max-width: 1440px) {
-
-}
-
 @media (max-width: 1200px) {
   #about {
     .about {
@@ -222,9 +217,10 @@
           font-size: 28px;
         }
         p {
-          font-size: 18px;
+          font-size: 16px;
           width: 600px;
           padding: 0 20px;
+          line-height: 20px;
         }
       }
       &--block {

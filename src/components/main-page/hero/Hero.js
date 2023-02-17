@@ -22,6 +22,7 @@ const Hero = () => {
                             <Link to={"/woman"}>•Для мужчин</Link>
                             <Link to={"/kids"}>•Для детей</Link>
                         </div>
+                        
                     </div>
                 </div>
             </div>
