@@ -7,7 +7,6 @@ import {DELETE_FROM_BASKET} from "../../redux/ActionTypes";
 const Basket = () => {
     const dispatch = useDispatch()
     const {basket} = useSelector(state => state)
-    console.log(basket.map(el=>  el.id))
     const decreaseQuantity = () => {
         dispatch({type:DELETE_FROM_BASKET, payload:basket.map(el=> el.id)})
     }
