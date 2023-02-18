@@ -43,7 +43,6 @@ const DetailPage = () => {
     const [green,setGreen] =useState(false)
 
 
-
     return (
         <div id="detail-page">
             <div className="container">

@@ -1,5 +1,4 @@
 
-
 export const backend = [
     {
         id:1,
@@ -25,7 +24,7 @@ export const backend = [
     },
     {
         id:3,
-        title: 'Converse Chuck Taylor All Star Move Platform Hi Sneaker',
+        title: 'Converse кроссовки',
         description: '  Футбо́лка — предмет нательной одежды для обоих полов, обычно не имеющий пуговиц[1], воротника и карманов, с короткими рукавами, закрывающий туловище, часть рук и верх бёдер, надевается через голову. Является одним из самых массовых видов одежды',
         price: 14190,
         category:"Обувь",
@@ -421,12 +420,6 @@ export const backend = [
         image: 'https://a.lmcdn.ru/product/R/T/RTLABZ336501_18002722_4_v2_2x.jpg',
 
     },
-
-
-
-
-
-
     {
         id:40,
         title: 'Bawer Рубашка',
@@ -503,10 +496,6 @@ export const backend = [
         categories:"Толстовка",
         image: 'https://a.lmcdn.ru/img600x866/M/P/MP002XC01735_17658355_4_v1.jpg',
     },
-
-
-
-
     {
         id:48,
         title: 'Ecco Ботинки ',
@@ -571,9 +560,6 @@ export const backend = [
         categories:"Кроссовки TRACE",
         image: 'https://a.lmcdn.ru/img600x866/M/P/MP002XM1I3QD_16255377_4_v1.jpg',
     },
-
-
-
     {
         id:55,
         title: 'PUMA Костюм спортивный',
@@ -614,8 +600,6 @@ export const backend = [
         image: 'https://a.lmcdn.ru/img600x866/M/P/MP002XC01CVD_19116900_1_v1.jpg',
 
     },
-
-
     {
         id:59,
         title: "O'stin",
@@ -634,7 +618,6 @@ export const backend = [
         categories:"Блуза",
         image: 'https://a.lmcdn.ru/img600x866/M/P/MP002XW15PSK_17355648_1_v1_2x.jpg',
     },
-
 ]
 
 
