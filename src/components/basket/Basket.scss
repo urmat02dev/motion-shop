@@ -1,13 +1,16 @@
 #basket {
   .basket {
     padding: 1% 0 5% 0;
-      p {
-        display: none;
-      }
+
+    p {
+      display: none;
+    }
+
     &--start {
       display: flex;
       align-items: center;
       padding: 10px 0;
+
       &__order {
         color: #72072D;
         font-size: 40px;
@@ -15,9 +18,11 @@
       }
 
     }
-    p{
+
+    p {
       display: none;
     }
+
     &--info {
       display: flex;
       justify-content: space-evenly;
@@ -76,6 +81,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
         h1 {
           font-size: 24px;
           color: #72072D;
@@ -110,7 +116,7 @@
           height: 30%;
         }
 
-        &--card{
+        &--card {
 
           display: flex;
           flex-direction: column;
@@ -118,22 +124,27 @@
           background: #72072D;
           padding: 5%;
           height: 20%;
-          &__cost{
+
+          &__cost {
             display: flex;
             justify-content: space-between;
-            h4{
+
+            h4 {
               font-size: 10px;
               color: #FFFFFF;
             }
-            h1{
+
+            h1 {
               font-size: 13px;
               color: #FFFFFF;
             }
           }
-          &__pay{
+
+          &__pay {
             display: flex;
             justify-content: center;
-            h4{
+
+            h4 {
               font-size: 10px;
               color: #FFFFFF;
             }
@@ -141,29 +152,109 @@
         }
       }
 
-      &__basket{
-        overflow: auto;
-        width: 533px; /* Ширина блока */
-        height: 594px; /* Высота блока */
-        padding: 5px; /* Поля вокруг текста */
-        ::-webkit-scrollbar-track{
-          width: 15px;
-          background: #962525;
+      &__group {
+        width: 35%;
+        height: 550px;
+        overflow: scroll;
+
+        &::-webkit-scrollbar {
+          width: 10px;
         }
-        ::-webkit-scrollbar{
-          width: 15px;
+
+        &::-webkit-scrollbar-thumb {
+          background: #FF005C;
+          border-radius: 5px;
+          height: 17px;
         }
-        &__card{
-          overflow-block: auto;
+
+        &__card {
           display: flex;
-          justify-content: space-evenly;
-          margin-bottom: 40px;
-          &--img{
-            margin-right: 15px;
+          justify-content: space-between;
+          align-items: start;
+          width: 420px;
+          margin-bottom: 35px;
+
+          &--img {
+
           }
+
+          &--info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            h1 {
+              font-size: 24px;
+              font-weight: 400;
+              line-height: 36px;
+              text-align: left;
+              color: #434343;
+              width: 230px;
+            }
+
+            h2 {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              color: rgba(0, 0, 0, 0.7);
+
+            }
+
+            h3 {
+              font-style: normal;
+              font-weight: 600;
+              font-size: 17px;
+              line-height: 22px;
+              color: #FF005C;
+              margin: 15px 0;
+            }
+
+            &--quantity {
+              display: flex;
+              justify-content: space-between;
+              width: 91px;
+              height: 21px;
+              border: 1px solid #DF0251;
+
+              .count {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 100%;
+
+                button{
+                  background: #DF0251;
+                  width: 26px;
+                  height: 19px;
+                  border: none;
+                  color: #fff;
+                  font-size: 20px;
+                  cursor: pointer;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                }
+              }
+            }
+
+            &--delete {
+              background: transparent;
+              border: none;
+              font-weight: 600;
+              font-size: 15px;
+              line-height: 22px;
+              color: #FF0000;
+              margin-top: 15px;
+              cursor: pointer;
+            }
+          }
+
 
         }
       }
+
+
     }
   }
 }

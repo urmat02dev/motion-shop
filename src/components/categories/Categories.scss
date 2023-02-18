@@ -15,10 +15,15 @@
         width: 100%;
         margin: 30px 0;
         flex-wrap: wrap;
-        &--man{
+        position: relative;
+        .man{
           position: relative;
           margin-bottom: 20px;
           width: 285px;
+          height: 67px;
+          border: none;
+          border-radius: 15px;
+          background: url("../../assets/img/man__hover.png");
           &--img{
             z-index: 10;
             width: 100%;
@@ -27,16 +32,197 @@
             position: absolute;
             left: 0;
             top: 0;
-            z-index: 1;
             width: 100%;
+            height: 100%;
           }
           &--title{
             position: absolute;
             left: 40px;
-            bottom: 15px;
-            z-index: 4;
+            top: 21px;
+            z-index: 5;
             display: flex;
             align-items: end;
+
+            p{
+              font-style: normal;
+              font-weight: 700;
+              font-size: 24px;
+              line-height: 29px;
+              color: #FFFFFF;
+              margin-right: 20px;
+            }
+            &--icon{
+              color: #FFFFFF;
+              font-size: 23px;
+
+            }
+          }
+        }
+        .woman{
+          position: relative;
+          margin-bottom: 20px;
+          width: 285px;
+          height: 67px;
+          border: none;
+          border-radius: 15px;
+          background: url("../../assets/img/woman__hover.png");
+          &--img{
+            z-index: 10;
+            width: 100%;
+          }
+          &--fon{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+          }
+          &--title{
+            position: absolute;
+            left: 40px;
+            top: 21px;
+            z-index: 5;
+            display: flex;
+            align-items: end;
+
+            p{
+              font-style: normal;
+              font-weight: 700;
+              font-size: 24px;
+              line-height: 29px;
+              color: #FFFFFF;
+              margin-right: 20px;
+            }
+            &--icon{
+              color: #FFFFFF;
+              font-size: 23px;
+
+            }
+          }
+        }
+        .kids{
+          position: relative;
+          margin-bottom: 20px;
+          width: 285px;
+          height: 67px;
+          border: none;
+          border-radius: 15px;
+          background: url("../../assets/img/kids__hover.png");
+          &--img{
+            z-index: 10;
+            width: 100%;
+          }
+          &--fon{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+          }
+          &--title{
+            position: absolute;
+            left: 40px;
+            top: 21px;
+            z-index: 5;
+            display: flex;
+            align-items: end;
+
+            p{
+              font-style: normal;
+              font-weight: 700;
+              font-size: 24px;
+              line-height: 29px;
+              color: #FFFFFF;
+              margin-right: 20px;
+            }
+            &--icon{
+              color: #FFFFFF;
+              font-size: 23px;
+
+            }
+          }
+        }
+        .shoes{
+          position: relative;
+          margin-bottom: 20px;
+          width: 285px;
+          height: 67px;
+          border: none;
+          border-radius: 15px;
+          background: url("../../assets/img/woman__hover.png");
+          &--img{
+            z-index: 10;
+            width: 100%;
+          }
+          &--fon{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+          }
+          &--title{
+            position: absolute;
+            left: 40px;
+            top: 21px;
+            z-index: 5;
+            display: flex;
+            align-items: end;
+
+            p{
+              font-style: normal;
+              font-weight: 700;
+              font-size: 24px;
+              line-height: 29px;
+              color: #FFFFFF;
+              margin-right: 20px;
+            }
+            &--icon{
+              color: #FFFFFF;
+              font-size: 23px;
+
+            }
+          }
+        }
+        &--man{
+          position: relative;
+          width: 285px;
+          height: 67px;
+          border-radius: 10px;
+          transition: all .5s ease-in-out;
+          background: url("../../assets/img/man__hover.png") no-repeat;
+          z-index: 10;
+          &:hover{
+            background: url("../../assets/img/man.png") no-repeat;
+            height: 232px;
+            z-index: 10;
+          }
+
+          &--fon{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            &:hover{
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+
+          &--title{
+            position: absolute;
+            left: 24px;
+            bottom: 15px;
+            display: flex;
+            align-items: end;
+            &:hover{
+              position: absolute;
+              left: 24px;
+              bottom: 15px;
+
+            }
 
             p{
               font-style: normal;
@@ -55,18 +241,25 @@
         }
         &--woman{
           position: relative;
-          margin-bottom: 20px;
           width: 285px;
-          height: 200px;
-          border-radius: 10%;
-          transition: all 0.3s ease-in-out;
+          height: 67px;
+          border-radius: 10px;
+          transition: all .5s ease-in-out;
           background: url("../../assets/img/woman__hover.png") no-repeat;
+          z-index: 10;
           &:hover{
-            width: 285px;
             background: url("../../assets/img/woman.png") no-repeat;
-            transform: translateY(1px);
+            height: 232px;
+            z-index: 10;
           }
 
+          &--fon{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+          }
 
           &--title{
             position: absolute;
@@ -74,6 +267,12 @@
             bottom: 15px;
             display: flex;
             align-items: end;
+            &:hover{
+              position: absolute;
+              left: 24px;
+              bottom: 15px;
+
+            }
 
             p{
               font-style: normal;
@@ -92,41 +291,38 @@
         }
         &--kids{
           position: relative;
-          margin-bottom: 20px;
           width: 285px;
-          transition-duration: 1s;
+          height: 67px;
+          border-radius: 10px;
+          transition: all .5s ease-in-out;
+          background: url("../../assets/img/kids__hover.png") no-repeat;
+          z-index: 10;
           &:hover{
-            .menu--categories--kids--photo{
-             display: block;
-              width: 285px;
-              transition: transform 25s;
-
-            }
-            .menu--categories--kids--img{
-              display: none;
-            }
-          }
-          &--img{
+            background: url("../../assets/img/children.png") no-repeat;
+            height: 232px;
             z-index: 10;
-            width: 100%;
           }
-          &--photo{
-            display: none;
-          }
+
           &--fon{
             position: absolute;
             left: 0;
             top: 0;
-            z-index: 2;
             width: 100%;
+            height: 100%;
           }
+
           &--title{
             position: absolute;
-            left: 40px;
+            left: 24px;
             bottom: 15px;
-            z-index: 10;
             display: flex;
             align-items: end;
+            &:hover{
+              position: absolute;
+              left: 24px;
+              bottom: 15px;
+
+            }
 
             p{
               font-style: normal;
@@ -145,26 +341,39 @@
         }
         &--shoes{
           position: relative;
-          margin-bottom: 20px;
           width: 285px;
-          &--img{
+          height: 67px;
+          transition: all .5s ease-in-out;
+          background: url("../../assets/img/shoes__hover.png") no-repeat;
+          z-index: 10;
+          &:hover{
+            background: url("../../assets/img/foot.png") no-repeat;
+            height: 232px;
+            width: 285px;
+            border-radius: 10px;
             z-index: 10;
-            width: 100%;
           }
+
           &--fon{
             position: absolute;
             left: 0;
             top: 0;
-            z-index: 1;
             width: 100%;
+            height: 100%;
           }
+
           &--title{
             position: absolute;
-            left: 40px;
+            left: 24px;
             bottom: 15px;
-            z-index: 4;
             display: flex;
             align-items: end;
+            &:hover{
+              position: absolute;
+              left: 24px;
+              bottom: 15px;
+
+            }
 
             p{
               font-style: normal;
@@ -181,6 +390,11 @@
             }
           }
         }
+
+
+
+
+
       }
     }
     &--product{
@@ -195,184 +409,18 @@
   }
 }
 
+
 @media (max-width: 1200px) {
-  #categories{
-    .categories{
-      h1{
-        font-size: 32px;
-      }
-      &--hover{
-        .menu--categories{
-          flex-wrap: nowrap;
-          &--man{
-            width: 250px;
-            &--img{
-              z-index: 10;
-              width: 100%;
-            }
-            &--fon{
-              position: absolute;
-              left: 0;
-              top: 0;
-              z-index: 1;
-              width: 100%;
-            }
-            &--title{
-              position: absolute;
-              left: 40px;
-              bottom: 15px;
-              z-index: 4;
-              display: flex;
-              align-items: end;
 
-              p{
-                font-style: normal;
-                font-weight: 700;
-                font-size: 24px;
-                line-height: 29px;
-                color: #FFFFFF;
-                margin-right: 20px;
-              }
-              &--icon{
-                color: #FFFFFF;
-                font-size: 23px;
-
-              }
-            }
-          }
-          &--woman{
-            position: relative;
-            margin-bottom: 20px;
-            width: 250px;
-            &--img{
-              z-index: 10;
-              width: 100%;
-            }
-            &--fon{
-              position: absolute;
-              left: 0;
-              top: 0;
-              z-index: 1;
-              width: 100%;
-            }
-            &--title{
-              position: absolute;
-              left: 40px;
-              bottom: 15px;
-              z-index: 4;
-              display: flex;
-              align-items: end;
-
-              p{
-                font-style: normal;
-                font-weight: 700;
-                font-size: 24px;
-                line-height: 29px;
-                color: #FFFFFF;
-                margin-right: 20px;
-              }
-              &--icon{
-                color: #FFFFFF;
-                font-size: 23px;
-
-              }
-            }
-          }
-          &--kids{
-            position: relative;
-            margin-bottom: 20px;
-            width: 250px;
-            &--img{
-              z-index: 10;
-              width: 100%;
-            }
-            &--fon{
-              position: absolute;
-              left: 0;
-              top: 0;
-              z-index: 1;
-              width: 100%;
-            }
-            &--title{
-              position: absolute;
-              left: 40px;
-              bottom: 15px;
-              z-index: 4;
-              display: flex;
-              align-items: end;
-
-              p{
-                font-style: normal;
-                font-weight: 700;
-                font-size: 24px;
-                line-height: 29px;
-                color: #FFFFFF;
-                margin-right: 20px;
-              }
-              &--icon{
-                color: #FFFFFF;
-                font-size: 23px;
-
-              }
-            }
-          }
-          &--shoes{
-            position: relative;
-            margin-bottom: 20px;
-            width: 250px;
-            &--img{
-              z-index: 10;
-              width: 100%;
-            }
-            &--fon{
-              position: absolute;
-              left: 0;
-              top: 0;
-              z-index: 1;
-              width: 100%;
-            }
-            &--title{
-              position: absolute;
-              left: 40px;
-              bottom: 15px;
-              z-index: 4;
-              display: flex;
-              align-items: end;
-
-              p{
-                font-style: normal;
-                font-weight: 700;
-                font-size: 24px;
-                line-height: 29px;
-                color: #FFFFFF;
-                margin-right: 20px;
-              }
-              &--icon{
-                color: #FFFFFF;
-                font-size: 23px;
-
-              }
-            }
-          }
-        }
-      }
-      &--product{
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 103%;
-        margin: 20px auto;
-
-      }
-    }
-  }
 }
 @media (max-width: 1024px) {
 }
 @media (max-width: 992px) {
 }
 @media (max-width: 768px) {
+  #categories .categories--hover .menu--categories{
+    display: none;
+  }
 }
 @media (max-width: 576px) {
 }

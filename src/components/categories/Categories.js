@@ -4,7 +4,7 @@ import MyComponent from "./hover";
 const Categories = () => {
     return (
         <>
-<MyComponent/>
+
         </>
     );
 };
