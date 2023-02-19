@@ -15,7 +15,13 @@ const Basket = () => {
         <>
             <div id="basket">
                 <div className="basket">
-                    <h1 className="basket--order">Оформление товара</h1>
+                    <div className="basket--block">
+                        <h1 className="basket--block__order">Оформление <span>товара</span></h1>
+                        <p>Что у меня в корзине?</p>
+                    </div>
+                    <div className="basket--sell">
+                        <p>Общая сумма:</p><h2>3000$</h2>
+                    </div>
                     <div className="basket--info">
                         <div className="basket--info__about">
                             <h1>Контактные данные</h1>
