@@ -18,8 +18,8 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      margin-top: 35px;
-      margin-bottom: 30px;
+      margin: 30px auto;
+      width: 95%;
     }
 
     .products--card {
@@ -296,11 +296,12 @@
 }
 @media (max-width: 320px){
   #products .products .products--card img{
-    width: 140px;
-    height: 200px;
+    width: 124px;
+    height: 150px;
   }
   #products .products .products--card{
-    width: 140px;
+    width: 125px;
+    height: 285px;
   }
   #products .products--button--btn{
     width: 190px;

@@ -47,7 +47,7 @@ const Kids = () => {
 
                             </div>
                         </div>
-                        <h1>Обувь</h1>
+                        <h1>Детская одежда</h1>
                         <div className="categories--product">
 
                             {
