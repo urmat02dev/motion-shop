@@ -5,18 +5,13 @@ import {IoIosPaper} from "react-icons/io";
 import {SlBasket} from "react-icons/sl";
 import {BsSearch} from "react-icons/bs";
 import {NavLink} from "react-router-dom";
-
-
-
-
-
 import BurgerMenu from "./BurgerMenu";
 
 const Header = () => {
     const [burger, setBurger] = useState(false)
-
     return (
         <>
+
             <BurgerMenu burger={burger} setBurger={setBurger}/>
            <header id="header">
                     <div className="container">
@@ -58,6 +53,7 @@ const Header = () => {
                             </div>
                         </div>
             </header>
+
         </>
     );
 };
