@@ -23,7 +23,7 @@ const Footer = () => {
                                 <div className="footer--text__start--think__two">
                                     <Link to={"/categories/woman"}>Женщинам </Link>
                                     <Link to={"/categories/man"}>Мужчинам </Link>
-                                    <Link to={"/categLink "}>Детям </Link>
+                                    <Link to={"/categories/kids"}>Детям </Link>
                                 </div>
                             </div>
                             <div className="footer--text__start--think2__three">
@@ -37,10 +37,10 @@ const Footer = () => {
                                 <a href="tel:0222533735">+996 222 533 735</a>
                                 <a href="tel:0222533735">+996 222 533 735</a>
                                 <div className="footer--text__start--number__icon">
-                                    <SlSocialInstagram className="footer--text__start--number__icon--1"/>
-                                    <FaTelegramPlane className="footer--text__start--number__icon--2"/>
-                                    <AiOutlineWhatsApp className="footer--text__start--number__icon--3"/>
-                                    <AiFillFacebook className="footer--text__start--number__icon--4"/>
+                                    <a href="https://www.instagram.com/"><SlSocialInstagram className="footer--text__start--number__icon--1"/></a>
+                                    <a href="https://web.telegram.org"><FaTelegramPlane className="footer--text__start--number__icon--2"/></a>
+                                    <a href="https://web.whatsapp.com/"><AiOutlineWhatsApp className="footer--text__start--number__icon--3"/></a>
+                                    <a href="https://ru-ru.facebook.com/"><AiFillFacebook className="footer--text__start--number__icon--4"/></a>
                                 </div>
                             </div>
                             <div className="footer--text__start--end">

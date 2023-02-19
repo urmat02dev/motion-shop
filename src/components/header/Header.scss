@@ -165,7 +165,7 @@
     margin-left: 20px;
 
     .burger-menu {
-      width: 98%;
+      width: 95%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -526,4 +526,8 @@
 }
 
 @media (max-width: 320px) {
+  #burger-menu .burger-menu{
+    width: 95%;
+    margin: 10px 2px;
+  }
 }

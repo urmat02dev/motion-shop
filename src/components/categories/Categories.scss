@@ -149,7 +149,7 @@
           height: 67px;
           border: none;
           border-radius: 15px;
-          background: url("../../assets/img/woman__hover.png");
+          background: url("../../assets/img/shoes__hover.png");
           &--img{
             z-index: 10;
             width: 100%;
@@ -402,18 +402,78 @@
       align-items: center;
       flex-wrap: wrap;
       justify-content: space-between;
-      width: 103%;
-      margin: 20px auto;
+      width: 100%;
+      margin: 20px 20px;
 
     }
   }
 }
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1540px){
 
 }
+@media (max-width: 1200px) {
+  #categories .categories--hover .menu--categories .man{
+    width: 250px;
+  }
+  #categories .categories--hover .menu--categories--man{
+    width: 250px;
+  }
+  #categories .categories--hover .menu--categories--woman{
+    width: 250px;
+  }
+  #categories .categories--hover .menu--categories .woman{
+    width: 250px;
+  }
+  #categories .categories--hover .menu--categories--kids{
+    width: 250px;
+  }
+  #categories .categories--hover .menu--categories .kids{
+    width: 250px;
+  }
+  #categories .categories--hover .menu--categories--shoes{
+    width: 250px;
+  }
+  #categories .categories--hover .menu--categories .shoes{
+    width: 250px;
+  }
+}
 @media (max-width: 1024px) {
+  #categories .categories--hover .menu--categories .man{
+    width: 220px;
+    height: 55px;
+  }
+  #categories .categories--hover .menu--categories--man{
+    width: 220px;
+    height: 55px;
+  }
+  #categories .categories--hover .menu--categories--woman{
+    width: 220px;
+    height: 55px;
+  }
+  #categories .categories--hover .menu--categories .woman{
+    width: 220px;
+    height: 55px;
+  }
+  #categories .categories--hover .menu--categories--kids{
+    width: 220px;
+    height: 55px;
+  }
+  #categories .categories--hover .menu--categories .kids{
+    width: 220px;
+    height: 55px;
+  }
+  #categories .categories--hover .menu--categories--shoes{
+    width: 220px;
+    height: 55px;
+  }
+  #categories .categories--hover .menu--categories .shoes{
+    height: 55px;
+    width: 220px;
+
+  }
+
 }
 @media (max-width: 992px) {
 }

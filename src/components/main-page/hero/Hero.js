@@ -18,9 +18,9 @@ const Hero = () => {
                         </div>
 
                         <div className='for'>
-                            <Link to={"/man"}>•Для женщин</Link>
-                            <Link to={"/woman"}>•Для мужчин</Link>
-                            <Link to={"/kids"}>•Для детей</Link>
+                            <Link to={"/categories/man"}>•Для женщин</Link>
+                            <Link to={"/categories/woman"}>•Для мужчин</Link>
+                            <Link to={"/categories/kids"}>•Для детей</Link>
                         </div>
                         
                     </div>

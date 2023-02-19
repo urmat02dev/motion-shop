@@ -8,7 +8,7 @@ const ProductCard = ({el}) => {
                 {
                     <div>
                         <NavLink to={`/detail-page/${el.id}`}>
-                            <img src={el.image} width={190} height={260} alt=""/>
+                            <img src={el.image}   alt="" className="product--card--img"/>
                         </NavLink>
                         <p>{el.price} сом</p>
                         <h6>{el.categories}</h6>
