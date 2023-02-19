@@ -2,6 +2,7 @@ import React from 'react';
 import "./Hero.scss"
 import family from './img/image 67.png'
 import img from './img/Rectangle 2256.png'
+import {Link} from "react-router-dom";
 const Hero = () => {
     return (
         <div>
@@ -17,10 +18,11 @@ const Hero = () => {
                         </div>
 
                         <div className='for'>
-                            <a href="">•Для женщин</a>
-                            <a href="">•Для мужчин</a>
-                            <a href="">•Для детей</a>
+                            <Link to={"/categories/man"}>•Для женщин</Link>
+                            <Link to={"/categories/woman"}>•Для мужчин</Link>
+                            <Link to={"/categories/kids"}>•Для детей</Link>
                         </div>
+                        
                     </div>
                 </div>
             </div>

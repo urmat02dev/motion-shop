@@ -19,32 +19,28 @@ const Woman = () => {
                     <div className="categories">
                         <div className="categories--hover">
                             <div className="menu--categories">
-                                <NavLink to={"/categories/man"} className="menu--categories--man" >
-                                    <img src={man} alt="" className="menu--categories--man--img"/>
+                                <NavLink to={"/categories/man"} className="menu--categories--man">
                                     <img src={hover} alt="" className="menu--categories--man--fon"/>
                                     <div className="menu--categories--man--title">
                                         <p>Мужская</p>
                                         <CgArrowLongRight className="menu--categories--man--title--icon"/>
                                     </div>
                                 </NavLink>
-                                <NavLink to={"/categories/woman"} className="menu--categories--woman" >
-                                    <img src={woman} alt="" className="menu--categories--woman--img"/>
-                                    <img src={active} alt="" className="menu--categories--woman--fon"/>
-                                    <div className="menu--categories--woman--title">
+                                <NavLink to={"/categories/woman"} className="woman">
+                                    <img src={active} alt="" className="woman--fon"/>
+                                    <div className="woman--title">
                                         <p>Женская</p>
-                                        <CgArrowLongDown className="menu--categories--woman--title--icon"/>
+                                        <CgArrowLongDown className="woman--title--icon"/>
                                     </div>
                                 </NavLink>
-                                <NavLink to={"/categories/kids"} className="menu--categories--kids" >
-                                    <img src={kids} alt="" className="menu--categories--kids--img" />
+                                <NavLink to={"/categories/kids"} className="menu--categories--kids">
                                     <img src={hover} alt="" className="menu--categories--kids--fon"/>
                                     <div className="menu--categories--kids--title">
                                         <p>Детская</p>
                                         <CgArrowLongRight className="menu--categories--kids--title--icon"/>
                                     </div>
                                 </NavLink>
-                                <NavLink to={"/categories/shoes"} className="menu--categories--shoes" >
-                                    <img src={shoes} alt="" className="menu--categories--shoes--img"/>
+                                <NavLink to={"/categories/shoes"} className="menu--categories--shoes">
                                     <img src={hover} alt="" className="menu--categories--shoes--fon"/>
                                     <div className="menu--categories--shoes--title">
                                         <p>Обувь</p>

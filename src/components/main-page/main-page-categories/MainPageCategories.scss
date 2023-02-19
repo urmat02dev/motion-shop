@@ -235,27 +235,20 @@
   }
 }
 
-
 @media (max-width: 400px) {
-  #block {
-    .block {
-
-    }
+  #block .block--categor__row--img {
+    width: 18rem;
+  }
+  #block .block--categor__row--arr img {
+    width: 18rem;
   }
 }
 
 @media (max-width: 375px) {
-  #block {
-    .block {
 
-    }
-  }
 }
 
 @media (max-width: 320px) {
-  #block {
-    .block {
-    }
-  }
+
 }
 

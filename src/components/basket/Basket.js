@@ -2,15 +2,12 @@ import React from 'react';
 import "./Basket.scss"
 import {useDispatch, useSelector} from "react-redux";
 import {DELETE_FROM_BASKET} from "../../redux/ActionTypes";
-import {keyboard} from "@testing-library/user-event/dist/keyboard";
+import BasketProducts from "./BasketProducts";
+
 
 const Basket = () => {
-    const dispatch = useDispatch()
-    const {basket} = useSelector(state => state)
-    console.log(basket.map(el=>  el.id))
-    const decreaseQuantity = () => {
-        dispatch({type:DELETE_FROM_BASKET, payload:basket.map(el=> el.id)})
-    }
+
+
     return (
         <>
             <div id="basket">
@@ -21,6 +18,12 @@ const Basket = () => {
                     </div>
                     <div className="basket--sell">
                         <p>Общая сумма:</p><h2>3000$</h2>
+                   <div className="basket--start">
+                       <h1 className="basket--start__order">Оформление <span>товара</span></h1>
+                       <p>Что у меня в корзине?</p>
+                   </div>
+                    <div className="basket--center">
+                        <p>Общая сумма: <span>3000$</span></p>
                     </div>
                     <div className="basket--info">
                         <div className="basket--info__about">
@@ -68,27 +71,8 @@ const Basket = () => {
                                 </div>
                             </div>
                         </div>
-
-                        <div className="basket--info__basket">
-                            {
-                                basket.map(el =>  (
-                                    <div className="basket--info__basket__card">
-                                        <div className="basket--info__basket__card--img">
-                                            <img src={el.image} width={147} height={177} alt=""/></div>
-                                        <div className="basket--info__basket__card--desc">
-                                            <h1>{el.title}</h1>
-                                            <p>Опции: {el.size}, {el.color}</p>
-                                            <p>{el.price}</p>
-                                            <div className="basket--info__basket__card--quantity">
-                                                <span>-</span>
-                                                {el.quantity}
-                                                <span>+</span>
-                                            </div>
-                                            <button onClick={()=> decreaseQuantity}>Удалить</button>
-                                        </div>
-                                    </div>
-                                ))
-                            }
+                        <div className="basket--info__group">
+                                <BasketProducts />
                         </div>
                     </div>
                 </div>

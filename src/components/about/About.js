@@ -38,10 +38,10 @@ const About = () => {
                                 </div>
                             </div>
                             <div className="about--block__right--email">
-                                <MdOutlineEmail className="email"/> <a href="email">Motionshop@gmail.com</a>
+                                <MdOutlineEmail className="email"/> <a href="#">Motionshop@gmail.com</a>
                             </div>
                             <div className="about--block__right--map">
-                                <BiMap className="icon"/><p>Кыргызстан Бишкек/Турция Станбул.</p>
+                                <BiMap className="icon"/><p>Кыргызстан Бишкек/Турция Стамбул.</p>
                             </div>
                             <div className="about--block__right--icon">
                                     <SlSocialInstagram className="about--block__right--icon__1"/>

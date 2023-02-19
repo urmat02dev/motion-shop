@@ -1,7 +1,7 @@
 #hero {
   .hero {
     position: relative;
-    bottom: 30px;
+    bottom: 20px;
     background: #fff;
     border-radius: 20px;
     width: 100%;
@@ -133,6 +133,26 @@
           flex-direction: row;
           justify-content: space-evenly;
           width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  #hero{
+    .hero{
+      .clothes{
+        &--text{
+          h1{
+              font-size: 19px;
+          }
+        }
+        .for{
+          a{
+            padding: 0;
+            font-size: 13px;
+          }
         }
       }
     }
