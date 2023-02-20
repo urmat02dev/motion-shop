@@ -9,10 +9,12 @@ import kids from "../../assets/img/kids__hover.png"
 import shoes from "../../assets/img/shoes__hover.png"
 import {CgArrowLongRight} from "react-icons/cg";
 import {NavLink} from "react-router-dom";
+import Search from "./Search";
 const BurgerMenu = ({burger, setBurger}) => {
     const [input, setInput] = useState(false)
     return (
         <>
+            <Search input={input} setInput={setInput}/>
             <div id="burger-menu">
                 <div className="burger-menu">
                     <div className="burger-menu--menu" onClick={() => setBurger(!burger)}>
@@ -30,36 +32,36 @@ const BurgerMenu = ({burger, setBurger}) => {
                         <BsSearch className='search' onClick={() => setInput(!input)}/>
                         <NavLink to={"/basket"}><SlBasket className='logo'/></NavLink>
                     </div>
-                    {
-                        input && <div className="basket-input">
-                            <input type="search" placeholder="I am"/>
-                        </div>
-                    }
+
                 </div>
 
             </div>
-            {
-                burger &&
-                    <div id="menu" >
-                        <div className="burger-menu" onClick={ () => setBurger(!burger)} style={{
-                            animation:"close 1s ease"
-                        }}>
-                            <div className="burger-menu--menu" >
-                                <div className="burger-menu--menu--one"></div>
-                                <div className="burger-menu--menu--two"></div>
-                            </div>
-                            <div className="burger-menu--title">
-                                <h1>MOTION</h1>
-                                <p>SHOP</p>
-                            </div>
-                            <div className="burger-menu--icons">
-                                <BsSearch className='search'/>
-                                <NavLink to={"/basket"}  onClick={() => setBurger(!burger)}>
-                                    <SlBasket className='logo'/>
-                                </NavLink>
-                            </div>
-                        </div>
 
+
+                    <div id={burger ? "menu" : "close"} >
+                        {
+                            <div onClick={() => setBurger(!burger)}
+                                 className="burger-menu">
+                                <div className="burger-menu--menu"  onClick={ () => setBurger(!burger)}>
+                                    <div className="burger-menu--menu--one"></div>
+                                    <div className="burger-menu--menu--two"></div>
+                                </div>
+                                <NavLink to={"/"} onClick={() => setBurger(!burger)}>
+                                    <div className="burger-menu--title">
+                                        <h1>MOTION</h1>
+                                        <p>SHOP</p>
+                                    </div>
+                                </NavLink>
+                                <div className="burger-menu--icons">
+                                    <BsSearch className='search' onClick={()=> setInput(!input) && setBurger(true)}/>
+                                    <NavLink to={"/basket"}  onClick={() => setBurger(!burger)}>
+                                        <SlBasket className='logo'/>
+                                    </NavLink>
+                                </div>
+
+
+                            </div>
+                        }
                         <div className="menu--categories">
                             <NavLink to={"/categories/man"} className="menu--categories--man" onClick={() => setBurger(!burger)}>
                                 <img src={man} alt="" className="menu--categories--man--img"/>
@@ -109,7 +111,7 @@ const BurgerMenu = ({burger, setBurger}) => {
                         </div>
                     </div>
 
-            }
+
         </>
 
     );
