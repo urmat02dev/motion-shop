@@ -40,6 +40,11 @@
         line-height: 20px;
         color: #000000;
         margin: 20px 0;
+        span{
+          color: black;
+          font-size: 16px;
+          font-weight: 600;
+        }
       }
       p{
         font-family: 'Poppins',sans-serif;
@@ -98,6 +103,33 @@
           color: white;
           border: none;
           cursor: pointer;
+
+        }
+        .size{
+          position: relative;
+          &--span {
+            position: absolute;
+            height: 22px;
+            width: 280px;
+            left: 105%;
+            bottom: 40px;
+            border: 2px solid #FF005C;
+            color: #FF005C;
+            text-align: center;
+          }
+        }
+        .color{
+          position: relative;
+          &--span {
+            position: absolute;
+            height: 22px;
+            width: 280px;
+            left: 105%;
+            bottom: 5px;
+            border: 2px solid #FF005C;
+            color: #FF005C;
+            text-align: center;
+          }
         }
         &--two{
           margin: 10px;
@@ -142,6 +174,7 @@
     }
   }
 }
+
 
 @media (max-width: 1024px) {
   #detail-page .detail-description p{

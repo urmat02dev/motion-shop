@@ -1,1084 +1,1249 @@
 #basket {
   .basket {
     padding: 1% 0 5% 0;
-    &--block {
-    p {
-      display: none;
-    }
 
-    &--start {
-      display: flex;
-      align-items: center;
-      padding: 10px 0;
-      &__order {
-        color: #72072D;
-        font-size: 40px;
-        padding: 0 0 0 5%;
-      }
+    &--block {
       p {
         display: none;
       }
-    }
-    &--sell {
 
-    }
-
-    p {
-      display: none;
-    }
-    &--info {
-      display: flex;
-      justify-content: space-evenly;
-
-      &__about {
-        h1 {
-          color: #72072D;
-          font-size: 24px;
-        }
-
-        &--inputs {
-          display: flex;
-          flex-direction: column;
-
-          .input {
-            border: 1px solid #72072D;
-            padding: 10px 10px;
-            width: 80%;
-            margin: 5px 0;
-          }
-        }
-
-        h2 {
-          color: #72072D;
-          font-size: 24px;
-          padding: 18% 0 5% 0;
-        }
-
-        &--check {
-          color: #72072D;
-          font-size: 14px;
-          padding: 0 0 0 2%;
-        }
-
-        h3 {
-          color: #72072D;
-          font-size: 14px;
-          padding: 5% 0;
-
-          span {
-            color: #70FF00;
-          }
-        }
-
-        button {
-          background: #72072D;
-          font-size: 16px;
-          color: white;
-          padding: 5px 60px;
-          border-radius: 3px;
-          border: none;
-        }
-      }
-
-      &__choose {
+      &--start {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
 
-        h1 {
-          font-size: 24px;
+        &__order {
           color: #72072D;
+          font-size: 40px;
+          padding: 0 0 0 5%;
         }
 
-        small {
-          color: black;
-          font-size: 14px;
-          padding: 4% 0;
-        }
-
-        &--check {
-          &__pickup {
-            color: #72072D;
-            font-size: 14px;
-          }
-        }
-
-        &--secondCheck {
-          padding: 4% 0;
-
-          &__delivery {
-            color: #72072D;
-            font-size: 14px;
-          }
-        }
-
-        textarea {
-          padding: 5%;
-          border: 1px solid #72072D;
-          width: 85%;
-          height: 30%;
-        }
-
-        &--card {
-
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          background: #72072D;
-          padding: 5%;
-          height: 20%;
-
-          &__cost {
-            display: flex;
-            justify-content: space-between;
-
-            h4 {
-              font-size: 10px;
-              color: #FFFFFF;
-            }
-
-            h1 {
-              font-size: 13px;
-              color: #FFFFFF;
-            }
-          }
-
-          &__pay {
-            display: flex;
-            justify-content: center;
-
-            h4 {
-              font-size: 10px;
-              color: #FFFFFF;
-            }
-          }
+        p {
+          display: none;
         }
       }
 
-      &__group {
-        width: 35%;
-        height: 550px;
-        overflow: scroll;
+      &--sell {
 
-        &::-webkit-scrollbar {
-          width: 10px;
-        }
+      }
 
-        &::-webkit-scrollbar-thumb {
-          background: #FF005C;
-          border-radius: 5px;
-          height: 17px;
-        }
+      p {
+        display: none;
+      }
 
-        &__card {
-          display: flex;
-          justify-content: space-between;
-          align-items: start;
-          width: 420px;
-          margin-bottom: 35px;
+      &--info {
+        display: flex;
+        justify-content: space-evenly;
 
-          &--img {
-
+        &__about {
+          h1 {
+            color: #72072D;
+            font-size: 24px;
           }
 
-          &--info {
+          &--inputs {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
 
-            h1 {
-              font-size: 24px;
-              font-weight: 400;
-              line-height: 36px;
-              text-align: left;
-              color: #434343;
-              width: 230px;
+            .input {
+              border: 1px solid #72072D;
+              padding: 10px 10px;
+              width: 80%;
+              margin: 5px 0;
             }
+          }
 
-            h2 {
-              font-style: normal;
-              font-weight: 400;
-              font-size: 16px;
-              line-height: 24px;
-              color: rgba(0, 0, 0, 0.7);
+          h2 {
+            color: #72072D;
+            font-size: 24px;
+            padding: 18% 0 5% 0;
+          }
 
+          &--check {
+            color: #72072D;
+            font-size: 14px;
+            padding: 0 0 0 2%;
+          }
+
+          h3 {
+            color: #72072D;
+            font-size: 14px;
+            padding: 5% 0;
+
+            span {
+              color: #70FF00;
             }
+          }
 
-            h3 {
-              font-style: normal;
-              font-weight: 600;
-              font-size: 17px;
-              line-height: 22px;
-              color: #FF005C;
-              margin: 15px 0;
+          button {
+            background: #72072D;
+            font-size: 16px;
+            color: white;
+            padding: 5px 60px;
+            border-radius: 3px;
+            border: none;
+          }
+        }
+
+        &__choose {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          h1 {
+            font-size: 24px;
+            color: #72072D;
+          }
+
+          small {
+            color: black;
+            font-size: 14px;
+            padding: 4% 0;
+          }
+
+          &--check {
+            &__pickup {
+              color: #72072D;
+              font-size: 14px;
             }
+          }
 
-            &--quantity {
+          &--secondCheck {
+            padding: 4% 0;
+
+            &__delivery {
+              color: #72072D;
+              font-size: 14px;
+            }
+          }
+
+          textarea {
+            padding: 5%;
+            border: 1px solid #72072D;
+            width: 85%;
+            height: 30%;
+          }
+
+          &--card {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: #72072D;
+            padding: 5%;
+            height: 20%;
+
+            &__cost {
               display: flex;
               justify-content: space-between;
-              width: 91px;
-              height: 21px;
-              border: 1px solid #DF0251;
 
-              .count {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                height: 100%;
+              h4 {
+                font-size: 10px;
+                color: #FFFFFF;
+              }
 
-                button{
-                  background: #DF0251;
-                  width: 26px;
-                  height: 19px;
-                  border: none;
-                  color: #fff;
-                  font-size: 20px;
-                  cursor: pointer;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                }
+              h1 {
+                font-size: 13px;
+                color: #FFFFFF;
               }
             }
 
-            &--delete {
-              background: transparent;
-              border: none;
-              font-weight: 600;
-              font-size: 15px;
-              line-height: 22px;
-              color: #FF0000;
-              margin-top: 15px;
-              cursor: pointer;
+            &__pay {
+              display: flex;
+              justify-content: center;
+
+              h4 {
+                font-size: 10px;
+                color: #FFFFFF;
+              }
+            }
+          }
+        }
+
+        &__group {
+          width: 35%;
+          height: 550px;
+          overflow: scroll;
+
+          &::-webkit-scrollbar {
+            width: 10px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background: #FF005C;
+            border-radius: 5px;
+            height: 17px;
+          }
+
+          &__card {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            width: 420px;
+            margin-bottom: 35px;
+
+            &--img {
+
+            }
+
+            &--info {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+              h1 {
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 36px;
+                text-align: left;
+                color: #434343;
+                width: 230px;
+              }
+
+              h2 {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: rgba(0, 0, 0, 0.7);
+
+              }
+
+              h3 {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 17px;
+                line-height: 22px;
+                color: #FF005C;
+                margin: 15px 0;
+              }
+
+              &--quantity {
+                display: flex;
+                justify-content: space-between;
+                width: 91px;
+                height: 21px;
+                border: 1px solid #DF0251;
+
+                .count {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  height: 100%;
+
+                  button {
+                    background: #DF0251;
+                    width: 26px;
+                    height: 19px;
+                    border: none;
+                    color: #fff;
+                    font-size: 20px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  }
+                }
+              }
+
+              &--delete {
+                background: transparent;
+                border: none;
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 22px;
+                color: #FF0000;
+                margin-top: 15px;
+                cursor: pointer;
+              }
+            }
+
+
+          }
+        }
+
+
+      }
+    }
+  }
+}
+
+  @media (max-width: 1440px) {
+
+  }
+
+  @media (max-width: 1200px) {
+    #basket {
+      .basket {
+        &--block {
+          display: flex;
+          align-items: center;
+
+          &__order {
+            display: flex;
+            font-size: 20px;
+
+            span {
+              display: block;
             }
           }
 
-
+          p {
+            display: none;
+          }
         }
-      }
 
+        &--sell {
+          display: none;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          width: 100%;
 
-    }
-  }
-}
+          h2 {
+            padding: 10px 10px;
+            font-size: 24px;
+            color: black;
+            font-width: bold;
+          }
+        }
 
-
-
-
-
-
-@media (max-width: 1440px) {
-  
-}
-
-@media (max-width: 1200px){
-  #basket {
-    .basket {
-      &--block {
-        display: flex;
-        align-items: center;
-        &__order {
-          display: flex;
-          font-size: 20px;
-          span {
+        &--info {
+          &__basket {
             display: block;
           }
-        }
-        p {
-          display: none;
-        }
-      }
-      &--sell {
-        display: none;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        h2 {
-          padding: 10px 10px;
-          font-size: 24px;
-          color: black;
-          font-width: bold;
-        }
-      }
-      &--info {
-        &__basket {
-          display: block;
-        }
-        h2 {
-          text-align: center;
-          font-size: 15px;
-          padding: 10px 0;
-        }
-        &__about {
-          text-align: center;
-          padding-top: 20px;
-          h1 {
-            font-size: 15px;
-            text-align: center;
-          }
-          h3 {
-            text-align: center;
-            font-size: 14px;
-            width: 100%;
-          }
-          &--inputs {
-            text-align: center;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          &--check {
 
-            width: 80%;
-          }
-          button {
-            font-size: 14px;
-          }
-        }
-        &__choose {
-          text-align: center;
-          padding-top: 17px;
-          h1 {
-            font-size: 19px;
+          h2 {
+            text-align: center;
+            font-size: 15px;
             padding: 10px 0;
+          }
+
+          &__about {
+            text-align: center;
+            padding-top: 20px;
+
+            h1 {
+              font-size: 15px;
+              text-align: center;
+            }
+
+            h3 {
+              text-align: center;
+              font-size: 14px;
+              width: 100%;
+            }
+
+            &--inputs {
+              text-align: center;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            &--check {
+
+              width: 80%;
+            }
+
+            button {
+              font-size: 14px;
+            }
+          }
+
+          &__choose {
+            text-align: center;
+            padding-top: 17px;
+
+            h1 {
+              font-size: 19px;
+              padding: 10px 0;
+            }
           }
         }
       }
     }
   }
-}
 
-@media (max-width: 1024px){
-  #basket {
-    .basket {
-      &--block {
-        display: flex;
-        align-items: center;
-        &__order {
+  @media (max-width: 1024px) {
+    #basket {
+      .basket {
+        &--block {
           display: flex;
-          font-size: 20px;
-          span {
+          align-items: center;
+
+          &__order {
+            display: flex;
+            font-size: 20px;
+
+            span {
+              display: block;
+            }
+          }
+
+          p {
+            display: none;
+          }
+        }
+
+        &--sell {
+          display: none;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          width: 100%;
+
+          h2 {
+            padding: 10px 10px;
+            font-size: 24px;
+            color: black;
+            font-width: bold;
+          }
+        }
+
+        &--info {
+          &__basket {
             display: block;
           }
-        }
-        p {
-          display: none;
-        }
-      }
-      &--sell {
-        display: none;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        h2 {
-          padding: 10px 10px;
-          font-size: 24px;
-          color: black;
-          font-width: bold;
-        }
-      }
-      &--info {
-        &__basket {
-          display: block;
-        }
-        h2 {
-          text-align: center;
-          font-size: 15px;
-          padding: 10px 0;
-        }
-        &__about {
-          text-align: center;
-          padding-top: 20px;
-          h1 {
-            font-size: 15px;
-            text-align: center;
-          }
-          h3 {
-            text-align: center;
-            font-size: 14px;
-            width: 100%;
-          }
-          &--inputs {
-            text-align: center;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          &--check {
 
-            width: 80%;
-          }
-          button {
-            font-size: 14px;
-          }
-        }
-        &__choose {
-          text-align: center;
-          padding-top: 17px;
-          h1 {
-            font-size: 19px;
+          h2 {
+            text-align: center;
+            font-size: 15px;
             padding: 10px 0;
+          }
+
+          &__about {
+            text-align: center;
+            padding-top: 20px;
+
+            h1 {
+              font-size: 15px;
+              text-align: center;
+            }
+
+            h3 {
+              text-align: center;
+              font-size: 14px;
+              width: 100%;
+            }
+
+            &--inputs {
+              text-align: center;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            &--check {
+
+              width: 80%;
+            }
+
+            button {
+              font-size: 14px;
+            }
+          }
+
+          &__choose {
+            text-align: center;
+            padding-top: 17px;
+
+            h1 {
+              font-size: 19px;
+              padding: 10px 0;
+            }
           }
         }
       }
     }
   }
-}
 
-@media (max-width: 992px){
-  #basket {
-    .basket {
-      &--block {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 90%;
-        &__order {
-          font-size: 18px;
-          span {
-            display: none;
-          }
-        }
-        p {
-          font-size: 12px;
-          display: block;
-        }
-      }
-      &--sell {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        p {
-          display: block;
-        }
-        h2 {
-          padding: 10px 10px;
-          font-size: 24px;
-          color: black;
-          font-width: bold;
-        }
-      }
-      &--info {
-        display: flex;
-        flex-direction: column;
-        &__basket {
-          display: block;
-        }
-        h2 {
-          text-align: center;
-          font-size: 15px;
-          padding: 10px 0;
-        }
-        &__about {
-          text-align: center;
-          h1 {
-            font-size: 15px;
-            text-align: center;
-          }
-          h3 {
-            text-align: center;
-            font-size: 14px;
-            width: 100%;
-          }
-          &--inputs {
-            text-align: center;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          &--check {
-            width: 80%;
-          }
-          button {
-            font-size: 14px;
-          }
-        }
-        &__choose {
-          text-align: center;
-          h1 {
-            font-size: 14px;
-            padding: 10px 0;
-          }
-        }
-      }
-    }
-  }
-}
+  @media (max-width: 992px) {
+    #basket {
+      .basket {
+        &--block {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 90%;
 
-@media (max-width: 768px){
-  #basket {
-    .basket {
-      &--block {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 90%;
-        &__order {
-          font-size: 18px;
-          span {
-            display: none;
-          }
-        }
-        p {
-          font-size: 12px;
-          display: block;
-        }
-      }
-      &--sell {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        p {
-          display: block;
-        }
-        h2 {
-          padding: 10px 10px;
-          font-size: 24px;
-          color: black;
-          font-width: bold;
-        }
-      }
-      &--info {
-        display: flex;
-        flex-direction: column;
-        &__basket {
-          //display: none;
-        }
-        h2 {
-          text-align: center;
-          font-size: 15px;
-          padding: 10px 0;
-        }
-        &__about {
-          text-align: center;
-          h1 {
-            font-size: 15px;
-            text-align: center;
-          }
-          h3 {
-            text-align: center;
-            font-size: 14px;
-            width: 100%;
-          }
-          &--inputs {
-            text-align: center;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          &--check {
-            width: 80%;
-          }
-          button {
-            font-size: 14px;
-          }
-        }
-        &__choose {
-          text-align: center;
-          h1 {
-            font-size: 14px;
-            padding: 10px 0;
-          }
-        }
-      }
-    }
-  }
-}
+          &__order {
+            font-size: 18px;
 
-@media (max-width: 576px){
-  #basket {
-    .basket {
-      &--block {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 90%;
-        &__order {
-          font-size: 18px;
-          span {
-            display: none;
-          }
-        }
-        p {
-          font-size: 12px;
-          display: block;
-        }
-      }
-      &--sell {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        p {
-          display: block;
-        }
-        h2 {
-          padding: 10px 10px;
-          font-size: 24px;
-          color: black;
-          font-width: bold;
-        }
-      }
-      &--info {
-        display: flex;
-        flex-direction: column;
-        &__basket {
-          display: none;
-        }
-        h2 {
-          text-align: center;
-          font-size: 15px;
-          padding: 10px 0;
-        }
-        &__about {
-          text-align: center;
-          h1 {
-            font-size: 15px;
-            text-align: center;
-          }
-          h3 {
-            text-align: center;
-            font-size: 14px;
-            width: 100%;
-          }
-          &--inputs {
-            text-align: center;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          &--check {
-            width: 80%;
-          }
-          button {
-            font-size: 14px;
-          }
-        }
-        &__choose {
-          text-align: center;
-          h1 {
-            font-size: 14px;
-            padding: 10px 0;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 450px){
-  #basket {
-    .basket {
-      &--block {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 90%;
-        &__order {
-          font-size: 18px;
-          span {
-            display: none;
-          }
-        }
-        p {
-          font-size: 12px;
-          display: block;
-        }
-      }
-      &--sell {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        p {
-          display: block;
-        }
-        h2 {
-          padding: 10px 10px;
-          font-size: 24px;
-          color: black;
-          font-width: bold;
-        }
-      }
-      &--info {
-        display: flex;
-        flex-direction: column;
-        &__basket {
-          display: none;
-        }
-        h2 {
-          text-align: center;
-          font-size: 15px;
-          padding: 10px 0;
-        }
-        &__about {
-          text-align: center;
-          h1 {
-            font-size: 15px;
-            text-align: center;
-          }
-          h3 {
-            text-align: center;
-            font-size: 14px;
-            width: 100%;
-          }
-          &--inputs {
-            text-align: center;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          &--check {
-            width: 80%;
-          }
-          button {
-            font-size: 14px;
-          }
-        }
-        &__choose {
-          text-align: center;
-          h1 {
-            font-size: 14px;
-            padding: 10px 0;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 425px){
-  #basket {
-    .basket {
-      &--block {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 90%;
-        &__order {
-          font-size: 18px;
-          span {
-            display: none;
-          }
-        }
-        p {
-          font-size: 12px;
-          display: block;
-        }
-      }
-      &--sell {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        p {
-          display: block;
-        }
-        h2 {
-          padding: 10px 10px;
-          font-size: 24px;
-          color: black;
-          font-width: bold;
-        }
-      }
-      &--info {
-        display: flex;
-        flex-direction: column;
-        h2 {
-          text-align: center;
-          font-size: 15px;
-          padding: 10px 0;
-        }
-        &__about {
-          text-align: center;
-          h1 {
-            font-size: 15px;
-            text-align: center;
-          }
-          h3 {
-            text-align: center;
-            font-size: 14px;
-            width: 100%;
-          }
-          &--inputs {
-            text-align: center;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          &--check {
-            width: 80%;
-          }
-          button {
-            font-size: 14px;
-          }
-        }
-        &__choose {
-          text-align: center;
-          h1 {
-            font-size: 14px;
-            padding: 10px 0;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 400px){
-  #basket {
-    .basket {
-      &--block {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 90%;
-        &__order {
-          font-size: 18px;
-          span {
-            display: none;
-          }
-        }
-        p {
-          font-size: 12px;
-          display: block;
-        }
-      }
-      &--sell {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        p {
-          display: block;
-        }
-        h2 {
-          padding: 10px 10px;
-          font-size: 24px;
-          color: black;
-          font-width: bold;
-        }
-      }
-      &--info {
-        display: flex;
-        flex-direction: column;
-        h2 {
-          text-align: center;
-          font-size: 15px;
-          padding: 10px 0;
-        }
-        &__about {
-          text-align: center;
-          h1 {
-            font-size: 15px;
-            text-align: center;
-          }
-          h3 {
-            text-align: center;
-            font-size: 14px;
-            width: 100%;
-          }
-          &--inputs {
-            text-align: center;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          &--check {
-            width: 80%;
-          }
-          button {
-            font-size: 14px;
-          }
-        }
-        &__choose {
-          text-align: center;
-          h1 {
-            font-size: 14px;
-            padding: 10px 0;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 375px){
-  #basket {
-    .basket {
-      &--block {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 90%;
-        &__order {
-          font-size: 18px;
-          span {
-            display: none;
-          }
-        }
-        p {
-           font-size: 12px;
-          display: block;
-         }
-      }
-      &--sell {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        p {
-          display: block;
-        }
-        h2 {
-          padding: 10px 10px;
-          font-size: 24px;
-          color: black;
-          font-width: bold;
-        }
-      }
-      &--info {
-        display: flex;
-        flex-direction: column;
-        h2 {
-          text-align: center;
-          font-size: 15px;
-          padding: 10px 0;
-        }
-        &__about {
-          text-align: center;
-          h1 {
-            font-size: 15px;
-            text-align: center;
-          }
-          h3 {
-            text-align: center;
-            font-size: 14px;
-            width: 100%;
-          }
-          &--inputs {
-            text-align: center;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          &--check {
-            width: 80%;
-          }
-          button {
-            font-size: 14px;
-          }
-        }
-        &__choose {
-          text-align: center;
-          h1 {
-            font-size: 14px;
-            padding: 10px 0;
-          }
-            .small {
-              width: 90%;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 320px){
-  #basket {
-    .basket {
-      &--block {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        p {
-          font-size: 12px;
-        }
-        h1 {
-          font-size: 14px;
-        }
-        &__order {
             span {
               display: none;
             }
+          }
+
+          p {
+            font-size: 12px;
+            display: block;
+          }
         }
-      }
-      &--sell {
-        padding: 20px 0;
-        text-align: center;
-        p {
+
+        &--sell {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          width: 100%;
+
+          p {
+            display: block;
+          }
+
+          h2 {
+            padding: 10px 10px;
+            font-size: 24px;
+            color: black;
+            font-width: bold;
+          }
         }
-     h2 {
-        padding: 0 10px;
-        font-size: 20px;
-        color: black;
-        font-width: bold;
-      }
-      }
-     &--info {
-       display: flex;
-       flex-direction: column;
-       h2 {
-         text-align: center;
-         font-size: 15px;
-         padding: 10px 0;
-       }
-       &__about {
-         text-align: center;
-         h1 {
-           font-size: 15px;
-           text-align: center;
-         }
-         h3 {
-           text-align: center;
-           font-size: 14px;
-           width: 100%;
-         }
-         &--inputs {
-           text-align: center;
-           width: 100%;
-           display: flex;
-           align-items: center;
-           justify-content: center;
-         }
-         &--check {
-           width: 80%;
-         }
-         button {
-           font-size: 14px;
-         }
-       }
-       &__choose {
-         text-align: center;
-          small {
+
+        &--info {
+          display: flex;
+          flex-direction: column;
+
+          &__basket {
+            display: block;
+          }
+
+          h2 {
+            text-align: center;
+            font-size: 15px;
             padding: 10px 0;
           }
-       }
-     }
+
+          &__about {
+            text-align: center;
+
+            h1 {
+              font-size: 15px;
+              text-align: center;
+            }
+
+            h3 {
+              text-align: center;
+              font-size: 14px;
+              width: 100%;
+            }
+
+            &--inputs {
+              text-align: center;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            &--check {
+              width: 80%;
+            }
+
+            button {
+              font-size: 14px;
+            }
+          }
+
+          &__choose {
+            text-align: center;
+
+            h1 {
+              font-size: 14px;
+              padding: 10px 0;
+            }
+          }
+        }
+      }
     }
   }
-}
+
+  @media (max-width: 768px) {
+    #basket {
+      .basket {
+        &--block {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 90%;
+
+          &__order {
+            font-size: 18px;
+
+            span {
+              display: none;
+            }
+          }
+
+          p {
+            font-size: 12px;
+            display: block;
+          }
+        }
+
+        &--sell {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          width: 100%;
+
+          p {
+            display: block;
+          }
+
+          h2 {
+            padding: 10px 10px;
+            font-size: 24px;
+            color: black;
+            font-width: bold;
+          }
+        }
+
+        &--info {
+          display: flex;
+          flex-direction: column;
+
+          &__basket {
+            //display: none;
+          }
+
+          h2 {
+            text-align: center;
+            font-size: 15px;
+            padding: 10px 0;
+          }
+
+          &__about {
+            text-align: center;
+
+            h1 {
+              font-size: 15px;
+              text-align: center;
+            }
+
+            h3 {
+              text-align: center;
+              font-size: 14px;
+              width: 100%;
+            }
+
+            &--inputs {
+              text-align: center;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            &--check {
+              width: 80%;
+            }
+
+            button {
+              font-size: 14px;
+            }
+          }
+
+          &__choose {
+            text-align: center;
+
+            h1 {
+              font-size: 14px;
+              padding: 10px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    #basket {
+      .basket {
+        &--block {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 90%;
+
+          &__order {
+            font-size: 18px;
+
+            span {
+              display: none;
+            }
+          }
+
+          p {
+            font-size: 12px;
+            display: block;
+          }
+        }
+
+        &--sell {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          width: 100%;
+
+          p {
+            display: block;
+          }
+
+          h2 {
+            padding: 10px 10px;
+            font-size: 24px;
+            color: black;
+            font-width: bold;
+          }
+        }
+
+        &--info {
+          display: flex;
+          flex-direction: column;
+
+          &__basket {
+            display: none;
+          }
+
+          h2 {
+            text-align: center;
+            font-size: 15px;
+            padding: 10px 0;
+          }
+
+          &__about {
+            text-align: center;
+
+            h1 {
+              font-size: 15px;
+              text-align: center;
+            }
+
+            h3 {
+              text-align: center;
+              font-size: 14px;
+              width: 100%;
+            }
+
+            &--inputs {
+              text-align: center;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            &--check {
+              width: 80%;
+            }
+
+            button {
+              font-size: 14px;
+            }
+          }
+
+          &__choose {
+            text-align: center;
+
+            h1 {
+              font-size: 14px;
+              padding: 10px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 450px) {
+    #basket {
+      .basket {
+        &--block {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 90%;
+
+          &__order {
+            font-size: 18px;
+
+            span {
+              display: none;
+            }
+          }
+
+          p {
+            font-size: 12px;
+            display: block;
+          }
+        }
+
+        &--sell {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          width: 100%;
+
+          p {
+            display: block;
+          }
+
+          h2 {
+            padding: 10px 10px;
+            font-size: 24px;
+            color: black;
+            font-width: bold;
+          }
+        }
+
+        &--info {
+          display: flex;
+          flex-direction: column;
+
+          &__basket {
+            display: none;
+          }
+
+          h2 {
+            text-align: center;
+            font-size: 15px;
+            padding: 10px 0;
+          }
+
+          &__about {
+            text-align: center;
+
+            h1 {
+              font-size: 15px;
+              text-align: center;
+            }
+
+            h3 {
+              text-align: center;
+              font-size: 14px;
+              width: 100%;
+            }
+
+            &--inputs {
+              text-align: center;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            &--check {
+              width: 80%;
+            }
+
+            button {
+              font-size: 14px;
+            }
+          }
+
+          &__choose {
+            text-align: center;
+
+            h1 {
+              font-size: 14px;
+              padding: 10px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 425px) {
+    #basket {
+      .basket {
+        &--block {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 90%;
+
+          &__order {
+            font-size: 18px;
+
+            span {
+              display: none;
+            }
+          }
+
+          p {
+            font-size: 12px;
+            display: block;
+          }
+        }
+
+        &--sell {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          width: 100%;
+
+          p {
+            display: block;
+          }
+
+          h2 {
+            padding: 10px 10px;
+            font-size: 24px;
+            color: black;
+            font-width: bold;
+          }
+        }
+
+        &--info {
+          display: flex;
+          flex-direction: column;
+
+          h2 {
+            text-align: center;
+            font-size: 15px;
+            padding: 10px 0;
+          }
+
+          &__about {
+            text-align: center;
+
+            h1 {
+              font-size: 15px;
+              text-align: center;
+            }
+
+            h3 {
+              text-align: center;
+              font-size: 14px;
+              width: 100%;
+            }
+
+            &--inputs {
+              text-align: center;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            &--check {
+              width: 80%;
+            }
+
+            button {
+              font-size: 14px;
+            }
+          }
+
+          &__choose {
+            text-align: center;
+
+            h1 {
+              font-size: 14px;
+              padding: 10px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    #basket {
+      .basket {
+        &--block {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 90%;
+
+          &__order {
+            font-size: 18px;
+
+            span {
+              display: none;
+            }
+          }
+
+          p {
+            font-size: 12px;
+            display: block;
+          }
+        }
+
+        &--sell {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          width: 100%;
+
+          p {
+            display: block;
+          }
+
+          h2 {
+            padding: 10px 10px;
+            font-size: 24px;
+            color: black;
+            font-width: bold;
+          }
+        }
+
+        &--info {
+          display: flex;
+          flex-direction: column;
+
+          h2 {
+            text-align: center;
+            font-size: 15px;
+            padding: 10px 0;
+          }
+
+          &__about {
+            text-align: center;
+
+            h1 {
+              font-size: 15px;
+              text-align: center;
+            }
+
+            h3 {
+              text-align: center;
+              font-size: 14px;
+              width: 100%;
+            }
+
+            &--inputs {
+              text-align: center;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            &--check {
+              width: 80%;
+            }
+
+            button {
+              font-size: 14px;
+            }
+          }
+
+          &__choose {
+            text-align: center;
+
+            h1 {
+              font-size: 14px;
+              padding: 10px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    #basket {
+      .basket {
+        &--block {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 90%;
+
+          &__order {
+            font-size: 18px;
+
+            span {
+              display: none;
+            }
+          }
+
+          p {
+            font-size: 12px;
+            display: block;
+          }
+        }
+
+        &--sell {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          width: 100%;
+
+          p {
+            display: block;
+          }
+
+          h2 {
+            padding: 10px 10px;
+            font-size: 24px;
+            color: black;
+            font-width: bold;
+          }
+        }
+
+        &--info {
+          display: flex;
+          flex-direction: column;
+
+          h2 {
+            text-align: center;
+            font-size: 15px;
+            padding: 10px 0;
+          }
+
+          &__about {
+            text-align: center;
+
+            h1 {
+              font-size: 15px;
+              text-align: center;
+            }
+
+            h3 {
+              text-align: center;
+              font-size: 14px;
+              width: 100%;
+            }
+
+            &--inputs {
+              text-align: center;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            &--check {
+              width: 80%;
+            }
+
+            button {
+              font-size: 14px;
+            }
+          }
+
+          &__choose {
+            text-align: center;
+
+            h1 {
+              font-size: 14px;
+              padding: 10px 0;
+            }
+
+            .small {
+              width: 90%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 320px) {
+    #basket {
+      .basket {
+        &--block {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+
+          p {
+            font-size: 12px;
+          }
+
+          h1 {
+            font-size: 14px;
+          }
+
+          &__order {
+            span {
+              display: none;
+            }
+          }
+        }
+
+        &--sell {
+          padding: 20px 0;
+          text-align: center;
+
+          p {
+          }
+
+          h2 {
+            padding: 0 10px;
+            font-size: 20px;
+            color: black;
+            font-width: bold;
+          }
+        }
+
+        &--info {
+          display: flex;
+          flex-direction: column;
+
+          h2 {
+            text-align: center;
+            font-size: 15px;
+            padding: 10px 0;
+          }
+
+          &__about {
+            text-align: center;
+
+            h1 {
+              font-size: 15px;
+              text-align: center;
+            }
+
+            h3 {
+              text-align: center;
+              font-size: 14px;
+              width: 100%;
+            }
+
+            &--inputs {
+              text-align: center;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            &--check {
+              width: 80%;
+            }
+
+            button {
+              font-size: 14px;
+            }
+          }
+
+          &__choose {
+            text-align: center;
+
+            small {
+              padding: 10px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
 
 
 

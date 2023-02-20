@@ -5,6 +5,7 @@ import {backend} from "../backend";
 import {useDispatch, useSelector} from "react-redux";
 import {GET_BASKET} from "../../redux/ActionTypes";
 
+
 const DetailPage = () => {
     const {id} = useParams()
     const dispatch = useDispatch()
@@ -19,16 +20,41 @@ const DetailPage = () => {
     const [colorBlue , setColorBlue] = useState(false)
     const [colorRed , setColorRed] = useState(false)
     const [colorWhite , setColorWhite] = useState(false)
+    const [green,setGreen] =useState(false)
+    const [trueSize,setTrueSize] =useState(false)
+    const [trueColor,setTrueColor] =useState(false)
+
     const detail = backend[id-1]
+    const XL = sizeXL ? "XL": ""
+    const XXL = sizeXXL ? "XXL": ""
+    const S = sizeS ? "S": ""
+    const C = sizeC ? "C": ""
+    const XS = sizeXS ? "XS": ""
+    const black = colorBlack ? "Черный" : ""
+    const red = colorRed && "Красный"
+    const blue = colorBlue ? "Синий" : ""
+    const white = colorWhite ? "Белый" : ""
+    const [textSize, setTextSize] = useState("")
     const addToBasket = () => {
-        setGreen(true)
-        setTimeout(() => {
-            setGreen(false)
-        },1100);
+        if (sizeS || sizeXXL || sizeC || sizeXL || sizeXS){
+            if (colorWhite || colorBlue || colorRed || colorBlack){
+                setGreen(true)
+                setTimeout(() => {
+                    setGreen(false)
+                },1100);
 
-        dispatch({type:GET_BASKET, payload:detail})
+                dispatch({type:GET_BASKET, payload:detail})
+            }
+            else{
 
-    }
+            }
+            }
+        else{
+
+            }
+        }
+
+
 
     const windowUp = () => {
         window.scrollTo({
@@ -40,8 +66,7 @@ const DetailPage = () => {
     useEffect(() => {
         windowUp()
     },[detail])
-    const [green,setGreen] =useState(false)
-
+    console.log(sizeXL)
 
     return (
         <div id="detail-page">
@@ -53,57 +78,81 @@ const DetailPage = () => {
                    <div className="detail-page--desc">
                        <h2>{detail.title}</h2>
                        <h6>{detail.price} СОМ</h6>
-                       <h5>Таблица размеров:</h5>
-                       <div className="detail-page--desc--size">
-                           <button onClick={() => setSizeXL(!sizeXL)} style={{
+                        <h5>Таблица размеров: <span>{XL || XXL || XS || S || C}</span></h5>
+                       <div className="detail-page--desc--size" >
+                           <button className="XL"
+                               onClick={() => setSizeXL(!sizeXL) || setSizeXS(false)
+                                || setSizeS(false) || setSizeC(false) || setSizeXXL(false) }
+                               style={{
                                border: sizeXL ? "1px solid #FF005C" : "",
                                color: sizeXL ? "#FF005C" : ""
                            }}>XL</button>
-                           <button onClick={() => setSizeXXL(!sizeXXL) }
+                           <button className="XXL"
+                               onClick={() => setSizeXXL(!sizeXXL) || setSizeXS(false)
+                               || setSizeS(false) || setSizeC(false) || setSizeXL(false)}
                                    style={{
                                        border: sizeXXL ? "1px solid #FF005C" : "",
                                        color: sizeXXL ? "#FF005C" : ""
                                    }}>XXL</button>
-                           <button onClick={() => setSizeC(!sizeC)} style={{
+                           <button className="C"
+                               onClick={() => setSizeC(!sizeC)|| setSizeXS(false)
+                               || setSizeS(false) || setSizeXL(false) || setSizeXXL(false)} style={{
                                border: sizeC ? "1px solid #FF005C" : "",
                                color: sizeC ? "#FF005C" : ""
                            }}>C</button>
-                           <button onClick={()=> setSizeS(!sizeS)} style={{
+                           <button className={"S"}
+                               onClick={()=> setSizeS(!sizeS)|| setSizeXS(false)
+                               || setSizeXL(false) || setSizeC(false) || setSizeXXL(false)} style={{
                                        border: sizeS ? "1px solid #FF005C" : "",
                                        color: sizeS ? "#FF005C" : ""
                                    }}>S</button>
-                           <button onClick={()=> setSizeXS(!sizeXS)} style={{
+                           <button  className={"XS"}
+                               onClick={()=> setSizeXS(!sizeXS)|| setSizeXL(false)
+                               || setSizeS(false) || setSizeC(false) || setSizeXXL(false)} style={{
                                        border: sizeXS ? "1px solid #FF005C" : "",
                                        color: sizeXS ? "#FF005C" : ""
                                    }}>XS</button>
                        </div>
-                       <p>Цвет:</p>
+                       <p>Цвет: <span>{black || blue || red || white}</span></p>
                        <div className="detail-page--desc--color">
 
                            <button style={{
                                background:"black",
                                   color:"black",
                                border: colorBlack ? "2px solid #FF005C" : "",
-                           }} onClick={() => setColorBlack(!colorBlack)}
-                           >черный</button>
+                           }} onClick={() => setColorBlack(!colorBlack) ||
+                               setColorWhite(false) ||
+                               setColorBlue(false) ||
+                               setColorRed(false)}
+                           ></button>
                            <button style={{
                                background:"blue",
                                color:"blue",
                                border: colorBlue ? "2px solid #FF005C" : "",
                            }}
-                           onClick={() => setColorBlue(!colorBlue)}>синий</button>
+                           onClick={() => setColorBlue(!colorBlue) ||
+                               setColorWhite(false) ||
+                               setColorBlack(false) ||
+                               setColorRed(false)
+                           }></button>
                            <button style={{
                                background:"red",
                                color:"red",
                                border: colorRed ? "2px solid #000" : "",
                            }}
-                           onClick={() => setColorRed(!colorRed)}>красный</button>
+                           onClick={() => setColorRed(!colorRed) ||
+                               setColorWhite(false) ||
+                               setColorBlue(false) ||
+                               setColorBlack(false)}></button>
                            <button  style={{
                                background:"white",
                                color:"white",
                                border: colorWhite ? "2px solid #FF005C" : "",
                            }}
-                           onClick={() => setColorWhite(!colorWhite)}>белый</button>
+                           onClick={() => setColorWhite(!colorWhite) ||
+                               setColorBlack(false) ||
+                               setColorBlue(false) ||
+                               setColorRed(false)}></button>
 
 
 
@@ -118,10 +167,24 @@ const DetailPage = () => {
                                                border:green ? "none" : "2px solid #FF005C"
                                            }}>{green ? "Добавлено" : "Перейти в корзину"}</button>
                                    :
-                                   <button onClick={() => addToBasket() } className="detail-page--desc--btn--one">
-                                       Добавить в корзину <span>{}</span>
-                                   </button>
+                                        <button onClick={() => addToBasket()}
+                                                 className={sizeS || sizeXXL || sizeC || sizeXL || sizeXS ? "detail-page--desc--btn--one size  color" : "detail-page--desc--btn--one"}>
+                                           Добавить в корзину
+                               </button>
                            }
+                           {
+                               sizeS || sizeXXL || sizeC || sizeXL || sizeXS ? "" :
+                               <div className={"size"} >
+                                   <div className={"size--span"}>Пожалуйства выберите размер!</div>
+                               </div>
+                           }
+                           {
+                               colorWhite || colorBlue || colorRed || colorBlack ? "" :
+                               <div className={"color"} >
+                                   <div className={"color--span"}>Пожалуйства выберите цвет!</div>
+                               </div>
+                           }
+
                            <button className="detail-page--desc--btn--two">Купить сейчас</button>
                        </div>
                    </div>
