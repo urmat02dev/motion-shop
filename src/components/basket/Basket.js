@@ -2,13 +2,11 @@ import React from 'react';
 import "./Basket.scss"
 import {useDispatch, useSelector} from "react-redux";
 import {DELETE_FROM_BASKET} from "../../redux/ActionTypes";
-import {keyboard} from "@testing-library/user-event/dist/keyboard";
 import BasketProducts from "./BasketProducts";
 
 const Basket = () => {
     const dispatch = useDispatch()
     const {basket} = useSelector(state => state)
-    console.log(basket.map(el=>  el.id))
     const decreaseQuantity = () => {
         dispatch({type:DELETE_FROM_BASKET, payload:basket.map(el=> el.id)})
     }
@@ -70,7 +68,7 @@ const Basket = () => {
                             </div>
                         </div>
                         <div className="basket--info__group">
-                                <BasketProducts />
+                                <BasketProducts  />
                         </div>
                     </div>
                 </div>

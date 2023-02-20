@@ -1,5 +1,5 @@
 import {DECREASE_QUANTITY, DELETE_FROM_BASKET, GET_BASKET, GET_PRODUCT, INCREASE_QUANTITY} from "../ActionTypes";
-import products from "../../components/main-page/products/Products";
+
 
 
 const initialState ={
@@ -8,7 +8,6 @@ const initialState ={
 
 }
 
-console.log(initialState.products)
 export const MainReducer = (state = initialState, action) => {
     switch (action.type) {
         case GET_PRODUCT:
