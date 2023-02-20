@@ -7,6 +7,7 @@
       font-size: 40px;
       line-height: 48px;
       color: #72072D;
+      z-index: 1;
     }
     &--hover{
       .menu--categories{
@@ -19,6 +20,7 @@
         .man{
           position: relative;
           margin-bottom: 20px;
+          left:0;
           width: 285px;
           height: 67px;
           border: none;
@@ -60,6 +62,7 @@
         }
         .woman{
           position: relative;
+          left: 330px;
           margin-bottom: 20px;
           width: 285px;
           height: 67px;
@@ -102,6 +105,7 @@
         }
         .kids{
           position: relative;
+          left: 670px;
           margin-bottom: 20px;
           width: 285px;
           height: 67px;
@@ -144,6 +148,7 @@
         }
         .shoes{
           position: relative;
+          left: 990px;
           margin-bottom: 20px;
           width: 285px;
           height: 67px;
@@ -185,9 +190,10 @@
           }
         }
         &--man{
-          position: relative;
+          position: absolute;
           width: 285px;
           height: 67px;
+          left: 0;
           border-radius: 10px;
           transition: all .5s ease-in-out;
           background: url("../../assets/img/man__hover.png") no-repeat;
@@ -240,9 +246,10 @@
           }
         }
         &--woman{
-          position: relative;
+          position: absolute;
           width: 285px;
           height: 67px;
+          left: 335px;
           border-radius: 10px;
           transition: all .5s ease-in-out;
           background: url("../../assets/img/woman__hover.png") no-repeat;
@@ -290,9 +297,10 @@
           }
         }
         &--kids{
-          position: relative;
+          position: absolute;
           width: 285px;
           height: 67px;
+          left: 670px;
           border-radius: 10px;
           transition: all .5s ease-in-out;
           background: url("../../assets/img/kids__hover.png") no-repeat;
@@ -300,7 +308,7 @@
           &:hover{
             background: url("../../assets/img/children.png") no-repeat;
             height: 232px;
-            z-index: 10;
+            z-index: 3;
           }
 
           &--fon{
@@ -340,9 +348,10 @@
           }
         }
         &--shoes{
-          position: relative;
+          position: absolute;
           width: 285px;
           height: 67px;
+          left: 990px;
           transition: all .5s ease-in-out;
           background: url("../../assets/img/shoes__hover.png") no-repeat;
           z-index: 10;
@@ -416,27 +425,35 @@
 @media (max-width: 1200px) {
   #categories .categories--hover .menu--categories .man{
     width: 250px;
-  }
-  #categories .categories--hover .menu--categories--man{
-    width: 250px;
-  }
-  #categories .categories--hover .menu--categories--woman{
-    width: 250px;
+    left: 0;
   }
   #categories .categories--hover .menu--categories .woman{
     width: 250px;
-  }
-  #categories .categories--hover .menu--categories--kids{
-    width: 250px;
+    left: 278px;
   }
   #categories .categories--hover .menu--categories .kids{
     width: 250px;
-  }
-  #categories .categories--hover .menu--categories--shoes{
-    width: 250px;
+    left: 553px;
   }
   #categories .categories--hover .menu--categories .shoes{
     width: 250px;
+    left: 820px;
+  }
+  #categories .categories--hover .menu--categories--man{
+    width: 250px;
+    left: 0;
+  }
+  #categories .categories--hover .menu--categories--woman{
+    width: 250px;
+    left: 278px;
+  }
+  #categories .categories--hover .menu--categories--kids{
+    width: 250px;
+    left: 553px;
+  }
+  #categories .categories--hover .menu--categories--shoes{
+    width: 250px;
+    left: 820px;
   }
 }
 @media (max-width: 1024px) {
@@ -451,40 +468,96 @@
   #categories .categories--hover .menu--categories--woman{
     width: 220px;
     height: 55px;
+    left: 247px;
   }
   #categories .categories--hover .menu--categories .woman{
     width: 220px;
     height: 55px;
+    left: 247px;
   }
   #categories .categories--hover .menu--categories--kids{
     width: 220px;
     height: 55px;
+    left: 490px;
   }
   #categories .categories--hover .menu--categories .kids{
     width: 220px;
     height: 55px;
+    left: 490px;
   }
   #categories .categories--hover .menu--categories--shoes{
     width: 220px;
     height: 55px;
+    left: 730px;
   }
   #categories .categories--hover .menu--categories .shoes{
     height: 55px;
     width: 220px;
-
+    left: 730px;
   }
 
 }
 @media (max-width: 992px) {
+  #categories .categories--hover .menu--categories .man{
+    width: 200px;
+    height: 50px;
+  }
+  #categories .categories--hover .menu--categories--man{
+    width: 200px;
+    height: 50px;
+  }
+  #categories .categories--hover .menu--categories--woman{
+    width: 200px;
+    height: 50px;
+    left: 235px;
+  }
+  #categories .categories--hover .menu--categories .woman{
+    width: 200px;
+    height: 50px;
+    left: 235px;
+  }
+  #categories .categories--hover .menu--categories--kids{
+    width: 200px;
+    height: 50px;
+    left: 470px;
+  }
+  #categories .categories--hover .menu--categories .kids{
+    width: 200px;
+    height: 50px;
+    left: 470px;
+  }
+  #categories .categories--hover .menu--categories--shoes{
+    width: 200px;
+    height: 50px;
+    left: 705px;
+  }
+  #categories .categories--hover .menu--categories .shoes{
+    width: 200px;
+    height: 50px;
+    left: 705px;
+  }
+
 }
 @media (max-width: 768px) {
   #categories .categories--hover .menu--categories{
     display: none;
   }
+  #categories .categories h1{
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
 }
 @media (max-width: 576px) {
+  #categories .categories h1{
+    font-size: 30px;
+  }
 }
 @media (max-width: 450px) {
+  #categories .categories h1{
+    font-size: 25px;
+  }
+
 }
 @media (max-width: 400px) {
 }

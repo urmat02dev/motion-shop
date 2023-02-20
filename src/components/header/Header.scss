@@ -246,7 +246,7 @@
     background: #fff;
     z-index: 50;
     transition: all 2s ease;
-    animation: menuLeft 2s alternate;
+    animation: menuLeft .7s alternate;
     @keyframes menuLeft {
       0% {
         left: -1000px;
@@ -499,6 +499,7 @@
     @keyframes close {
       0% {
         left: 0;
+        z-index: 999;
       }
 
       100% {
@@ -813,4 +814,5 @@
     width: 95%;
     margin: 10px 2px;
   }
+
 }

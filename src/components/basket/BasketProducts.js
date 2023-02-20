@@ -3,7 +3,7 @@ import "./Basket.scss"
 import {useDispatch, useSelector} from "react-redux";
 import {DELETE_FROM_BASKET, GET_BASKET, INCREASE_QUANTITY} from "../../redux/ActionTypes";
 
-const BasketProducts = () => {
+const BasketProducts = ({key}) => {
 
     const dispatch = useDispatch()
     const {basket} = useSelector(state => state)
@@ -19,7 +19,8 @@ const BasketProducts = () => {
     return (
         <>
         {
-        basket.map(el  => (
+        basket.map(el=>  (
+
         <div className="basket--info__group__card">
             <div className="basket--info__basket__card--img">
                 <img src={el.image} width={150} height={180} alt=""/></div>

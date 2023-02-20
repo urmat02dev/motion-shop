@@ -242,6 +242,10 @@
     display: block;
 
   }
+  #products .products .products--card{
+    height: 360px;
+  }
+
 }
 
 @media (max-width: 576px){
@@ -308,6 +312,8 @@
     height: 35px;
     font-size: 14px;
   }
-
+  #products .products h2{
+    font-size: 28px;
+  }
 }
 
