@@ -18,7 +18,6 @@ const Products = () => {
     useEffect(()=> {
         dispatch({type:GET_PRODUCT,payload: backend})
     },[])
-    console.log(products)
     return (
         
         <div id="products">
