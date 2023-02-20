@@ -515,16 +515,17 @@
       &--block {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         width: 90%;
         &__order {
-          font-size: 18px;
+          font-size: 20px;
           span {
-            display: none;
+            display: block;
+            padding-left: 20px;
           }
         }
         p {
-          font-size: 12px;
+          font-size: 14px;
           display: block;
         }
       }
@@ -539,7 +540,7 @@
         }
         h2 {
           padding: 10px 10px;
-          font-size: 24px;
+          font-size: 26px;
           color: black;
           font-width: bold;
         }
@@ -552,18 +553,29 @@
         }
         h2 {
           text-align: center;
-          font-size: 15px;
+          font-size: 24px;
           padding: 10px 0;
         }
         &__about {
           text-align: center;
+          small {
+            padding: 20px 0;
+          }
+          textarea {
+            width: 100%;
+            margin: 17px 0;
+          }
+          &--card {
+            text-align: center;
+            width: 78%;
+          }
           h1 {
-            font-size: 15px;
+            font-size: 17px;
             text-align: center;
           }
           h3 {
             text-align: center;
-            font-size: 14px;
+            font-size: 25px;
             width: 100%;
           }
           &--inputs {
@@ -577,15 +589,21 @@
             width: 80%;
           }
           button {
-            font-size: 14px;
+            font-size: 17px;
           }
         }
         &__choose {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           text-align: center;
           h1 {
-            font-size: 14px;
+            font-size: 17px;
             padding: 10px 0;
           }
+        }
+        &__group {
+          text-align: center;
         }
       }
     }
