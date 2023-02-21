@@ -22,8 +22,8 @@
           border-top: 1px solid #72072D;
 
           h1 {
-            font-size: 16px;
-            font-weight: 200;
+            font-size: 17px;
+            font-weight: 450;
             color: black;
             padding: 15px 0 10px 0;
             width: 80%;
@@ -60,9 +60,9 @@
             transition: 1s;
 
             &--paragraph {
-              font-size: 15px;
-              color: black;
-              font-weight: 200;
+              font-size: 16px;
+              color: #72072D;
+              font-weight: 400;
             }
           }
         }
@@ -75,8 +75,8 @@
           border-bottom: 1px solid #72072D;
 
           h1 {
-            font-size: 16px;
-            font-weight: 200;
+            font-size: 17px;
+            font-weight: 450;
             color: black;
             padding: 15px 0 10px 0;
             width: 80%;
@@ -101,9 +101,9 @@
             transition: 1s;
 
             &--paragraph {
-              font-size: 15px;
-              color: black;
-              font-weight: 200;
+              font-size: 16px;
+              color: #72072D;
+              font-weight: 400;
             }
           }
         }
@@ -232,16 +232,19 @@
       &--text {
         padding: 40px 0 40px 40px;
       }
-      &--center{
+
+      &--center {
         width: 95%;
-        &__card{
-          &--provide{
-            h1{
+
+        &__card {
+          &--provide {
+            h1 {
               font-size: 11px;
             }
           }
-          &--provide2{
-            h1{
+
+          &--provide2 {
+            h1 {
               font-size: 11px;
             }
           }
@@ -299,8 +302,8 @@
     font-size: 8px;
   }
   #questions .questions--center__card--provide2 h1 {
-     font-size: 8px;
-   }
+    font-size: 8px;
+  }
   #questions .questions--text {
     font-size: 16px;
   }
@@ -314,6 +317,6 @@
     margin: 0 15px 10px 0;
   }
   #questions .questions--center__card--provide2 h1 {
-     margin: 0 15px 10px 0;
-   }
+    margin: 0 15px 10px 0;
+  }
 }
