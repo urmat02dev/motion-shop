@@ -15,7 +15,8 @@ export const MainReducer = (state = initialState, action) => {
         case GET_BASKET :
             const foundProduct = state.basket.find(el => el.id === action.payload.id)
             if (foundProduct) {
-                return{...state, basket: state.basket.map(el => el.id === foundProduct.id ? {...el, quantity: el.quantity + 1} : el)}
+                return{...state, basket: state.basket.map(el => el.id === foundProduct.id ?
+                      {...el, quantity: el.quantity + 1} : el)}
             } else {
                 return {...state, basket: [...state.basket, {...action.payload, quantity: 1}]}
             }
@@ -28,8 +29,9 @@ export const MainReducer = (state = initialState, action) => {
         }
 
         case INCREASE_QUANTITY :
-            const foundPro = state.basket.find(el => el.id === action.payload.id)
-            return{...state, basket: state.basket.map(el => el.id === foundPro.id ? {...el, quantity: el.quantity + 1} : el)}
+
+            return{...state, basket: state.basket.map(el => el.id === action.payload ?
+                  {...el,quantity:el.quantity+1} : el)}
         case DECREASE_QUANTITY :
         return{...state, basket: state.basket.map(el => {
             if (el.id === action.payload) {
