@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {BsSearch} from "react-icons/bs";
 import {SlBasket} from "react-icons/sl";
 import "./Header.scss"
@@ -11,10 +11,22 @@ import {CgArrowLongRight} from "react-icons/cg";
 import {NavLink} from "react-router-dom";
 import Search from "./Search";
 const BurgerMenu = ({burger, setBurger}) => {
-    const [input, setInput] = useState(false)
+    const [input, setInput] = useState('')
+    const [search, setSearch] = useState(false)
+
+    let textInput = React.createRef()
+
+    const showInput = () =>{
+        setInput(textInput.current.value)
+    }
+
+    useEffect(() => {
+        localStorage.setItem("text", JSON.stringify(input))
+    },[input])
+
     return (
         <>
-            <Search input={input} setInput={setInput}/>
+            <Search search={search} setSearch={setSearch}/>
             <div id="burger-menu">
                 <div className="burger-menu">
                     <div className="burger-menu--menu" onClick={() => setBurger(!burger)}>
@@ -29,7 +41,7 @@ const BurgerMenu = ({burger, setBurger}) => {
                         </div>
                     </NavLink>
                     <div className="burger-menu--icons">
-                        <BsSearch className='search' onClick={() => setInput(!input)}/>
+                        <BsSearch className='search' onClick={() => setSearch(!search)}/>
                         <NavLink to={"/basket"}><SlBasket className='logo'/></NavLink>
                     </div>
 

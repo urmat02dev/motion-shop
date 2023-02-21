@@ -10,6 +10,9 @@ import Man from "./components/categories/Man";
 import Woman from "./components/categories/Woman";
 import Kids from "./components/categories/Kids";
 import Shoes from "./components/categories/Shoes";
+import Search from "./components/header/Search";
+import SearchResult from "./components/header/SearchResult";
+import BasketProducts from "./components/basket/BasketProducts";
 function App() {
   return (
     <>
@@ -23,6 +26,8 @@ function App() {
                 <Route path="/categories/woman" element={<Woman/>}/>
                 <Route path="/categories/kids" element={<Kids/>}/>
                 <Route path="/categories/shoes" element={<Shoes/>}/>
+                <Route path="/search" element={<SearchResult/>}/>
+                <Route path="/basket/product" element={<BasketProducts/>}/>
                 <Route path={"/detail-page/:id"} element={<DetailPage/>}/>
             </Routes>
 

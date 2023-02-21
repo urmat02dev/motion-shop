@@ -41,21 +41,18 @@ const DetailPage = () => {
                 setGreen(true)
                 setTimeout(() => {
                     setGreen(false)
-                }, 1100);
+                }, 2000);
 
                 dispatch({type: GET_BASKET, payload: detail})
-            } else {
 
+
+            } else {
             }
         } else {
 
         }
     }
-if (true){
-    if (true){
 
-    }
-}
 
     const windowUp = () => {
         window.scrollTo({
@@ -172,18 +169,19 @@ if (true){
                                             }}>{green ? "Добавлено" : "Перейти в корзину"}</button>
                                     :
                                     <button onClick={() => addToBasket()}
-                                            className={sizeS || sizeXXL || sizeC || sizeXL || sizeXS ? "detail-page--desc--btn--one size  color" : "detail-page--desc--btn--one"}>
+                                            className="detail-page--desc--btn--one">
                                         Добавить в корзину
                                     </button>
                             }
                             {
-                                sizeS || sizeXXL || sizeC || sizeXL || sizeXS ? "" :
-                                    <div className={"size"}>
-                                        <div className={"size--span"}>Пожалуйства выберите размер!</div>
-                                    </div>
+                                  sizeS || sizeXXL || sizeC || sizeXL || sizeXS  ? "" :
+                                  <div className={"size"}>
+                                      <div className={"size--span"}>Пожалуйства выберите размер!</div>
+                                  </div>
                             }
+
                             {
-                                colorWhite || colorBlue || colorRed || colorBlack ? "" :
+                                colorWhite || colorBlue || colorRed || colorBlack  ? "" :
                                     <div className={"color"}>
                                         <div className={"color--span"}>Пожалуйства выберите цвет!</div>
                                     </div>
@@ -197,20 +195,6 @@ if (true){
                 <div className="detail-description">
                     <h1>Описание</h1>
                     <p>{detail.description}</p>
-                    <div>
-                        <button>
-                            <button>
-                                <button>
-
-                                </button>
-                            </button>
-                        </button>
-                    </div>
-                </div>
-                <div>
-                    <p>
-
-                    </p>
                 </div>
             </div>
         </div>

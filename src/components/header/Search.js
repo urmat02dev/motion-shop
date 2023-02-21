@@ -1,11 +1,27 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import "./Search.scss"
-const Search = ({input,setInput}) => {
+import {BsSearch} from "react-icons/bs";
+import {NavLink} from "react-router-dom";
+const Search = ({search}) => {
+  const [input, setInput] = useState('')
 
-    return (
+  let textInput = React.createRef()
+
+  const showInput = () =>{
+    setInput(textInput.current.value)
+  }
+
+  useEffect(() => {
+    localStorage.setItem("text", JSON.stringify(input))
+  },[input])
+  console.log(input)
+  return (
         <div className="input">
-                <div className={input ? "input-input" : "close" }>
-                    <input type="search" placeholder="Я ищу..."/>
+                <div className={search ? "input-input" : "close" }>
+                    <input onInput={showInput} ref={textInput} type={"text"} placeholder="Я ищу..."/>
+                    <NavLink to={"/search"}>
+                      <BsSearch/>
+                    </NavLink>
                 </div>
         </div>
     );

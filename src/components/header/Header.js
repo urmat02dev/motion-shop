@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import "./Header.scss"
 import {HiOutlineQuestionMarkCircle} from "react-icons/hi";
 import {IoIosPaper} from "react-icons/io";
@@ -7,8 +7,12 @@ import {BsSearch} from "react-icons/bs";
 import {NavLink} from "react-router-dom";
 import BurgerMenu from "./BurgerMenu";
 
+
 const Header = () => {
     const [burger, setBurger] = useState(false)
+  const [input, setInput] = useState('')
+
+  let textInput = React.createRef()
     return (
         <>
 
@@ -24,8 +28,12 @@ const Header = () => {
 
 
                                 <div className="header--search">
-                                    <input type="search" placeholder="Я ищу.." />
-                                    <BsSearch className='search'/>
+                                    <input type="search" onChange={(e) => {
+                                    return e.target.value}
+                                    }  placeholder="Я ищу.." />
+                                    <NavLink to={"/search"}>
+                                      <BsSearch className='search'/>
+                                    </NavLink>
 
 
                                 </div>

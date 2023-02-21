@@ -1,50 +1,62 @@
 import React from 'react';
 import "./Basket.scss"
 import {useDispatch, useSelector} from "react-redux";
-import {DELETE_FROM_BASKET, GET_BASKET, INCREASE_QUANTITY} from "../../redux/ActionTypes";
+import {
+    DECREASE_QUANTITY,
+    DELETE_FROM_BASKET,
+    GET_BASKET,
+    INCREASE_QUANTITY
+} from "../../redux/ActionTypes";
+import {backend} from "../backend";
+import {useParams} from "react-router-dom";
 
-const BasketProducts = ({key}) => {
-
+const BasketProducts = () => {
+    const {id} = useParams()
     const dispatch = useDispatch()
     const {basket} = useSelector(state => state)
     const {products} = useSelector(state => state)
+    console.log(basket)
+
     const deleteBasket = (el) => {
         dispatch({type:DELETE_FROM_BASKET, payload:el.id})
     }
-    const increaseQuantity = (basket) => {
-        dispatch({type:INCREASE_QUANTITY, payload:basket })
+    const increaseQuantity = (el) => {
+        dispatch({type:INCREASE_QUANTITY, payload: el.id })
+    }
+    const decreaseQuantity = (el) => {
+        dispatch({type:DECREASE_QUANTITY, payload: el.id})
     }
 
 
     return (
         <>
         {
-        basket.map(el=>  (
+        basket.map((el,index)=>  {
+            return <div key={index} className="basket--third--card">
+                <div className="basket--third--card--img">
+                    <img src={el.image} width={150} height={180} alt=""/></div>
+                <div className="basket--third--card--desc">
+                    <h1>{el.title}</h1>
+                    <h2>Опции: <span></span></h2>
+                    <h3>{el.price * el.quantity} СОМ</h3>
+                    <div className="basket--third--card--count">
 
-        <div className="basket--info__group__card">
-            <div className="basket--info__basket__card--img">
-                <img src={el.image} width={150} height={180} alt=""/></div>
-            <div className="basket--info__group__card--info">
-                <h1>{el.title}</h1>
-                <h2>Опции:</h2>
-                <h3>{el.price} СОМ</h3>
-                <div className="basket--info__group__card--info--quantity">
-
-                    <div className="count">
-                        <button >-</button>
+                        <div className="count">
+                            <button onClick={() => decreaseQuantity(el)}>-</button>
+                        </div>
+                        <div>{el.quantity}</div>
+                        <div className="count">
+                            <button onClick={()=> increaseQuantity(el)}>+</button>
+                        </div>
                     </div>
-                    <div>{el.quantity}</div>
-                    <div className="count">
-                        <button onClick={()=> increaseQuantity(basket)}>+</button>
-                    </div>
-                </div>
-                <button className="basket--info__group__card--info--delete"
-                    onClick={() => deleteBasket(el)}>
+                    <button className="basket--third--card--delete"
+                            onClick={() => deleteBasket(el)}>
                         Удалить
-                </button>
+                    </button>
+                </div>
             </div>
-        </div>
-    ))
+        })
+
         }
         </>
 
