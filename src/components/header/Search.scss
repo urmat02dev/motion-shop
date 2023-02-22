@@ -6,244 +6,55 @@
     top: 66px;
     left: 270px;
     z-index: 99;
-    animation: input .7s ease-in-out;
-    @keyframes input {
-      0%{
-        left: -500px;
-      }
-      100%{
-        top: 66px;
-        left: 270px;
-      }
-    }
+    transition:all 1.3s ease-in-out ;
 
     input{
-      background: linear-gradient(90deg, #72072D 0%, #FF005C 100%);
+      background: white;
       border-radius: 10px;
-      border: 1px solid white;
-      width: 200px;
-      height: 40px;
-      padding-left: 10px;
-      color: white;
+      border: 2px solid #FF00C7;
+      width: 350px;
+      height: 38px;
+      color: rgba(56, 6, 44, 0.87);
+      padding-left: 15px;
+      font-size: 20px;
       outline: white;
 
 
     }
     ::placeholder {
-      color: white;
+      color: rgba(255, 0, 199, 0.93);
     }
   }
-  .close{
-    position: absolute;
-    width: 200px;
-    height: 56px;
-    top: 70px;
-    left: -500px;
-    z-index: 99;
-    animation:inputCLose 1s alternate ease ;
-    @keyframes inputCLose {
-      0%{
-        top: 70px;
-        left: 270px;
-      }
-      100%{
-        left: -500px;
-      }
-    }
 
-    input{
-      background: rgba(220, 18, 95, 0.55);
-      border-radius: 10px;
-      border: 1px solid white;
-      width: 200px;
-      height: 40px;
-      padding-left: 10px;
-      color: white;
-      outline: white;
-
-    }
-  }
 }
 
 @media (max-width: 576px) {
-  .input-input{
-    left: 180px;
-    animation: input 1s ease-in-out;
-    @keyframes input {
-      0%{
-        left: -500px;
 
-      }
-      100%{
-        top: 66px;
-        left: 180px;
-      }
-    }
-  }
-  .close{
-    left: 180px;
-    animation:inputCLose 1s alternate ease ;
-    @keyframes inputCLose {
-      0%{
-        top: 66px;
-        left: 180px;
-      }
-      100%{
-        left: -500px;
-        top: 66px;
-      }
-    }
-  }
 }
 @media (max-width: 450px) {
-  .input-input{
-    left: 120px;
-    animation: input 1s ease-in-out;
-    @keyframes input {
-      0%{
-        left: -500px;
-      }
-      100%{
-        top: 66px;
-        left: 120px;
-      }
-    }
-  }
+
   .input-input input{
     width: 190px;
     height: 35px;
   }
-  .input .close input{
-    width: 190px;
-    height: 35px;
-  }
-  .input .close{
-    animation:inputCLose 1.5s alternate ease ;
-    @keyframes inputCLose {
-      0%{
-        top: 70px;
-        left: 120px;
-      }
-      100%{
-
-        left: -500px;
-      }
-    }
-  }
 }
 @media (max-width: 400px) {
-  .input-input{
-    left: 105px;
-    top: 56px;
-    animation: input 1s ease-in-out;
-    @keyframes input {
-      0%{
-        left: -500px;
-      }
-      100%{
-        top: 56px;
-        left: 105px;
-      }
-    }
-
-  }
   .input-input input{
     width: 180px;
     height: 30px;
   }
-  .input .close{
 
-    animation:inputCLose 1.2s alternate ease ;
-    @keyframes inputCLose {
-      0%{
-        top: 56px;
-        left: 105px;
-      }
-      100%{
-        top: 56px;
-        left: -500px;
-      }
-    }
-    input{
-      width: 180px;
-      height: 30px;
-    }
-  }
 }
 @media (max-width: 375px) {
-  .input-input{
-    left: 95px;
-    top: 60px;
-    animation: input 1s ease-in-out;
-    @keyframes input {
-      0%{
-        left: -500px;
-      }
-      100%{
-        top: 60px;
-        left: 95px;
-      }
-    }
-
-  }
   .input-input input{
     width: 170px;
     height: 28px;
   }
-  .input .close{
-    animation:inputCLose 1.2s alternate ease ;
-    @keyframes inputCLose {
-      0%{
-        top: 60px;
-        left: 95px;
-      }
-      100%{
-        top: 60px;
-        left: -500px;
-      }
-    }
-    input{
-      width: 170px;
-      height: 28px;
-    }
-  }
-
-
 }
 @media (max-width: 320px) {
-  .input-input{
-    left: 78px;
-    top: 65px;
-    animation: input 1s ease-in-out;
-    @keyframes input {
-      0%{
-        left: -500px;
-      }
-      100%{
-        top: 65px;
-        left: 78px;
-      }
-    }
-  }
+
   .input-input input{
     width: 150px;
     height: 30px;
-  }
-  .input .close{
-    animation:inputCLose 1.2s alternate ease ;
-    @keyframes inputCLose {
-      0%{
-        top: 65px;
-        left: 78px;
-      }
-      100%{
-        top: 65px;
-        left: -500px;
-      }
-    }
-  input{
-    width: 150px;
-    height: 30px;
-  }
   }
 }

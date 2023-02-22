@@ -6,16 +6,23 @@ import {SlBasket} from "react-icons/sl";
 import {BsSearch} from "react-icons/bs";
 import {NavLink} from "react-router-dom";
 import BurgerMenu from "./BurgerMenu";
+import Search from "./Search";
+import SearchResult from "./SearchResult";
 
 
 const Header = () => {
-    const [burger, setBurger] = useState(false)
+  const [burger, setBurger] = useState(false)
   const [input, setInput] = useState('')
 
-  let textInput = React.createRef()
+  useEffect(()=> {
+    localStorage.setItem("result", input)
+  },[input])
+  console.log(input)
     return (
         <>
-
+          <div style={{
+            display:"none",
+          }}><SearchResult input={input}/></div>
             <BurgerMenu burger={burger} setBurger={setBurger}/>
            <header id="header">
                     <div className="container">
@@ -28,9 +35,10 @@ const Header = () => {
 
 
                                 <div className="header--search">
-                                    <input type="search" onChange={(e) => {
-                                    return e.target.value}
-                                    }  placeholder="Я ищу.." />
+                                    <input type="search" onChange={(e)=> setInput(e.target.value)}
+                                           placeholder="Я ищу.." />
+
+
                                     <NavLink to={"/search"}>
                                       <BsSearch className='search'/>
                                     </NavLink>

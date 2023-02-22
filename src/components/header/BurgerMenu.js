@@ -50,7 +50,9 @@ const BurgerMenu = ({burger, setBurger}) => {
             </div>
 
 
-                    <div id={burger ? "menu" : "close"} >
+                    <div id={"menu"} style={{
+                        left: !burger ? "-2000px" : "0"
+                    }}>
                         {
                             <div onClick={() => setBurger(!burger)}
                                  className="burger-menu">
@@ -65,7 +67,7 @@ const BurgerMenu = ({burger, setBurger}) => {
                                     </div>
                                 </NavLink>
                                 <div className="burger-menu--icons">
-                                    <BsSearch className='search' onClick={()=> setInput(!input) && setBurger(true)}/>
+                                    <BsSearch className='search' onClick={()=> setSearch(!search) && setBurger(true) }/>
                                     <NavLink to={"/basket"}  onClick={() => setBurger(!burger)}>
                                         <SlBasket className='logo'/>
                                     </NavLink>

@@ -4,6 +4,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {DELETE_FROM_BASKET} from "../../redux/ActionTypes";
 import BasketProducts from "./BasketProducts";
 import {NavLink} from "react-router-dom";
+import BasketBasket from "./BasketBasket";
+import BasketTitle from "./BasketTitle";
 
 const Basket = () => {
     const dispatch = useDispatch()
@@ -21,18 +23,7 @@ const Basket = () => {
                 <h1 className="title">Оформление товара</h1>
                 <div className="container">
                     <div className="basket">
-                            <div className="tabs">
-                                <div className="tab">
-                                    <p>Оформление</p>
-                                    <div></div>
-                                    <NavLink to={"/basket/product"}>
-                                        <h6>Что у меня в корзине?</h6>
-                                    </NavLink>
-                                </div>
-                                <div className="tab-total">
-                                    <p>Общая сумма: <span>{totalPrice} COM</span></p>
-                                </div>
-                            </div>
+                            <BasketTitle/>
                         <div className="basket--together">
                             <div className="basket--first">
                                 <div className="basket--first--contacts">

@@ -1,6 +1,6 @@
 #basket{
   position: relative;
-  top: -40px;
+  top: -30px;
   background: #ffffff;
   border-radius: 20px;
   width: 100%;
@@ -14,8 +14,8 @@
     line-height: 48px;
     color: #72072D;
     top: 20px;
-    left: 20px;
-    width: 500px;
+    left: 53px;
+    width: 100%;
   }
   .basket{
     display: flex;
@@ -311,8 +311,13 @@
 
 
 @media (max-width: 1440px) {
-  
+  #basket{
+    .title{
+      left: 65px;
+    }
+  }
 }
+
 
 @media (max-width: 1200px){
 
@@ -456,7 +461,7 @@
     display: none;
   }
   #basket .basket--first--contacts input{
-    width: 500px;
+    width: 400px;
   }
   #basket .basket--first--contacts h1{
     text-align: center;
@@ -489,7 +494,7 @@
     height: 45px;
   }
   #basket .basket--second--pay--btn--one{
-    width: 100%;
+    width: 80%;
   }
   #basket .basket--second--pay--first--label{
     width: 81%;
@@ -506,6 +511,10 @@
   #basket .basket--second--pay--second--label{
     width: 81%;
   }
+  #basket .basket--first--dost p{
+    text-align: center;
+  }
+
 
 }
 
