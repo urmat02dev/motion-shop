@@ -1,4 +1,11 @@
-import {DECREASE_QUANTITY, DELETE_FROM_BASKET, GET_BASKET, GET_PRODUCT, INCREASE_QUANTITY} from "../ActionTypes";
+import {
+    DECREASE_QUANTITY,
+    DELETE_FROM_BASKET,
+    GET_BASKET,
+    GET_PRODUCT,
+    GET_SIZE,
+    INCREASE_QUANTITY
+} from "../ActionTypes";
 
 
 
@@ -16,10 +23,12 @@ export const MainReducer = (state = initialState, action) => {
             const foundProduct = state.basket.find(el => el.id === action.payload.id)
             if (foundProduct) {
                 return{...state, basket: state.basket.map(el => el.id === foundProduct.id ?
-                      {...el, quantity: el.quantity + 1} : el)}
+                      {...el, quantity: el.quantity + 1, ...el, size:el.size } : el)}
             } else {
-                return {...state, basket: [...state.basket, {...action.payload, quantity: 1}]}
+                return {...state, basket: [...state.basket, {...action.payload, quantity: 1 }]}
             }
+
+
         case DELETE_FROM_BASKET : {
             return{
             ...state, basket: state.basket.filter(el => {

@@ -3,7 +3,7 @@ import "./DetailPage.scss"
 import {useNavigate, useParams} from "react-router-dom";
 import {backend} from "../backend";
 import {useDispatch, useSelector} from "react-redux";
-import {GET_BASKET} from "../../redux/ActionTypes";
+import {GET_BASKET, GET_SIZE} from "../../redux/ActionTypes";
 
 
 const DetailPage = () => {
@@ -35,22 +35,22 @@ const DetailPage = () => {
     const blue = colorBlue ? "Синий" : ""
     const white = colorWhite ? "Белый" : ""
     const [textSize, setTextSize] = useState("")
+
     const addToBasket = () => {
+        localStorage.getItem("basket")
         if (sizeS || sizeXXL || sizeC || sizeXL || sizeXS) {
             if (colorWhite || colorBlue || colorRed || colorBlack) {
                 setGreen(true)
                 setTimeout(() => {
                     setGreen(false)
                 }, 2000);
-
                 dispatch({type: GET_BASKET, payload: detail})
-
-
             } else {
             }
         } else {
 
         }
+        localStorage.setItem("basket", JSON.stringify([detail]))
     }
 
 
