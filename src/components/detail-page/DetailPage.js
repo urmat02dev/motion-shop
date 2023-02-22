@@ -37,22 +37,32 @@ const DetailPage = () => {
     const [textSize, setTextSize] = useState("")
 
     const addToBasket = () => {
-        localStorage.getItem("basket")
         if (sizeS || sizeXXL || sizeC || sizeXL || sizeXS) {
             if (colorWhite || colorBlue || colorRed || colorBlack) {
+                setTrueColor(false)
+                setTrueSize(false)
                 setGreen(true)
                 setTimeout(() => {
                     setGreen(false)
-                }, 2000);
+                }, 1200);
                 dispatch({type: GET_BASKET, payload: detail})
-            } else {
             }
-        } else {
+            else{
 
+                setTrueColor(true)
+                setTrueSize(true)
+            }
         }
-        localStorage.setItem("basket", JSON.stringify([detail]))
-    }
+        else{
+            setTrueColor(true)
+            setTrueSize(true)
+        }
 
+
+
+    }
+    console.log("color",trueColor)
+    console.log("size",trueSize)
 
     const windowUp = () => {
         window.scrollTo({
@@ -174,17 +184,24 @@ const DetailPage = () => {
                                     </button>
                             }
                             {
-                                  sizeS || sizeXXL || sizeC || sizeXL || sizeXS  ? "" :
-                                  <div className={"size"}>
-                                      <div className={"size--span"}>Пожалуйства выберите размер!</div>
+                                  trueSize ?
+                                  <div className={ sizeS || sizeXXL || sizeC || sizeXL || sizeXS ? "" : "size"}>
+                                      <div className={"size--span"} style={{
+                                          display: sizeS || sizeXXL || sizeC || sizeXL || sizeXS ? "none" : "flex"
+                                      }}>Пожалуйства выберите размер!</div>
                                   </div>
+                                    : ""
                             }
 
                             {
-                                colorWhite || colorBlue || colorRed || colorBlack  ? "" :
-                                    <div className={"color"}>
-                                        <div className={"color--span"}>Пожалуйства выберите цвет!</div>
+                                 trueColor ?
+                                    <div className={colorWhite || colorBlue || colorRed || colorBlack ? "" : "color"}>
+                                        <div className={"color--span"} style={{
+                                            display: colorWhite || colorBlue || colorRed || colorBlack ? "none": "flex"
+                                        }}>Пожалуйства выберите цвет!</div>
                                     </div>
+                                  : ""
+
                             }
 
                             <button className="detail-page--desc--btn--two">Купить сейчас</button>

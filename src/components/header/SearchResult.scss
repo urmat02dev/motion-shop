@@ -1,0 +1,15 @@
+#result{
+  width: 100%;
+  height: 100%;
+  background: floralwhite;
+  .result{
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    &--card{
+      background: #aaaaaa;
+      width: 390px;
+    }
+  }
+  
+}
