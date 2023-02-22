@@ -24,7 +24,7 @@
     }
 
     &--search {
-
+    position: relative;
       input::-webkit-input-placeholder {
         color: rgba(255, 255, 255, 0.6);
       }
@@ -43,8 +43,9 @@
 
       .search {
         line-height: 26px;
-        margin-left: -50px;
-        margin-bottom: -3px;
+        position: absolute;
+        right: 15px;
+        top: 9px;
         color: white;
         cursor: pointer;
       }

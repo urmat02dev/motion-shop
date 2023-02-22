@@ -21,7 +21,18 @@ const Basket = () => {
                 <h1 className="title">Оформление товара</h1>
                 <div className="container">
                     <div className="basket">
-
+                            <div className="tabs">
+                                <div className="tab">
+                                    <p>Оформление</p>
+                                    <div></div>
+                                    <NavLink to={"/basket/product"}>
+                                        <h6>Что у меня в корзине?</h6>
+                                    </NavLink>
+                                </div>
+                                <div className="tab-total">
+                                    <p>Общая сумма: <span>{totalPrice} COM</span></p>
+                                </div>
+                            </div>
                         <div className="basket--together">
                             <div className="basket--first">
                                 <div className="basket--first--contacts">
@@ -34,13 +45,15 @@ const Basket = () => {
                                 <div className="basket--first--dost">
                                     <h1>Доставка</h1>
                                     <p>Выберите удобный способ доставки для этого заказа.</p>
-                                    <div className="basket--first--dost--check">
-                                        <input type="radio"  id="pickup"/>
-                                        <label className="basket--first--dost--check--label" htmlFor="pickup">Самовывоз</label>
-                                    </div>
-                                    <div className="basket--first--dost--secondCheck">
-                                        <input type="radio"  id="delivery"/>
-                                        <label className="basket--first--dost--secondCheck--label" htmlFor="delivery">Доставка курьером</label>
+                                    <div className="basket--first--dost--checks">
+                                        <div className="basket--first--dost--check">
+                                            <input type="radio"  id="pickup"/>
+                                            <label className="basket--first--dost--check--label" htmlFor="pickup">Самовывоз</label>
+                                        </div>
+                                        <div className="basket--first--dost--secondCheck">
+                                            <input type="radio"  id="delivery"/>
+                                            <label className="basket--first--dost--secondCheck--label" htmlFor="delivery">Доставка курьером</label>
+                                        </div>
                                     </div>
                                     <div className="basket--first--dost--block">
                                         <p>Выберите пункт выдачи*   +</p>

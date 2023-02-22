@@ -1,24 +1,21 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import "./Basket.scss"
 import {useDispatch, useSelector} from "react-redux";
 import {
     DECREASE_QUANTITY,
-    DELETE_FROM_BASKET,
-    GET_BASKET,
+    DELETE_FROM_BASKET, GET_SIZE,
     INCREASE_QUANTITY
 } from "../../redux/ActionTypes";
-import {backend} from "../backend";
+
 import {useParams} from "react-router-dom";
 
 const BasketProducts = () => {
     const {id} = useParams()
     const dispatch = useDispatch()
     const {basket} = useSelector(state => state)
-    const {products} = useSelector(state => state)
-    console.log(basket)
-
     const deleteBasket = (el) => {
         dispatch({type:DELETE_FROM_BASKET, payload:el.id})
+
     }
     const increaseQuantity = (el) => {
         dispatch({type:INCREASE_QUANTITY, payload: el.id })
@@ -27,7 +24,9 @@ const BasketProducts = () => {
         dispatch({type:DECREASE_QUANTITY, payload: el.id})
     }
 
-
+    useEffect(() => {
+        localStorage.getItem("basket")
+    },[basket])
     return (
         <>
         {
@@ -37,7 +36,7 @@ const BasketProducts = () => {
                     <img src={el.image} width={150} height={180} alt=""/></div>
                 <div className="basket--third--card--desc">
                     <h1>{el.title}</h1>
-                    <h2>Опции: <span></span></h2>
+                    <h2>Опции: <span>{el.size}</span></h2>
                     <h3>{el.price * el.quantity} СОМ</h3>
                     <div className="basket--third--card--count">
 
