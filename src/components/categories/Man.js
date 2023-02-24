@@ -10,6 +10,7 @@ import ProductCard from "./ProductCard";
 
 const Man = () => {
     const man = backend.filter(el => el.category === "Мужская")
+    console.log(man)
     return (
         <div id="categories">
             <div className="container">
@@ -49,7 +50,6 @@ const Man = () => {
                     </div>
                     <h1>Мужская одежда</h1>
                     <div className="categories--product">
-
                         {
                             man.map(el => (
                                 <ProductCard el={el} key={el.id}/>

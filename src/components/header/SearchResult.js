@@ -1,38 +1,35 @@
 import React, {useEffect, useState} from 'react';
 import "./SearchResult.scss"
 import {backend} from "../backend";
-const SearchResult = ({input}) => {
+import ProductCard from "../categories/ProductCard";
+const SearchResult = () => {
 
+  let text = localStorage.getItem(("input"))
+  const res = backend.filter(el => el.categories.toLowerCase() === text)
+  localStorage.setItem("result",JSON.stringify(res))
 
-  let textInput = React.createRef()
-
-  const res=backend.filter(el => el.categories.toLowerCase() && el.category.toLowerCase() === input)
-  const getRes = () => {
-
-  }
-  console.log(res.map(el=> el))
-  useEffect(()=> {
-
-  },[res])
   return (
     <>
       <div id="result">
         <div className="container">
-          <div className="result">
-            <h1>Ощибка</h1>
-            <h1>{res.title}</h1>
+          <div className={"result--card"}>
             {
-              res.map((el,index) => {
-                return <div key={index} className={"result--card"}>
-                  <h1>{el.title}</h1>
-                  <img src={el.image}  width={123} alt=""/>
-                </div>
-              })
+              res.map(el => (
+                <ProductCard el={el} key={el.id}/>
+              ))
 
             }
+
+            <div className={"result--error"} style={{
+              display: res.length>1 ? "none" : "flex"
+            }}>
+              <h1>Такой именам продукта нетy!!!</h1>
+            </div>
           </div>
+
         </div>
       </div>
+
     </>
   );
 };

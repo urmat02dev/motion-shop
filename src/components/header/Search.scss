@@ -1,8 +1,9 @@
 .input{
+
   &-input{
     position: absolute;
-    width: 200px;
-    height: 56px;
+    width: 350px;
+    height: 38px;
     top: 66px;
     left: 270px;
     z-index: 99;
@@ -18,30 +19,60 @@
       padding-left: 15px;
       font-size: 20px;
       outline: white;
-
-
+      position: relative;
+    }
+    &-icon{
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      color: #D118A8;
     }
     ::placeholder {
       color: rgba(255, 0, 199, 0.93);
+      font-size: 17px;
     }
   }
 
 }
 
 @media (max-width: 576px) {
+  .input-input{
+    left: 140px;
+    width: 300px;
+    input{
+      width: 300px;
+      height: 35px;
+      font-size: 16px;
+    }
+    ::placeholder {
 
+      font-size: 15px;
+    }
+  }
 }
 @media (max-width: 450px) {
-
+  .input-input{
+    width: 190px;
+    left: 130px;
+  }
   .input-input input{
     width: 190px;
-    height: 35px;
+    height: 32px;
   }
+  .input-input-icon{
+    top: 7px;
+  }
+
 }
 @media (max-width: 400px) {
   .input-input input{
     width: 180px;
     height: 30px;
+  }
+  .input-input{
+    top: 60px;
+    width: 180px;
+    left: 105px;
   }
 
 }
@@ -50,9 +81,21 @@
     width: 170px;
     height: 28px;
   }
+  .input-input{
+    width: 170px;
+    left: 100px;
+    font-size: 15px;
+    ::placeholder {
+
+      font-size: 15px;
+    }
+  }
 }
 @media (max-width: 320px) {
-
+  .input-input{
+    width: 150px;
+    left: 80px;
+  }
   .input-input input{
     width: 150px;
     height: 30px;

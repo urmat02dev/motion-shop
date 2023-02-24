@@ -2,23 +2,21 @@ import React, {useEffect, useState} from 'react';
 import "./Search.scss"
 import {BsSearch} from "react-icons/bs";
 import {NavLink} from "react-router-dom";
-const Search = ({search}) => {
-  const [input, setInput] = useState('')
-  let textInput = React.createRef()
-
-  const showInput = () =>{
-    setInput(textInput.current.value)
-  }
-
-
+import SearchResult from "./SearchResult";
+const Search = ({search,setSearch}) => {
+  const [value, setValue] = useState('')
+  localStorage.getItem("input")
+  localStorage.setItem("input",value)
   return (
+
         <div className="input">
+
                 <div className={"input-input" } style={{
-                  left:!search ? "-2000px" : "190px"
+                  left:!search ? "-2000px" : ""
                 }}>
-                    <input onInput={showInput} ref={textInput} type={"text"} placeholder="Я ищу..."/>
-                    <NavLink to={"/search"}>
-                      <BsSearch/>
+                    <input onChange={(event) =>setValue(event.target.value.toLowerCase()) } type={"text"} placeholder="Я ищу..."/>
+                    <NavLink to={"/search/product"}>
+                      <BsSearch className={"input-input-icon"} onClick={() => setSearch(false)}/>
                     </NavLink>
                 </div>
         </div>

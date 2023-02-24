@@ -6,12 +6,13 @@ import {
     GET_SIZE,
     INCREASE_QUANTITY
 } from "../ActionTypes";
+import basket from "../../components/basket/Basket";
 
 
 
 const initialState ={
     products:[],
-    basket:[],
+    basket:JSON.parse(localStorage.getItem("basket")) || [],
 
 }
 
@@ -23,11 +24,11 @@ export const MainReducer = (state = initialState, action) => {
             const foundProduct = state.basket.find(el => el.id === action.payload.id)
             if (foundProduct) {
                 return{...state, basket: state.basket.map(el => el.id === foundProduct.id ?
-                      {...el, quantity: el.quantity + 1, ...el, size:el.size } : el)}
+                      {...el, quantity: el.quantity + 1} : el)}
             } else {
                 return {...state, basket: [...state.basket, {...action.payload, quantity: 1 }]}
             }
-
+        case GET_SIZE :
 
         case DELETE_FROM_BASKET : {
             return{

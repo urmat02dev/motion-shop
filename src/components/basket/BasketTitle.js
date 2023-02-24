@@ -9,18 +9,21 @@ const BasketTitle = () => {
     return acc + el.price * el.quantity
   },0)
   return (
-    <div className="tabs">
-      <div className="tab">
-        <p>Оформление</p>
-        <div></div>
-        <NavLink to={"/basket/product"}>
-          <h6>Что у меня в корзине?</h6>
-        </NavLink>
+    <>
+      <div className="tabs">
+        <div className="tab">
+          <p>Оформление</p>
+          <div></div>
+          <NavLink to={"/basket/product"}>
+            <h6>Что у меня в корзине?</h6>
+          </NavLink>
+        </div>
+        <div className="tab-total">
+          <p>Общая сумма: <span>{totalPrice} COM</span></p>
+        </div>
       </div>
-      <div className="tab-total">
-        <p>Общая сумма: <span>{totalPrice} COM</span></p>
-      </div>
-    </div>
+
+    </>
   );
 };
 

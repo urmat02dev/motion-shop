@@ -12,17 +12,12 @@ import SearchResult from "./SearchResult";
 
 const Header = () => {
   const [burger, setBurger] = useState(false)
-  const [input, setInput] = useState('')
-
-  useEffect(()=> {
-    localStorage.setItem("result", input)
-  },[input])
-  console.log(input)
+  const [value, setValue] = useState('')
+  localStorage.getItem("value")
+  localStorage.setItem("value",value)
     return (
         <>
-          <div style={{
-            display:"none",
-          }}><SearchResult input={input}/></div>
+
             <BurgerMenu burger={burger} setBurger={setBurger}/>
            <header id="header">
                     <div className="container">
@@ -35,11 +30,11 @@ const Header = () => {
 
 
                                 <div className="header--search">
-                                    <input type="search" onChange={(e)=> setInput(e.target.value)}
+                                    <input type="search" onChange={(e)=> setValue(e.target.value.toLowerCase())}
                                            placeholder="Я ищу.." />
 
 
-                                    <NavLink to={"/search"}>
+                                    <NavLink to={"/search/products"}>
                                       <BsSearch className='search'/>
                                     </NavLink>
 

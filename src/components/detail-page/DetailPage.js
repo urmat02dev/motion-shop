@@ -45,7 +45,12 @@ const DetailPage = () => {
                 setTimeout(() => {
                     setGreen(false)
                 }, 1200);
+                let basket = JSON.parse(localStorage.getItem("basket")) || []
+                basket = [...basket, {...detail,quantity:1}]
+                localStorage.setItem("basket",JSON.stringify(basket))
+                dispatch({type: GET_SIZE, payload: XL || XXL || XS || S || C})
                 dispatch({type: GET_BASKET, payload: detail})
+
             }
             else{
 
@@ -61,8 +66,9 @@ const DetailPage = () => {
 
 
     }
-    console.log("color",trueColor)
-    console.log("size",trueSize)
+    const getSize = () => {
+
+    }
 
     const windowUp = () => {
         window.scrollTo({
@@ -88,14 +94,14 @@ const DetailPage = () => {
                         <h5>Таблица размеров: <span>{XL || XXL || XS || S || C}</span></h5>
                         <div className="detail-page--desc--size">
                             <button className="XL"
-                                    onClick={() => setSizeXL(!sizeXL) || setSizeXS(false)
+                                    onClick={() => getSize(detail) || setSizeXL(!sizeXL) || setSizeXS(false)
                                         || setSizeS(false) || setSizeC(false) || setSizeXXL(false)}
                                     style={{
                                         border: sizeXL ? "1px solid #FF005C" : "",
                                         color: sizeXL ? "#FF005C" : ""
                                     }}>XL
                             </button>
-                            <button className="XXL"
+                            <button className="XXL" onChange={()=> getSize("XXL")}
                                     onClick={() => setSizeXXL(!sizeXXL) || setSizeXS(false)
                                         || setSizeS(false) || setSizeC(false) || setSizeXL(false)}
                                     style={{
@@ -204,7 +210,9 @@ const DetailPage = () => {
 
                             }
 
-                            <button className="detail-page--desc--btn--two">Купить сейчас</button>
+                            <button className="detail-page--desc--btn--two" style={{
+
+                            }}>Купить сейчас</button>
                         </div>
                     </div>
 
