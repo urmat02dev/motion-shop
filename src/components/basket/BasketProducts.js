@@ -18,15 +18,18 @@ const BasketProducts = () => {
 
     }
     const increaseQuantity = (el) => {
+        let basket = JSON.parse(localStorage.getItem("basket")) || []
+        basket = basket.map(el => el.id === id ? {...el, quantity:el.quantity +1} : el)
+
+
         dispatch({type:INCREASE_QUANTITY, payload: el.id })
+        localStorage.setItem("basket",JSON.stringify(basket))
     }
     const decreaseQuantity = (el) => {
         dispatch({type:DECREASE_QUANTITY, payload: el.id})
     }
 
-    useEffect(() => {
-        localStorage.getItem("basket")
-    },[basket])
+
     return (
         <>
         {
