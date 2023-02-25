@@ -1,5 +1,5 @@
 export const GET_BASKET ="GET_BASKET"
-export const GET_SIZE ="GET_SIZE"
+export const GET_INPUT ="GET_INPUT"
 export const GET_PRODUCT ="GET_PRODUCT"
 
 export const DECREASE_QUANTITY ="DECREASE_QUANTITY"
