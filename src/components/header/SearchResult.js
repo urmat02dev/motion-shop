@@ -2,12 +2,12 @@ import React, {useEffect, useState} from 'react';
 import "./SearchResult.scss"
 import {backend} from "../backend";
 import ProductCard from "../categories/ProductCard";
+import {useSelector} from "react-redux";
 const SearchResult = () => {
 
-  let text = localStorage.getItem(("input"))
-  const res = backend.filter(el => el.categories.toLowerCase() === text)
-  localStorage.setItem("result",JSON.stringify(res))
-
+  const {input} = useSelector(state => state)
+  const res = backend.filter(el => el.categories.toLowerCase() === input)
+  console.log(res)
   return (
     <>
       <div id="result">
