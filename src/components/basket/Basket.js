@@ -70,7 +70,7 @@ const Basket = () => {
                                         <div className="two-block" style={{
                                             display: block2 ? 'block' : 'none'
                                         }}>
-                                            <textarea name="" id="" cols="38" rows="5" placeholder='Область, город (район, село), улица, дом№, кв.№*' ></textarea>
+                                            <textarea name="" id="" cols="38" rows="5" placeholder='Область, город (район, село), улица, дом№, кв.№*' className='textarea'></textarea>
                                         </div>
                                     </div>
                                 </div>

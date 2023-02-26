@@ -116,6 +116,9 @@
             color: #72072DE5;
 
           }
+          .textarea {
+            width: 100%;
+          }
         }
       }
     }
@@ -540,50 +543,78 @@
 @media (max-width: 375px){
 
 }
-//
-//@media (max-width: 320px){
-// #basket {
-//   text-align: center;
-//   .basket {
-//     &--second {
-//          display: flex;
-//          flex-direction: column;
-//          align-items: center;
-//          justify-content: center;
-//          &--pay {
-//            width: 200px;
-//            &--btn {
-//              //text-align: center;
-//              &--two {
-//                width: 70%;
-//
-//              }
-//              &--one {
-//                width: 70%;
-//                font-size: 14px;
-//                margin-left: 20%;
-//              }
-//            }
-//          }
-//          &--total {
-//            width: 55%;
-//          }
-//     }
-//     &--first {
-//       &--dost {
-//         height: 220px;
-//       }
-//     }
-//     .tabs {
-//       .tab {
-//         p {
-//           font-size: 12px;
-//         }
-//         h6 {
-//           font-size: 12px;
-//         }
-//       }
-//     }
-//   }
-// }
-//}
+    @media (max-width: 320px){
+     #basket {
+       text-align: center;
+       .basket {
+         &--second {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              &--pay {
+                width: 200px;
+                &--btn {
+                  //text-align: center;
+                  &--two {
+                    width: 70%;
+
+                  }
+                  &--one {
+                    width: 70%;
+                    font-size: 14px;
+                    margin-left: 25%;
+                  }
+                }
+              }
+              &--total {
+                width: 55%;
+              }
+         }
+         &--first {
+           text-align: center;
+           &--dost {
+             height: 220px;
+             text-align: center;
+             display: flex;
+             align-items: center;
+             flex-direction: column;
+             justify-content: center;
+             p {
+               width: 60%;
+               text-align: center;
+             }
+             &--checks {
+               &--then {
+                 select {
+                   width: 70%;
+                 }
+               }
+             }
+             &--secondCheck {
+               .two-block {
+                 .textarea {
+                   width: 220px;
+                 }
+               }
+             }
+           }
+           &--contacts {
+             h1 {
+               font-size: 14px;
+             }
+           }
+         }
+         .tabs {
+           .tab {
+             p {
+               font-size: 12px;
+             }
+             h6 {
+               font-size: 12px;
+             }
+           }
+         }
+       }
+     }
+    }
