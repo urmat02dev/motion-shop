@@ -4,6 +4,7 @@ import {useNavigate, useParams} from "react-router-dom";
 import {backend} from "../backend";
 import {useDispatch, useSelector} from "react-redux";
 import {GET_BASKET, GET_SIZE} from "../../redux/ActionTypes";
+import {logDOM} from "@testing-library/react";
 
 
 const DetailPage = () => {
@@ -46,14 +47,11 @@ const DetailPage = () => {
                     setGreen(false)
                 }, 1200);
                 let basket = JSON.parse(localStorage.getItem("basket")) || []
-                basket = [...basket, {...detail,quantity:1}]
+                basket = [...basket, {...detail,quantity:1,size:XL || XXL || C || S || XS, color:black || blue || red || white}]
                 localStorage.setItem("basket",JSON.stringify(basket))
-                dispatch({type: GET_SIZE, payload: XL || XXL || XS || S || C})
                 dispatch({type: GET_BASKET, payload: detail})
-
             }
             else{
-
                 setTrueColor(true)
                 setTrueSize(true)
             }
@@ -62,13 +60,8 @@ const DetailPage = () => {
             setTrueColor(true)
             setTrueSize(true)
         }
-
-
-
     }
-    const getSize = () => {
 
-    }
 
     const windowUp = () => {
         window.scrollTo({
@@ -94,14 +87,14 @@ const DetailPage = () => {
                         <h5>Таблица размеров: <span>{XL || XXL || XS || S || C}</span></h5>
                         <div className="detail-page--desc--size">
                             <button className="XL"
-                                    onClick={() => getSize(detail) || setSizeXL(!sizeXL) || setSizeXS(false)
+                                    onClick={() =>  setSizeXL(!sizeXL) || setSizeXS(false)
                                         || setSizeS(false) || setSizeC(false) || setSizeXXL(false)}
                                     style={{
                                         border: sizeXL ? "1px solid #FF005C" : "",
                                         color: sizeXL ? "#FF005C" : ""
                                     }}>XL
                             </button>
-                            <button className="XXL" onChange={()=> getSize("XXL")}
+                            <button className="XXL"
                                     onClick={() => setSizeXXL(!sizeXXL) || setSizeXS(false)
                                         || setSizeS(false) || setSizeC(false) || setSizeXL(false)}
                                     style={{

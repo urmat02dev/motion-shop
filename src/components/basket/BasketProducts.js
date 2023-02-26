@@ -1,45 +1,54 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import "./Basket.scss"
 import {useDispatch, useSelector} from "react-redux";
 import {
     DECREASE_QUANTITY,
-    DELETE_FROM_BASKET, GET_SIZE,
+    DELETE_FROM_BASKET,
     INCREASE_QUANTITY
 } from "../../redux/ActionTypes";
-
-import {useParams} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 const BasketProducts = () => {
-    const {id} = useParams()
     const dispatch = useDispatch()
-    const {basket} = useSelector(state => state)
+    const navigate = useNavigate()
+    let basket = JSON.parse(localStorage.getItem("basket")) || []
     const deleteBasket = (el) => {
-        dispatch({type:DELETE_FROM_BASKET, payload:el.id})
+        let basket = JSON.parse(localStorage.getItem("basket")) || []
+        basket = basket.filter(ele=>ele.id !== el.id )
+        localStorage.setItem("basket",JSON.stringify(basket))
+        dispatch({type:DELETE_FROM_BASKET, payload: el.id})
 
     }
     const increaseQuantity = (el) => {
         let basket = JSON.parse(localStorage.getItem("basket")) || []
-        basket = basket.map(el => el.id === id ? {...el, quantity:el.quantity +1} : el)
-
-
-        dispatch({type:INCREASE_QUANTITY, payload: el.id })
+        basket = basket.map(ele=>ele.id === el.id ? {...ele,quantity:ele.quantity + 1} : ele)
+        dispatch({type:INCREASE_QUANTITY, payload:el.id})
         localStorage.setItem("basket",JSON.stringify(basket))
     }
     const decreaseQuantity = (el) => {
-        dispatch({type:DECREASE_QUANTITY, payload: el.id})
+        let basket = JSON.parse(localStorage.getItem("basket")) || []
+        basket = basket.map(ele => {
+            if (ele.id === el.id){
+                if (ele.quantity > 1){
+                    return {...ele, quantity:ele.quantity - 1}
+                } else return ele
+            } else return ele
+        })
+        localStorage.setItem("basket",JSON.stringify(basket))
+        dispatch({type:DECREASE_QUANTITY, payload:el.id})
     }
-
 
     return (
         <>
         {
-        basket.map((el,index)=>  {
+            basket.length ?
+         basket.map((el,index)=>  {
             return <div key={index} className="basket--third--card">
                 <div className="basket--third--card--img">
-                    <img src={el.image} width={150} height={180} alt=""/></div>
+                    <img src={el.image}   alt=""/></div>
                 <div className="basket--third--card--desc">
                     <h1>{el.title}</h1>
-                    <h2>Опции: <span>{el.size}</span></h2>
+                    <h2>Опции: <span>{el.size}, {el.color}</span></h2>
                     <h3>{el.price * el.quantity} СОМ</h3>
                     <div className="basket--third--card--count">
 
@@ -58,7 +67,13 @@ const BasketProducts = () => {
                 </div>
             </div>
         })
-
+            : <div className={"basket--four"}>
+                  <button onClick={() => navigate("/")}
+                          className="basket--four--btn">
+                      Добавить в товар
+                      <div>+</div>
+                  </button>
+              </div>
         }
         </>
 

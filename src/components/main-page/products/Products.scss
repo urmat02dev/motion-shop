@@ -271,6 +271,16 @@
   #products .products--store{
   }
 }
+@media (max-width: 414px){
+  #products .products .products--card img{
+    width: 160px;
+    height: 220px;
+  }
+  #products .products .products--card{
+    width: 160px;
+    height: 320px;
+  }
+}
 @media (max-width: 400px){
   #products .products .products--card img{
     width: 160px;

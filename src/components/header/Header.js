@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import "./Header.scss"
 import {HiOutlineQuestionMarkCircle} from "react-icons/hi";
 import {IoIosPaper} from "react-icons/io";
@@ -6,19 +6,15 @@ import {SlBasket} from "react-icons/sl";
 import {BsSearch} from "react-icons/bs";
 import {NavLink} from "react-router-dom";
 import BurgerMenu from "./BurgerMenu";
-import Search from "./Search";
-import SearchResult from "./SearchResult";
-
+import {useDispatch} from "react-redux";
+import {GET_INPUT} from "../../redux/ActionTypes";
 
 const Header = () => {
   const [burger, setBurger] = useState(false)
-  const [value, setValue] = useState('')
-  localStorage.getItem("value")
-  localStorage.setItem("value",value)
+  const dispatch = useDispatch()
     return (
         <>
-
-            <BurgerMenu burger={burger} setBurger={setBurger}/>
+          <BurgerMenu burger={burger} setBurger={setBurger}/>
            <header id="header">
                     <div className="container">
                         <div className="header">
@@ -30,11 +26,12 @@ const Header = () => {
 
 
                                 <div className="header--search">
-                                    <input type="search" onChange={(e)=> setValue(e.target.value.toLowerCase())}
+                                    <input type="text" onChange={(e)=> dispatch(
+                                      {type:GET_INPUT,payload:e.target.value.toLowerCase()})}
                                            placeholder="Я ищу.." />
 
 
-                                    <NavLink to={"/search/products"}>
+                                    <NavLink to={"/search/product"}>
                                       <BsSearch className='search'/>
                                     </NavLink>
 
@@ -64,7 +61,6 @@ const Header = () => {
                             </div>
                         </div>
             </header>
-
         </>
     );
 };

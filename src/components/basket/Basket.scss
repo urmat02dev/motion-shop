@@ -15,7 +15,7 @@
     color: #72072D;
     top: 20px;
     left: 53px;
-    width: 100%;
+    width: 50%;
   }
   .basket{
     display: flex;
@@ -27,11 +27,10 @@
     &--first{
 
       display: flex;
-      width: 700px;
+      width: 650px;
       align-items: start;
       justify-content: space-between;
       margin-top: 40px;
-      margin-bottom: 50px;
       &--contacts{
         h1{
           font-weight: 700;
@@ -77,6 +76,7 @@
           line-height: 17px;
           color: rgba(0, 0, 0, 0.9);
           margin-bottom: 17px;
+          margin-top: 37px;
         }
         &--checks {
           &--check {
@@ -120,13 +120,21 @@
             width: 100%;
           }
         }
+        &--block{
+          width: 288px;
+          height: 43px;
+          border: 1px solid #72072D;
+          p{
+            margin-top: 0;
+          }
+        }
       }
     }
     &--second{
       display: flex;
       align-items: end;
       justify-content: space-between;
-      width: 700px;
+      width: 95%;
       &--pay{
         h1{
           font-weight: 700;
@@ -234,8 +242,8 @@
       flex-direction: column;
       overflow: auto;
       width: 40%;
-      height: 600px;
-      justify-content: space-between;
+      height: 100vh;
+      justify-content: flex-start;
       &::-webkit-scrollbar{
         width: 12px;
 
@@ -247,9 +255,15 @@
       &--card{
         display: flex;
         align-items: start;
-        margin: 20px 0;
+        margin: 35px 0;
         &--img{
           margin-right: 20px;
+          width: 150px;
+          height: 180px;
+          img{
+            width: 150px;
+            height: 180px;
+          }
         }
         &--desc{
           h1{
@@ -264,6 +278,10 @@
             font-size: 16px;
             line-height: 24px;
             color: rgba(0, 0, 0, 0.7);
+            span{
+              color: black;
+              font-weight: 500;
+            }
           }
           h3{
             font-weight: 600;
@@ -311,11 +329,43 @@
           cursor: pointer;
         }
       }
+
+    }
+    &--four{
+      display: flex;
+      align-items: center;
+      height: 50vh;
+      justify-content: center;
+      &--btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 10px;
+        width: 271px;
+        height: 51px;
+        background: linear-gradient(90deg, #72072D 0%, #FF005C 100%);
+        border-radius: 5px;
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: .3s;
+
+        div{
+          font-size: 30px;
+          margin-left:30px;
+        }
+        &:hover{
+          transform: scale(1.1);
+        }
+      }
     }
   }
 }
-
-
 
 @media (max-width: 1440px) {
   #basket{
@@ -324,15 +374,13 @@
     }
   }
 }
-
-
 @media (max-width: 1200px){
 
   #basket .basket--first{
-    width: 630px;
+    width: 620px;
   }
   #basket .basket--second{
-    width: 630px;
+    width: 620px;
   }
 }
 
@@ -401,6 +449,7 @@
       justify-content: center;
       .tabs{
         display: flex;
+        margin-bottom: 20px;
         flex-direction: column;
         .tab{
           display: flex;
@@ -408,11 +457,9 @@
           width:  100%;
           justify-content: space-between;
           p{
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 22px;
-            color: #72072D;
+            color: #FF005C;
           }
+
           div{
             height: 22px;
             border:1.2px solid black;
@@ -422,6 +469,10 @@
             font-size: 18px;
             line-height: 22px;
             color: rgba(114, 7, 45, 0.7);
+
+          }
+          .active{
+            color: #FF005C;
           }
         }
         .tab-total{
@@ -445,24 +496,146 @@
           }
         }
       }
+      &--product{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        .basket--third--card{
+          display: flex;
+          width: 550px;
+          align-items: start;
+          margin: 35px 0;
+          justify-content: space-around;
+          &--img{
+            margin-right: 20px;
+            width: 200px;
+            height: 240px;
+            img{
+              width: 200px;
+              height: 240px;
+            }
+          }
+          &--desc{
+            h1{
+              width: 250px;
+              font-weight: 400;
+              font-size: 26px;
+              line-height: 36px;
+              color: #434343;
+            }
+            h2{
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 24px;
+              color: rgba(0, 0, 0, 0.7);
+              margin: 10px 0;
+              span{
+                color: black;
+                font-weight: 500;
+              }
+            }
+            h3{
+              font-weight: 600;
+              font-size: 15px;
+              line-height: 22px;
+              color: #FF005C;
+              margin: 20px 0;
+            }
 
+          }
+          &--count{
+            width: 91px;
+            height: 21px;
+            border: 1px solid #DF0251;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+
+            .count{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              button{
+                width: 26px;
+                height: 21px;
+                background: #DF0251;
+                color: white;
+                border: none;
+                font-size: 20px;
+                cursor: pointer;
+              }
+            }
+          }
+          &--delete{
+            width: 67px;
+            height: 23px;
+            background: transparent;
+            font-style: normal;
+            border: none;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 22px;
+            color: #FF0000;
+            cursor: pointer;
+          }
+        }
+      }
+      &--four{
+
+        height: 70vh;
+        &--btn{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          div{
+            font-size: 30px;
+            margin-left:30px;
+          }
+
+        }
+      }
     }
   }
-
 
   #basket .title{
     display: none;
   }
-
   #basket .basket--first{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+  }
+  #basket .basket--first--dost{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    p{
+      margin-top: 0;
+    }
+    &--block{
+      width: 390px;
+    }
+  }
+  #basket .basket--first--dost--check input{
+    width: 20px;
+    height: 20px;
+  }
+  #basket .basket--first--dost--secondCheck input{
+    width: 20px;
+    height: 20px;
   }
   #basket .basket--second{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    &--pay{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
   #basket .basket--third{
     display: none;
@@ -485,11 +658,12 @@
   }
   #basket .basket--second--pay--btn--one{
     display: block;
-    width: 100%;
+    width: 500px;
     height: 45px;
   }
   #basket .basket--second--pay h1{
     text-align: center;
+    margin-top: 5px;
   }
   #basket .basket--second--total{
     width: 500px;
@@ -500,7 +674,7 @@
     height: 45px;
   }
   #basket .basket--second--pay--btn--one{
-    width: 80%;
+    width: 500px;
   }
   #basket .basket--second--pay--first--label{
     width: 81%;
@@ -510,6 +684,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+
   }
   #basket .basket--second--pay--second{
     width: 100%;
@@ -525,15 +700,62 @@
 }
 
 @media (max-width: 576px){
+  #basket .basket--product .basket--third--card{
+    width: 500px;
+  }
+  #basket .basket--product{
+    margin-bottom: 10vh;
+  }
 
 }
+
 
 @media (max-width: 450px){
-
+  #basket .basket--product .basket--third--card{
+    width: 400px;
+  }
+  #basket .basket--product .basket--third--card--img{
+    margin-right: 0;
+    width: 180px;
+    height: 200px;
+    img{
+      width: 170px;
+      height: 210px;
+    }
+  }
+  #basket .basket--product .basket--third--card--desc h1{
+    width: 216px;
+    font-size: 23px;
+  }
+  #basket .basket--four{
+    height: 60vh;
+  }
 }
 
-@media (max-width: 425px){
+@media (max-width: 414px){
+  #basket .basket--product .basket--third--card{
+    width: 360px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #basket .basket--product .basket--third--card--img img{
+    width: 160px;
+    height: 200px;
+  }
+  #basket .basket--product .basket--third--card--img{
+    width: 170px;
+    height: 180px;
+  }
 
+  #basket .basket--four--btn{
+    width: 235px;
+    height: 46px;
+    font-size: 15px;
+
+  }
+  #basket .basket--product .basket--third--card--desc h1{
+    width:182px;
+  }
 }
 
 @media (max-width: 400px){
@@ -541,7 +763,33 @@
 }
 
 @media (max-width: 375px){
+  #basket .basket--product .basket--third--card{
+    width: 340px;
+    align-items: flex-start;
+  }
+  #basket .basket--product .basket--third--card--img{
+    width: 100%;
+    height: 100%;
+    img{
+      width: 140px;
+      height: 180px;
 
+    }
+  }
+  #basket .basket--product .basket--third--card--desc h1{
+    font-size: 21px;
+
+  }
+  #basket .basket--product .basket--third--card--desc h2{
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  #basket .basket--product .basket--third--card--desc h3{
+    margin: 10px 0;
+  }
+  #basket .basket--product .basket--third--card--desc h1{
+    width: 172px;
+  }
 }
     @media (max-width: 320px){
      #basket {
@@ -618,3 +866,20 @@
        }
      }
     }
+@media (max-width: 320px){
+  #basket .basket--product .basket--third--card--img img{
+    width: 125px;
+    height: 160px;
+  }
+  #basket .basket--product .basket--third--card{
+    width: 285px;
+  }
+  #basket .basket--product .basket--third--card--desc h1{
+    width: 143px;
+    font-size: 18px;
+
+  }
+  #basket .basket--product .basket--third--card--desc h3{
+    margin: 7px 0;
+  }
+}
