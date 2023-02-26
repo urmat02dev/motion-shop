@@ -1,13 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import "./SearchResult.scss"
 import {backend} from "../backend";
 import ProductCard from "../categories/ProductCard";
 import {useSelector} from "react-redux";
 const SearchResult = () => {
-
   const {input} = useSelector(state => state)
   const res = backend.filter(el => el.categories.toLowerCase() === input)
-  console.log(res)
   return (
     <>
       <div id="result">
@@ -26,10 +24,8 @@ const SearchResult = () => {
               <h1>Такой именам продукта нетy!!!</h1>
             </div>
           </div>
-
         </div>
       </div>
-
     </>
   );
 };

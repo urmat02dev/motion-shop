@@ -11,6 +11,7 @@ import Kids from "./components/categories/Kids";
 import Shoes from "./components/categories/Shoes";
 import SearchResult from "./components/header/SearchResult";
 import BasketProducts from "./components/basket/BasketProducts";
+import BasketBasket from "./components/basket/BasketBasket";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
                 <Route path="/categories/kids" element={<Kids/>}/>
                 <Route path="/categories/shoes" element={<Shoes/>}/>
                 <Route path="/search/product" element={<SearchResult/>}/>
-                <Route path="/basket/product" element={<BasketProducts/>}/>
+                <Route path="/basket/product" element={<BasketBasket/>}/>
                 <Route path={"/detail-page/:id"} element={<DetailPage/>}/>
             </Routes>
 
