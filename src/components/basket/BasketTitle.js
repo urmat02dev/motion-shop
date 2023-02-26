@@ -12,7 +12,9 @@ const BasketTitle = () => {
     <>
       <div className="tabs">
         <div className="tab">
-          <p>Оформление</p>
+          <NavLink to={"/basket"}>
+            <p>Оформление</p>
+          </NavLink>
           <div></div>
           <NavLink to={"/basket/product"}>
             <h6>Что у меня в корзине?</h6>
@@ -22,7 +24,6 @@ const BasketTitle = () => {
           <p>Общая сумма: <span>{totalPrice} COM</span></p>
         </div>
       </div>
-
     </>
   );
 };

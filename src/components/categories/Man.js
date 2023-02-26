@@ -10,7 +10,6 @@ import ProductCard from "./ProductCard";
 
 const Man = () => {
     const man = backend.filter(el => el.category === "Мужская")
-    console.log(man)
     return (
         <div id="categories">
             <div className="container">
