@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./Basket.scss"
 import {useDispatch, useSelector} from "react-redux";
 import {DELETE_FROM_BASKET} from "../../redux/ActionTypes";
@@ -8,17 +8,24 @@ import BasketBasket from "./BasketBasket";
 import BasketTitle from "./BasketTitle";
 
 const Basket = () => {
+    const dispatch = useDispatch()
     const {basket} = useSelector(state => state)
+    const [block, setBlock] = useState(false)
+    const [block2, setBlock2] = useState(false)
+    const decreaseQuantity = () => {
+        dispatch({type:DELETE_FROM_BASKET, payload:basket.map(el=> el.id)})
+    }
     const totalPrice = basket.reduce((acc, el) => {
              return acc + el.price * el.quantity
         },0)
+
     return (
         <>
             <div id="basket">
                 <h1 className="title">Оформление товара</h1>
                 <div className="container">
                     <div className="basket">
-                        <BasketTitle/>
+                            <BasketTitle/>
                         <div className="basket--together">
                             <div className="basket--first">
                                 <div className="basket--first--contacts">
@@ -33,18 +40,39 @@ const Basket = () => {
                                     <p>Выберите удобный способ доставки для этого заказа.</p>
                                     <div className="basket--first--dost--checks">
                                         <div className="basket--first--dost--check">
-                                            <input type="radio"  id="pickup"/>
+                                            <input type="radio"  id="pickup" name="tabs" onClick={() => {
+                                                setBlock(true)
+                                                setBlock2(false)
+                                            }
+                                            }/>
                                             <label className="basket--first--dost--check--label" htmlFor="pickup">Самовывоз</label>
                                         </div>
-                                        <div className="basket--first--dost--secondCheck">
-                                            <input type="radio"  id="delivery"/>
-                                            <label className="basket--first--dost--secondCheck--label" htmlFor="delivery">Доставка курьером</label>
+                                        <div className="basket--first--dost--checks--then" style={{
+                                            display: block ? 'block' : 'none'
+                                        }}>
+                                        <select>
+                                            <option>Выберите пункт выдачи*</option>
+                                            <option>Bishkek</option>
+                                            <option>Karakol</option>
+                                            <option>Osh</option>
+                                        </select>
                                         </div>
                                     </div>
-                                    <div className="basket--first--dost--block">
-                                        <p>Выберите пункт выдачи*   +</p>
+                                    <div className="basket--first--dost--secondCheck">
+                                        <div className="one-block">
+                                            <input type="radio" id="delivery" name="tabs" onClick={() => {
+                                                setBlock2(true)
+                                                setBlock(false)
+                                            }
+                                            }/>
+                                            <label className="basket--first--dost--secondCheck--label" htmlFor="delivery">Доставка курьером</label>
+                                        </div>
+                                        <div className="two-block" style={{
+                                            display: block2 ? 'block' : 'none'
+                                        }}>
+                                            <textarea name="" id="" cols="38" rows="5" placeholder='Область, город (район, село), улица, дом№, кв.№*' ></textarea>
+                                        </div>
                                     </div>
-                                    <textarea name="" id="" cols="30" rows="10" placeholder="Область, город (район, село), улица, дом№, кв.№*"></textarea>
                                 </div>
                             </div>
                             <div className="basket--second">
@@ -80,8 +108,7 @@ const Basket = () => {
                             <BasketProducts/>
                         </div>
                     </div>
-                </div>
-
+                 </div>
             </div>
         </>
     );
