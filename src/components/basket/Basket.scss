@@ -257,6 +257,10 @@
           margin-right: 20px;
           width: 150px;
           height: 180px;
+          img{
+            width: 150px;
+            height: 180px;
+          }
         }
         &--desc{
           h1{
@@ -330,6 +334,9 @@
       height: 50vh;
       justify-content: center;
       &--btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin: 20px 10px;
         width: 271px;
         height: 51px;
@@ -344,6 +351,11 @@
         border: none;
         cursor: pointer;
         transition: .3s;
+
+        div{
+          font-size: 30px;
+          margin-left:30px;
+        }
         &:hover{
           transform: scale(1.1);
         }
@@ -591,11 +603,36 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+  }
+  #basket .basket--first--dost{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    p{
+      margin-top: 0;
+    }
+    &--block{
+      width: 390px;
+    }
+  }
+  #basket .basket--first--dost--check input{
+    width: 20px;
+    height: 20px;
+  }
+  #basket .basket--first--dost--secondCheck input{
+    width: 20px;
+    height: 20px;
   }
   #basket .basket--second{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    &--pay{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
   #basket .basket--third{
     display: none;
@@ -618,11 +655,12 @@
   }
   #basket .basket--second--pay--btn--one{
     display: block;
-    width: 100%;
+    width: 500px;
     height: 45px;
   }
   #basket .basket--second--pay h1{
     text-align: center;
+    margin-top: 5px;
   }
   #basket .basket--second--total{
     width: 500px;
@@ -633,7 +671,7 @@
     height: 45px;
   }
   #basket .basket--second--pay--btn--one{
-    width: 80%;
+    width: 500px;
   }
   #basket .basket--second--pay--first--label{
     width: 81%;
@@ -643,6 +681,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+
   }
   #basket .basket--second--pay--second{
     width: 100%;
