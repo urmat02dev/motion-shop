@@ -8,23 +8,17 @@ import BasketBasket from "./BasketBasket";
 import BasketTitle from "./BasketTitle";
 
 const Basket = () => {
-    const dispatch = useDispatch()
     const {basket} = useSelector(state => state)
-    const decreaseQuantity = () => {
-
-        dispatch({type:DELETE_FROM_BASKET, payload:basket.map(el=> el.id)})
-    }
     const totalPrice = basket.reduce((acc, el) => {
              return acc + el.price * el.quantity
         },0)
-
     return (
         <>
             <div id="basket">
                 <h1 className="title">Оформление товара</h1>
                 <div className="container">
                     <div className="basket">
-                            <BasketTitle/>
+                        <BasketTitle/>
                         <div className="basket--together">
                             <div className="basket--first">
                                 <div className="basket--first--contacts">

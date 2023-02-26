@@ -76,8 +76,7 @@
       }
       &--color{
         display: flex;
-        margin-bottom:10px;
-
+        margin-bottom: 20px;
         button{
           margin-right: 15px;
           width: 75px;
@@ -213,19 +212,21 @@
 @media (max-width: 1536px) {
   #detail-page .detail-page--desc--btn .color{
     left: 800px;
+    top: 726px;
   }
   #detail-page .detail-page--desc--btn .size{
     left: 800px;
-
+    top: 690px;
   }
 }
 @media (max-width: 1440px) {
   #detail-page .detail-page--desc--btn .color{
     left: 796px;
+    top: 730px;
   }
   #detail-page .detail-page--desc--btn .size{
     left: 796px;
-
+    top: 691px;
   }
 }
 @media (max-width: 1200px) {
@@ -233,8 +234,20 @@
     left: 783px;
   }
   #detail-page .detail-page--desc--btn .size{
-    left: 783px;
-
+    left: 785px;
+    top: 698px;
+    .size--span{
+      width: 240px;
+      height: 25px;
+    }
+  }
+  #detail-page .detail-page--desc--btn .color{
+    left: 785px;
+    top: 731px;
+    .color--span{
+      width: 240px;
+      height: 25px;
+    }
   }
 }
 @media (max-width: 1024px) {
@@ -250,7 +263,7 @@
   }
   #detail-page .detail-page--desc--btn .size{
     left: 688px;
-    top: 451px;
+    top: 441px;
     .size--span {
       width: 210px;
       height: 25px;
@@ -279,7 +292,7 @@
   }
   #detail-page .detail-page--desc--btn .color{
     left: 614px;
-    top: 561px;
+    top: 551px;
     .color--span {
       width: 210px;
       height: 25px;
@@ -366,7 +379,7 @@
     margin: 20px 0 0 0;
   }
   #detail-page .detail-page--desc--btn--two{
-    margin: 15px 0 0 0;
+    margin: 20px 0 0 0;
   }
   #detail-page .detail-description h1{
     font-size: 33px;
@@ -470,6 +483,26 @@
     .size--span:before {
       left: 80%;
     }
+  }
+}
+@media (max-width: 414px) {
+  #detail-page .detail-page--img img{
+    width: 320px;
+    height: 380px;
+  }
+  #detail-page .detail-page--desc--btn .color{
+    top: 761px;
+    left: 57px;
+  }
+  #detail-page .detail-page--desc--btn .size{
+    left: 73px;
+    top: 658px;
+  }
+  #detail-page .detail-page--desc--size{
+    margin-top: 20px;
+  }
+  #detail-page .detail-page--desc--color{
+    margin-top: 20px;
   }
 }
 @media (max-width: 400px) {

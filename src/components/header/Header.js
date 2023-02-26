@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import "./Header.scss"
 import {HiOutlineQuestionMarkCircle} from "react-icons/hi";
 import {IoIosPaper} from "react-icons/io";
@@ -6,11 +6,8 @@ import {SlBasket} from "react-icons/sl";
 import {BsSearch} from "react-icons/bs";
 import {NavLink} from "react-router-dom";
 import BurgerMenu from "./BurgerMenu";
-import Search from "./Search";
-import SearchResult from "./SearchResult";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {GET_INPUT} from "../../redux/ActionTypes";
-
 
 const Header = () => {
   const [burger, setBurger] = useState(false)
@@ -29,7 +26,7 @@ const Header = () => {
 
 
                                 <div className="header--search">
-                                    <input type="search" onChange={(e)=> dispatch(
+                                    <input type="text" onChange={(e)=> dispatch(
                                       {type:GET_INPUT,payload:e.target.value.toLowerCase()})}
                                            placeholder="Я ищу.." />
 
@@ -64,7 +61,6 @@ const Header = () => {
                             </div>
                         </div>
             </header>
-
         </>
     );
 };
