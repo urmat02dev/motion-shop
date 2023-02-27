@@ -1,23 +1,18 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import "./Products.scss"
 import {backend} from "../../backend";
 import {BsArrowDown} from "react-icons/bs";
 import {NavLink} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {GET_PRODUCT} from "../../../redux/ActionTypes";
 const Products = () => {
     const dispatch = useDispatch()
-    const {products} = useSelector(s =>s)
     const [view, setView] = useState(15)
     const slice = backend.slice(0, view)
     const viewMore = () => {
         setView(backend.length)
-
     }
-
-    useEffect(()=> {
-        dispatch({type:GET_PRODUCT,payload: backend})
-    },[])
+    dispatch({type:GET_PRODUCT,payload: backend})
     return (
         
         <div id="products">

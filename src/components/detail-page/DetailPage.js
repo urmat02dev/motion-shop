@@ -3,8 +3,7 @@ import "./DetailPage.scss"
 import {useNavigate, useParams} from "react-router-dom";
 import {backend} from "../backend";
 import {useDispatch, useSelector} from "react-redux";
-import {GET_BASKET, GET_SIZE} from "../../redux/ActionTypes";
-import {logDOM} from "@testing-library/react";
+import {GET_BASKET} from "../../redux/ActionTypes";
 
 
 const DetailPage = () => {
@@ -35,8 +34,6 @@ const DetailPage = () => {
     const red = colorRed && "Красный"
     const blue = colorBlue ? "Синий" : ""
     const white = colorWhite ? "Белый" : ""
-    const [textSize, setTextSize] = useState("")
-
     const addToBasket = () => {
         if (sizeS || sizeXXL || sizeC || sizeXL || sizeXS) {
             if (colorWhite || colorBlue || colorRed || colorBlack) {
@@ -61,8 +58,6 @@ const DetailPage = () => {
             setTrueSize(true)
         }
     }
-
-
     const windowUp = () => {
         window.scrollTo({
             top: 0,

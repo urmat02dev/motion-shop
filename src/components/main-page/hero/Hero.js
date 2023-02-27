@@ -1,7 +1,6 @@
 import React from 'react';
 import "./Hero.scss"
 import family from './img/image 67.png'
-import img from './img/Rectangle 2256.png'
 import {Link} from "react-router-dom";
 const Hero = () => {
     return (

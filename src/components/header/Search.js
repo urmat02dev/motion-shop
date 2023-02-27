@@ -14,7 +14,7 @@ const Search = ({search,setSearch}) => {
                 <div className={"input-input" } style={{
                   left:!search ? "-2000px" : ""
                 }}>
-                  <input type="search" onChange={(e)=> dispatch(
+                  <input type="text" onChange={(e)=> dispatch(
                     {type:GET_INPUT,payload:e.target.value.toLowerCase()})}
                          placeholder="Я ищу.." />
                     <NavLink to={"/search/product"}>
