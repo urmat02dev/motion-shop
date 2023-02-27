@@ -38,41 +38,44 @@ const Basket = () => {
                                 <div className="basket--first--dost">
                                     <h1>Доставка</h1>
                                     <p>Выберите удобный способ доставки для этого заказа.</p>
-                                    <div className="basket--first--dost--checks">
-                                        <div className="basket--first--dost--check">
-                                            <input type="radio"  id="pickup" name="tabs" onClick={() => {
-                                                setBlock(true)
-                                                setBlock2(false)
-                                            }
-                                            }/>
-                                            <label className="basket--first--dost--check--label" htmlFor="pickup">Самовывоз</label>
+                                    <div className='basket--first--dost--blockta'>
+                                        <div className="basket--first--dost--blockta--checks">
+                                            <div className="basket--first--dost--blockta--checks--check">
+                                                <input type="radio"  id="pickup" name="tabs" onClick={() => {
+                                                    setBlock(true)
+                                                    setBlock2(false)
+                                                }
+                                                }/>
+                                                <label className="basket--first--dost--blockta--checks--check--label" htmlFor="pickup">Самовывоз</label>
+                                            </div>
+                                            <div className="basket--first--dost--blockta--checks--then" style={{
+                                                display: block ? 'block' : 'none'
+                                            }}>
+                                                <select>
+                                                    <option>Выберите пункт выдачи*</option>
+                                                    <option>Bishkek</option>
+                                                    <option>Karakol</option>
+                                                    <option>Osh</option>
+                                                </select>
+                                            </div>
                                         </div>
-                                        <div className="basket--first--dost--checks--then" style={{
-                                            display: block ? 'block' : 'none'
-                                        }}>
-                                        <select>
-                                            <option>Выберите пункт выдачи*</option>
-                                            <option>Bishkek</option>
-                                            <option>Karakol</option>
-                                            <option>Osh</option>
-                                        </select>
+                                        <div className="basket--first--dost--blockta--secondCheck">
+                                            <div className="one-block">
+                                                <input type="radio" id="delivery" name="tabs" onClick={() => {
+                                                    setBlock2(true)
+                                                    setBlock(false)
+                                                }
+                                                }/>
+                                                <label className="basket--first--dost--blockta--secondCheck--label" htmlFor="delivery">Доставка курьером</label>
+                                            </div>
+                                            <div className="two-block" style={{
+                                                display: block2 ? 'block' : 'none',
+                                            }}>
+                                                <textarea name="" id="" cols="38" rows="5" placeholder='Область, город (район, село), улица, дом№, кв.№*' className='textarea'></textarea>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="basket--first--dost--secondCheck">
-                                        <div className="one-block">
-                                            <input type="radio" id="delivery" name="tabs" onClick={() => {
-                                                setBlock2(true)
-                                                setBlock(false)
-                                            }
-                                            }/>
-                                            <label className="basket--first--dost--secondCheck--label" htmlFor="delivery">Доставка курьером</label>
-                                        </div>
-                                        <div className="two-block" style={{
-                                            display: block2 ? 'block' : 'none'
-                                        }}>
-                                            <textarea name="" id="" cols="38" rows="5" placeholder='Область, город (район, село), улица, дом№, кв.№*' ></textarea>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                             <div className="basket--second">

@@ -59,7 +59,7 @@
       &--dost{
         background: #ffffff;
         width: 300px;
-        height: 400px;
+        height: 300px;
         h1{
           font-weight: 700;
           font-size: 24px;
@@ -78,45 +78,61 @@
           margin-bottom: 17px;
           margin-top: 37px;
         }
-        &--checks {
-          &--check {
-            input{
-              height: 16px;
-              width: 295px;
-            }
-            &--label{
+        &--blockta {
+          &--checks {
+            &--check {
+              display: flex;
+              input{
+                height: 16px;
+                margin-right: 10px;
+              }
+              &--label{
                 font-weight: 600;
                 font-size: 14px;
                 line-height: 17px;
                 color: #72072DE5;
-            }
-          }
-          &--then {
-            select {
-              width: 300px;
-              height: 40px;
-              color: #999999;
-              border: 1px solid #72072D;
-              outline: none;
-              margin: 10px 0;
-            }
-          }
-        }
-        &--secondCheck{
-          margin: 15px 0;
-          input{
-            width: 16px;
-            height: 16px;
-            //margin-right: 5px;
-          }
-          &--label{
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 17px;
-            color: #72072DE5;
 
+              }
+            }
+            &--then {
+              position: relative;
+              select {
+                position: absolute;
+                top: 3rem;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 300px;
+                height: 40px;
+                color: #999999;
+                border: 1px solid #72072D;
+                outline: none;
+                margin: 10px 0;
+              }
+            }
+          }
+          &--secondCheck{
+            margin: 15px 0;
+            input{
+              height: 16px;
+              margin-right: 10px;
+            }
+            &--label{
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 17px;
+              color: #72072DE5;
+            }
+            .two-block {
+              position: relative;
+              .textarea {
+                position: absolute;
+                top: 30px;
+              }
+            }
           }
         }
+
         &--block{
           width: 288px;
           height: 43px;
@@ -157,7 +173,7 @@
           display: flex;
           align-items: start;
           justify-content: space-between;
-          width: 270px;
+          //width: 270px;
           margin: 20px 0;
           &--input{
             width: 16px;
@@ -648,7 +664,7 @@
   }
   #basket .basket--first--dost--checks{
     justify-content: space-between;
-    width: 300px;
+    width: 100%;
   }
   #basket .basket--first--dost h1{
     text-align: center;
@@ -677,14 +693,13 @@
     width: 81%;
   }
   #basket .basket--second--pay--first{
-    width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
 
   }
   #basket .basket--second--pay--second{
-    width: 100%;
+    //width: 100%;
   }
   #basket .basket--second--pay--second--label{
     width: 81%;
@@ -696,18 +711,227 @@
 
 }
 
-@media (max-width: 576px){
-  #basket .basket--product .basket--third--card{
-    width: 500px;
-  }
-  #basket .basket--product{
-    margin-bottom: 10vh;
-  }
+@media (max-width: 577px){
+  #basket {
+    .basket {
+      //width: 576px;
+      .tabs {
+        margin-bottom: 0;
+        .tab {
+          font-size: 16px;
+          h6 {
+            font-size: 16px;
+          }
+          div {
+            margin-left: 20px;
+          }
+        }
+        .tab-total {
+          p {
+            font-size: 15px;
+            span {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+      &--first {
+        &--contacts {
+          h1 {
+            font-size: 18px;
+          }
+          input {
+            width: 280px;
+            margin-left: 10px;
+          }
+        }
+        &--dost {
+          //width: 300px;
+          h1 {
+            font-size: 20px;
+          }
+          &--blockta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            &--checks {
+              &--check {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                //margin-left: 40px;
+                &--label {
+                  font-size: 15px;
+                }
+              }
+              &--then {
+                width: 100%;
+                select {
 
+                  //margin-left: 39px;
+                }
+              }
+            }
+            &--secondCheck {
+
+              align-items: center;
+              justify-content: center;
+              input {
+                margin-left: 30px;
+              }
+              &--label {
+                font-size: 14px;
+              }
+              .one-block {
+                display: flex;
+                align-items: center;
+                width: 200px;
+              }
+              .two-block {
+                .textarea {
+                  right: 14px;
+                  width: 300px;
+                }
+              }
+            }
+          }
+        }
+      }
+      &--second {
+        display: flex;
+        align-items: center;
+        width: 88%;
+        &--pay {
+          &--second {
+            &--label {
+              font-size: 13px;
+              margin-right: 38px;
+            }
+          }
+          &--first {
+            &--label {
+              font-size: 13px;
+              margin-left: 38px;
+              //padding-right: 20px;
+            }
+          }
+          h1 {
+            font-size: 15px;
+            margin-bottom: 5px;
+          }
+          text-align: center;
+          margin-left: 3.9rem;
+          width: 100%;
+          &--btn {
+            &--one {
+              width: 100%;
+              font-size: 13px;
+            }
+          }
+          &--btn {
+            &--two {
+              width: 100%;
+              font-size: 13px;
+            }
+          }
+        }
+        &--total {
+          margin-left: 3.9rem;
+          width: 95%;
+        }
+      }
+    }
+  }
 }
 
 
-@media (max-width: 450px){
+@media (max-width: 451px){
+
+  #basket {
+    .basket {
+      .tabs {
+        .tab {
+          div {
+            margin-left: 20px;
+          }
+        }
+      }
+      &--first {
+        width: 450px;
+        &--contacts {
+          input {
+            width: 300px;
+          }
+        }
+        &--dost {
+          &--blockta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &--checks {
+              &--check {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &--label {
+                  font-size: 15px;
+                }
+              }
+            }
+            &--secondCheck {
+
+              align-items: center;
+              justify-content: center;
+              input {
+                margin-left: 20px;
+              }
+              &--label {
+                font-size: 15px;
+              }
+              .one-block {
+                display: flex;
+                align-items: center;
+                width: 200px;
+              }
+              .two-block {
+                .textarea {
+                  right: 2px;
+                  //left: 0;
+                  width: 300px;
+                }
+              }
+            }
+          }
+        }
+      }
+      &--second {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        &--pay {
+          text-align: center;
+          margin-left: 5.8rem;
+          width: 80%;
+          &--btn {
+            &--one {
+              width: 100%;
+            }
+          }
+          &--btn {
+            &--two {
+              width: 100%;
+            }
+          }
+        }
+        &--total {
+          margin-left: 5.5rem;
+          width: 90%;
+        }
+      }
+    }
+  }
+
   #basket .basket--product .basket--third--card{
     width: 400px;
   }
@@ -730,6 +954,89 @@
 }
 
 @media (max-width: 414px){
+  #basket {
+    .basket {
+      .tabs {
+        .tab {
+          div {
+            margin-left: 20px;
+          }
+        }
+      }
+      &--first {
+        width: 414px;
+        &--contacts {
+          input {
+            width: 300px;
+          }
+        }
+        &--dost {
+          &--blockta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &--checks {
+              &--check {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &--label {
+                  font-size: 15px;
+                }
+              }
+            }
+            &--secondCheck {
+
+              align-items: center;
+              justify-content: center;
+              input {
+                margin-left: 20px;
+              }
+              &--label {
+                font-size: 15px;
+              }
+              .one-block {
+                display: flex;
+                align-items: center;
+                width: 200px;
+              }
+              .two-block {
+                .textarea {
+                  right: 2px;
+                  //left: 0;
+                  width: 300px;
+                }
+              }
+            }
+          }
+        }
+      }
+      &--second {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        &--pay {
+          text-align: center;
+          margin-left: 5.8rem;
+          width: 80%;
+          &--btn {
+            &--one {
+              width: 100%;
+            }
+          }
+          &--btn {
+            &--two {
+              width: 100%;
+            }
+          }
+        }
+        &--total {
+          margin-left: 5.5rem;
+          width: 90%;
+        }
+      }
+    }
+  }
   #basket .basket--product .basket--third--card{
     width: 360px;
     justify-content: space-between;
@@ -756,10 +1063,247 @@
 }
 
 @media (max-width: 400px){
+  #basket {
+    .basket {
+      .tabs {
+        .tab {
+          div {
+            margin-left: 20px;
+          }
+        }
+      }
+      &--first {
+        width: 414px;
+        &--contacts {
+          input {
+            width: 300px;
+          }
+        }
+        &--dost {
+          &--blockta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &--checks {
+              &--check {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &--label {
+                  font-size: 15px;
+                }
+              }
+            }
+            &--secondCheck {
 
+              align-items: center;
+              justify-content: center;
+              input {
+                margin-left: 20px;
+              }
+              &--label {
+                font-size: 15px;
+              }
+              .one-block {
+                display: flex;
+                align-items: center;
+                width: 200px;
+              }
+              .two-block {
+                .textarea {
+                  right: 2px;
+                  //left: 0;
+                  width: 300px;
+                }
+              }
+            }
+          }
+        }
+      }
+      &--second {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        &--pay {
+          text-align: center;
+          margin-left: 5.8rem;
+          width: 80%;
+          &--btn {
+            &--one {
+              width: 100%;
+            }
+          }
+          &--btn {
+            &--two {
+              width: 100%;
+            }
+          }
+        }
+        &--total {
+          margin-left: 5.5rem;
+          width: 90%;
+        }
+      }
+    }
+  }
+  #basket .basket--product .basket--third--card{
+    width: 360px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #basket .basket--product .basket--third--card--img img{
+    width: 160px;
+    height: 200px;
+  }
+  #basket .basket--product .basket--third--card--img{
+    width: 170px;
+    height: 180px;
+  }
+
+  #basket .basket--four--btn{
+    width: 235px;
+    height: 46px;
+    font-size: 15px;
+
+  }
+  #basket .basket--product .basket--third--card--desc h1{
+    width:182px;
+  }
 }
 
-@media (max-width: 375px){
+@media (max-width: 376px){
+
+  #basket {
+    .basket {
+      .tabs {
+        margin-bottom: 0;
+        .tab {
+          font-size: 13px;
+          h6 {
+            font-size: 13px;
+          }
+          div {
+            margin-left: 20px;
+          }
+        }
+        .tab-total {
+          p {
+            font-size: 15px;
+            span {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+      &--first {
+        width: 320px;
+        &--contacts {
+          h1 {
+            font-size: 18px;
+
+          }
+          input {
+            width: 250px;
+            margin-left: 10px;
+          }
+        }
+        &--dost {
+          width: 300px;
+          h1 {
+            font-size: 20px;
+          }
+          &--blockta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 270px;
+            &--checks {
+              &--check {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 36px;
+                &--label {
+                  font-size: 14px;
+                }
+              }
+              &--then {
+                select {
+                  width: 260px;
+                  margin-left: 39px;
+                }
+              }
+            }
+            &--secondCheck {
+
+              align-items: center;
+              justify-content: center;
+              input {
+                margin-left: 20px;
+              }
+              &--label {
+                font-size: 14px;
+              }
+              .one-block {
+                display: flex;
+                align-items: center;
+                width: 200px;
+              }
+              .two-block {
+                .textarea {
+                  right: 29px;
+                  width:260px;
+                }
+              }
+            }
+          }
+        }
+      }
+      &--second {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        &--pay {
+          &--second {
+            &--label {
+              font-size: 10px;
+              margin-right: 38px;
+            }
+          }
+          &--first {
+            &--label {
+              font-size: 10px;
+              margin-right: 40px;
+            }
+          }
+          h1 {
+            font-size: 17px;
+            margin-bottom: 5px;
+          }
+          text-align: center;
+          margin-left: 3.9rem;
+          width: 100%;
+          &--btn {
+            &--one {
+              width: 100%;
+              font-size: 15px;
+            }
+          }
+          &--btn {
+            &--two {
+              width: 100%;
+              font-size: 15px;
+            }
+          }
+        }
+        &--total {
+          margin-left: 3.9rem;
+          width: 95%;
+        }
+      }
+    }
+  }
+
   #basket .basket--product .basket--third--card{
     width: 340px;
     align-items: flex-start;
@@ -788,55 +1332,138 @@
     width: 172px;
   }
 }
-//
-//@media (max-width: 320px){
-// #basket {
-//   text-align: center;
-//   .basket {
-//     &--second {
-//          display: flex;
-//          flex-direction: column;
-//          align-items: center;
-//          justify-content: center;
-//          &--pay {
-//            width: 200px;
-//            &--btn {
-//              //text-align: center;
-//              &--two {
-//                width: 70%;
-//
-//              }
-//              &--one {
-//                width: 70%;
-//                font-size: 14px;
-//                margin-left: 20%;
-//              }
-//            }
-//          }
-//          &--total {
-//            width: 55%;
-//          }
-//     }
-//     &--first {
-//       &--dost {
-//         height: 220px;
-//       }
-//     }
-//     .tabs {
-//       .tab {
-//         p {
-//           font-size: 12px;
-//         }
-//         h6 {
-//           font-size: 12px;
-//         }
-//       }
-//     }
-//   }
-// }
-//}
 
 @media (max-width: 320px){
+  #basket {
+    .basket {
+      .tabs {
+        margin-bottom: 0;
+        .tab {
+          font-size: 11px;
+          h6 {
+            font-size: 11px;
+          }
+          div {
+            margin-left: 20px;
+          }
+        }
+        .tab-total {
+          p {
+            font-size: 13px;
+            span {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+      &--first {
+        width: 320px;
+        &--contacts {
+          h1 {
+            font-size: 15px;
+
+          }
+          input {
+            width: 250px;
+            margin-left: 10px;
+          }
+        }
+        &--dost {
+          width: 300px;
+          h1 {
+            font-size: 18px;
+          }
+          &--blockta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 270px;
+            &--checks {
+              &--check {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 40px;
+                &--label {
+                  font-size: 12px;
+                }
+              }
+              &--then {
+                select {
+                  width: 260px;
+                  margin-left: 39px;
+                }
+              }
+            }
+            &--secondCheck {
+
+              align-items: center;
+              justify-content: center;
+              input {
+                margin-left: 20px;
+              }
+              &--label {
+                font-size: 12px;
+              }
+              .one-block {
+                display: flex;
+                align-items: center;
+                width: 200px;
+              }
+              .two-block {
+                .textarea {
+                  right: 29px;
+                  width:260px;
+                }
+              }
+            }
+          }
+        }
+      }
+      &--second {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        &--pay {
+          &--second {
+            &--label {
+              font-size: 10px;
+              margin-right: 38px;
+            }
+          }
+          &--first {
+            &--label {
+              font-size: 10px;
+              margin-right: 40px;
+            }
+          }
+          h1 {
+            font-size: 15px;
+            margin-bottom: 5px;
+          }
+          text-align: center;
+          margin-left: 3.9rem;
+          width: 100%;
+          &--btn {
+            &--one {
+              width: 100%;
+              font-size: 13px;
+            }
+          }
+          &--btn {
+            &--two {
+              width: 100%;
+              font-size: 13px;
+            }
+          }
+        }
+        &--total {
+          margin-left: 3.9rem;
+          width: 95%;
+        }
+      }
+    }
+  }
   #basket .basket--product .basket--third--card--img img{
     width: 125px;
     height: 160px;
