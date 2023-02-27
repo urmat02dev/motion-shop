@@ -14,12 +14,6 @@ const BurgerMenu = ({burger, setBurger}) => {
     const [input, setInput] = useState('')
     const [search, setSearch] = useState(false)
 
-    let textInput = React.createRef()
-
-    const showInput = () =>{
-        setInput(textInput.current.value)
-    }
-
     useEffect(() => {
         localStorage.setItem("text", JSON.stringify(input))
     },[input])
@@ -48,8 +42,6 @@ const BurgerMenu = ({burger, setBurger}) => {
                 </div>
 
             </div>
-
-
                     <div id={"menu"} style={{
                         left: !burger ? "-2000px" : "0"
                     }}>

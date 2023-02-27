@@ -3,7 +3,6 @@ import {
     DELETE_FROM_BASKET,
     GET_BASKET, GET_INPUT,
     GET_PRODUCT,
-    GET_SIZE,
     INCREASE_QUANTITY
 } from "../ActionTypes";
 

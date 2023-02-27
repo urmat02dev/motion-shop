@@ -12,9 +12,6 @@ const Basket = () => {
     const {basket} = useSelector(state => state)
     const [block, setBlock] = useState(false)
     const [block2, setBlock2] = useState(false)
-    const decreaseQuantity = () => {
-        dispatch({type:DELETE_FROM_BASKET, payload:basket.map(el=> el.id)})
-    }
     const totalPrice = basket.reduce((acc, el) => {
              return acc + el.price * el.quantity
         },0)

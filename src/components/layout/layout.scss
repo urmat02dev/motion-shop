@@ -31,6 +31,9 @@
   .btn button{
     padding: 10px;
   }
+  .btn{
+    left: 90%;
+  }
 }
 @media (max-width: 576px){
   .btn button{
@@ -69,6 +72,6 @@
     font-size: 18px;
   }
   .btn{
-    left: 55%;
+    left: 85%;
   }
 }

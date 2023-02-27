@@ -21,7 +21,7 @@ const SearchResult = () => {
             <div className={"result--error"} style={{
               display: res.length>1 ? "none" : "flex"
             }}>
-              <h1>Такой именам продукта нетy!!!</h1>
+              <h1>{input.length ? `Ничего не нашли по запросу «${input}»` : `` }</h1>
             </div>
           </div>
         </div>
