@@ -12,12 +12,15 @@ const BasketTitle = () => {
     <>
       <div className="tabs">
         <div className="tab">
-          <NavLink to={"/basket"}>
-            <p>Оформление</p>
+          <NavLink to={"/basket"} className={"tab--left"}>
+            <p style={{
+              transition: ".4s",
+              borderBottom: "4px solid #FF00C7"
+            }}>Оформление</p>
           </NavLink>
-          <div></div>
-          <NavLink to={"/basket/product"}>
-            <h6>Что у меня в корзине?</h6>
+
+          <NavLink to={"/basket/product"} className={"tab--right"}>
+            <h6>| Что у меня в корзине?</h6>
           </NavLink>
         </div>
         <div className="tab-total">

@@ -18,11 +18,16 @@ const BasketBasket = () => {
           <div className="tabs">
             <div className="tab">
               <NavLink to={"/basket"}>
-                <p>Оформление</p>
+                <p style={{
+                  border:"none"
+                }}>Оформление</p>
               </NavLink>
-              <div></div>
               <NavLink to={"/basket/product"}>
-                <h6>Что у меня в корзине?</h6>
+                <h6  style={{
+                  color: "#72072D;",
+                  transition: ".4s",
+                  borderBottom: "4px solid #FF00C7"
+                }}>| Что у меня в корзине?</h6>
               </NavLink>
             </div>
             <div className="tab-total">

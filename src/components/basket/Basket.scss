@@ -465,26 +465,19 @@
         .tab{
           display: flex;
           align-items: center;
-          width:  100%;
+          width:  370px;
           justify-content: space-between;
           p{
-            color: #FF005C;
+            color: rgba(114, 7, 45, 0.7);
           }
-
-          div{
-            height: 22px;
-            border:1.2px solid black;
-          }
-          h6{
+          h6 {
             font-weight: 600;
             font-size: 18px;
             line-height: 22px;
             color: rgba(114, 7, 45, 0.7);
 
           }
-          .active{
-            color: #FF005C;
-          }
+
         }
         .tab-total{
           margin-top: 20px;
