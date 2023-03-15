@@ -10,7 +10,6 @@ import Woman from "./components/categories/Woman";
 import Kids from "./components/categories/Kids";
 import Shoes from "./components/categories/Shoes";
 import SearchResult from "./components/header/SearchResult";
-import BasketProducts from "./components/basket/BasketProducts";
 import BasketBasket from "./components/basket/BasketBasket";
 
 function App() {
