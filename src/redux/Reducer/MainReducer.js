@@ -2,7 +2,7 @@ import {
     DECREASE_QUANTITY,
     DELETE_FROM_BASKET,
     GET_BASKET, GET_INPUT,
-    GET_PRODUCT,
+    GET_PRODUCT, GET_TOTAL,
     INCREASE_QUANTITY
 } from "../ActionTypes";
 
@@ -12,7 +12,7 @@ import {
 const initialState ={
     products:[],
     basket:JSON.parse(localStorage.getItem("basket")) || [],
-    input:""
+    input:"",
 }
 
 export const MainReducer = (state = initialState, action) => {

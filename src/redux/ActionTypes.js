@@ -1,6 +1,8 @@
 export const GET_BASKET ="GET_BASKET"
 export const GET_INPUT ="GET_INPUT"
 export const GET_PRODUCT ="GET_PRODUCT"
+export const GET_TOTAL ="GET_TOTAL"
+
 
 export const DECREASE_QUANTITY ="DECREASE_QUANTITY"
 export const INCREASE_QUANTITY ="INCREASE_QUANTITY"

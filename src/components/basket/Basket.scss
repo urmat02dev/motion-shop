@@ -186,7 +186,12 @@
             }
           }
         }
-
+        &--third{
+          display: none;
+        }
+        &--fourth{
+          display: none;
+        }
         &--btn{
           &--one{
             width: 329px;
@@ -212,6 +217,12 @@
             line-height: 19px;
             color: #FFFFFF;
             border: none;
+          }
+          &--third{
+            display: none;
+          }
+          &--fourth{
+            display: none;
           }
         }
       }
@@ -398,6 +409,9 @@
 @media (max-width: 1024px) {
   #basket .basket--first{
     width: 540px;
+    &--dost{
+      margin-left: 45px;
+    }
   }
   #basket .basket--second{
     width: 500px;
@@ -413,7 +427,7 @@
     width: 228px;
   }
   #basket .basket--second--total{
-    width: 250px;
+    width: 100%;
   }
   #basket .basket--second--total--title{
 
@@ -432,7 +446,10 @@
     line-height: 30px;
   }
   #basket .basket--second--total{
-    width: 200px;
+    width: 100%;
+  }
+  #basket .basket--four{
+    margin-left: 40px;
   }
 }
 @media (max-width: 992px){
@@ -465,19 +482,11 @@
         .tab{
           display: flex;
           align-items: center;
-          width:  370px;
+          width: 117%;
           justify-content: space-between;
-          p{
-            color: rgba(114, 7, 45, 0.7);
+          &--h3{
+            font-size: 30px;
           }
-          h6 {
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 22px;
-            color: rgba(114, 7, 45, 0.7);
-
-          }
-
         }
         .tab-total{
           margin-top: 20px;
@@ -600,6 +609,83 @@
 
         }
       }
+      &--second{
+        &--pay{
+
+          &--third{
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            width: 100%;
+            padding-bottom: 25px;
+            &--input{
+              width: 16px;
+              height: 16px;
+              margin-right: 10px;
+            }
+            p{
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 17px;
+              color: rgba(114, 7, 45, 0.9);
+            }
+          }
+          &--fourth{
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 25px;
+            &--input{
+              width: 16px;
+              height: 16px;
+              margin-right: 10px;
+            }
+            p{
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 17px;
+              color: rgba(114, 7, 45, 0.9);
+              span{
+                color: #70FF00;
+              }
+            }
+          }
+          &--btn{
+            &--third{
+              display: block;
+              width: 329px;
+              height: 53px;
+              left: 53px;
+              top: 862px;
+              background: #72072D;
+              border-radius: 3px;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 19px;
+              text-align: center;
+              color: #FFFFFF;
+              border: none;
+            }
+            &--fourth{
+              display: block;
+              width: 329px;
+              height: 53px;
+              left: 53px;
+              top: 862px;
+              background: #72072D;
+              border-radius: 3px;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 19px;
+              text-align: center;
+              color: #FFFFFF;
+              border: none;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -644,8 +730,15 @@
   #basket .basket--third{
     display: none;
   }
-  #basket .basket--first--contacts input{
-    width: 100%;
+  #basket .basket--first--contacts {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+
+    input{
+      width: 100%;
+    }
+
   }
   #basket .basket--first--contacts h1{
     text-align: center;
@@ -674,8 +767,7 @@
     margin-top: 20px;
   }
   #basket .basket--second--pay--btn--two{
-    width: 500px;
-    height: 45px;
+    display: none;
   }
   #basket .basket--second--pay--btn--one{
     width: 500px;
@@ -684,19 +776,44 @@
     width: 81%;
   }
   #basket .basket--second--pay--first{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    display: none;
 
   }
   #basket .basket--second--pay--second{
-    //width: 100%;
+    display: none;
   }
   #basket .basket--second--pay--second--label{
     width: 81%;
   }
   #basket .basket--first--dost p{
     text-align: center;
+  }
+  #basket .basket--first--dost{
+    &--blockta{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+  #basket .basket--first--dost--blockta--checks--check input{
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+  }
+  #basket .basket--first--dost--blockta--secondCheck input{
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+  }
+  #basket .basket--first--dost--blockta--checks--check{
+    align-items: center;
+  }
+  #basket .basket--first--dost--blockta--secondCheck{
+    .one-block{
+      display: flex;
+      align-items: center;
+    }
   }
 
 
@@ -843,6 +960,7 @@
     .basket {
       .tabs {
         .tab {
+          width: 107%;
           div {
             margin-left: 20px;
           }
@@ -1058,6 +1176,7 @@
     .basket {
       .tabs {
         .tab {
+
           div {
             margin-left: 20px;
           }
@@ -1162,16 +1281,17 @@
   }
 }
 
-@media (max-width: 376px){
+@media (max-width: 375px){
 
   #basket {
     .basket {
       .tabs {
         margin-bottom: 0;
         .tab {
-          font-size: 13px;
-          h6 {
-            font-size: 13px;
+          a{
+            h6{
+              font-size: 14px;
+            }
           }
           div {
             margin-left: 20px;
@@ -1330,10 +1450,13 @@
       .tabs {
         margin-bottom: 0;
         .tab {
-          font-size: 11px;
-          h6 {
-            font-size: 11px;
+          .tabs--h3{
+            font-size: 13px;
           }
+          &--h6{
+            font-size: 13px;
+          }
+
           div {
             margin-left: 20px;
           }

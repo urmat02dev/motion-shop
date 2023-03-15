@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import "./Basket.scss"
 import {useDispatch, useSelector} from "react-redux";
 import {DELETE_FROM_BASKET} from "../../redux/ActionTypes";
@@ -10,11 +10,19 @@ import BasketTitle from "./BasketTitle";
 const Basket = () => {
     const dispatch = useDispatch()
     const {basket} = useSelector(state => state)
+
     const [block, setBlock] = useState(false)
     const [block2, setBlock2] = useState(false)
-    const totalPrice = basket.reduce((acc, el) => {
-             return acc + el.price * el.quantity
-        },0)
+    const [cash , setCash] = useState(false)
+    const [card , setCard] = useState(false)
+    const [pay , setPay] = useState(false)
+    let total = JSON.parse(localStorage.getItem("basket"))
+    const totalPrice = total.reduce((acc, el) => {
+        return acc + el.price * el.quantity
+    },0)
+
+    useEffect(() => {
+        },[])
 
     return (
         <>
@@ -79,18 +87,32 @@ const Basket = () => {
                                 <div className="basket--second--pay">
                                     <h1>Оплата</h1>
                                     <div className="basket--second--pay--first">
-                                        <input className="basket--second--pay--first--input" type="radio"   id="check" name="tabs"/>
+                                        <input className="basket--second--pay--first--input" type="radio"   id="check" name="tabs" onClick={() => setPay(true)}/>
                                         <p className="basket--second--pay--first--label" >Оплачу наличными при
                                             получении заказа</p>
                                     </div>
-                                    <button className={"basket--second--pay--btn--one"}>Заказать</button>
                                     <div className="basket--second--pay--second">
-                                        <input className="basket--second--pay--second--input" type="radio" id="res" name="tabs"/>
+                                        <input className="basket--second--pay--second--input" type="radio" id="res" name="tabs" onClick={() => setPay(true) }/>
                                         <p className="basket--second--pay--second--label" >Оплата с банковской картой через <span>PayBox</span></p>
                                     </div>
-
-                                    <button className={"basket--second--pay--btn--two"}>Оплатить</button>
-
+                                    <button className={"basket--second--pay--btn--two"} style={{
+                                        background: pay ? "#72072D" : "#72072D99"
+                                    }}>Оплатить</button>
+                                    <div className="basket--second--pay--third">
+                                        <input className="basket--second--pay--third--input" type="radio"   id="check" name="tabs" onClick={() => setCash(true) || setCard(false)}/>
+                                        <p className="basket--second--pay--third--label" >Оплачу наличными при
+                                            получении заказа</p>
+                                    </div>
+                                    <button className={"basket--second--pay--btn--third"} style={{
+                                        background: cash ? "#72072D" : "#72072D99"
+                                    }}>Заказать</button>
+                                    <div className="basket--second--pay--fourth">
+                                        <input className="basket--second--pay--fourth--input" type="radio" id="res" name="tabs" onClick={() => setCard(true)  || setCash(false) }/>
+                                        <p className="basket--second--pay--fourth--label" >Оплата с банковской картой через <span>PayBox</span></p>
+                                    </div>
+                                    <button className={"basket--second--pay--btn--fourth"} style={{
+                                        background: card ? "#72072D" : "#72072D99"
+                                    }}>Оплатить и заказать</button>
                                 </div>
                                 <div className="basket--second--total">
                                     <div className="basket--second--total--title">

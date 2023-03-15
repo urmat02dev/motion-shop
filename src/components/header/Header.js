@@ -4,7 +4,7 @@ import {HiOutlineQuestionMarkCircle} from "react-icons/hi";
 import {IoIosPaper} from "react-icons/io";
 import {SlBasket} from "react-icons/sl";
 import {BsSearch} from "react-icons/bs";
-import {NavLink} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 import BurgerMenu from "./BurgerMenu";
 import {useDispatch} from "react-redux";
 import {GET_INPUT} from "../../redux/ActionTypes";
@@ -12,6 +12,14 @@ import {GET_INPUT} from "../../redux/ActionTypes";
 const Header = () => {
   const [burger, setBurger] = useState(false)
   const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const getSearch = (e) => {
+    if (e.key === "Enter"){
+        navigate("/search/product")
+      dispatch({type:GET_INPUT,payload:e.target.value.toLowerCase()})
+      e.target.value = ""
+    }
+  }
     return (
         <>
           <BurgerMenu burger={burger} setBurger={setBurger}/>
@@ -26,8 +34,7 @@ const Header = () => {
 
 
                                 <div className="header--search">
-                                    <input type="text" onChange={(e)=> dispatch(
-                                      {type:GET_INPUT,payload:e.target.value.toLowerCase()})}
+                                    <input type="text" onKeyPress={(e) => getSearch(e) } onChange={(e)=> getSearch(e)}
                                            placeholder="Я ищу.." />
 
 
