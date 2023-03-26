@@ -10,9 +10,11 @@ import shoes from "../../assets/img/shoes__hover.png"
 import {CgArrowLongRight} from "react-icons/cg";
 import {NavLink} from "react-router-dom";
 import Search from "./Search";
+import {useSelector} from "react-redux";
 const BurgerMenu = ({burger, setBurger}) => {
     const [input, setInput] = useState('')
     const [search, setSearch] = useState(false)
+    const {basket} = useSelector(state => state)
 
     useEffect(() => {
         localStorage.setItem("text", JSON.stringify(input))
@@ -36,7 +38,9 @@ const BurgerMenu = ({burger, setBurger}) => {
                     </NavLink>
                     <div className="burger-menu--icons">
                         <BsSearch className='search' onClick={() => setSearch(!search)}/>
-                        <NavLink to={"/basket"}><SlBasket className='logo'/></NavLink>
+                        <NavLink to={"/basket"}><SlBasket className='logo'/>
+                            <sup>{basket.length ? basket.length : null}</sup>
+                        </NavLink>
                     </div>
 
                 </div>
@@ -62,7 +66,9 @@ const BurgerMenu = ({burger, setBurger}) => {
                                     <BsSearch className='search' onClick={()=> setSearch(!search) && setBurger(true) }/>
                                     <NavLink to={"/basket"}  onClick={() => setBurger(!burger)}>
                                         <SlBasket className='logo'/>
+
                                     </NavLink>
+                                    <sup>{basket.length ? basket.length : null}</sup>
                                 </div>
 
 

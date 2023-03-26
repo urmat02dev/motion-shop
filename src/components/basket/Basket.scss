@@ -125,8 +125,10 @@
             }
             .two-block {
               position: relative;
+              left: 136px;
               .textarea {
                 position: absolute;
+                left: -142px;
                 top: 30px;
               }
             }
@@ -386,6 +388,9 @@
         }
       }
     }
+    &--five{
+      display: none;
+    }
   }
 }
 
@@ -463,7 +468,7 @@
     width: 99%;
   }
   #basket .basket--third{
-    width: 365px;
+    width: 355px;
   }
 
 }
@@ -482,12 +487,26 @@
         .tab{
           display: flex;
           align-items: center;
-          width: 117%;
+          width: 100%;
           justify-content: space-between;
           &--h3{
             font-size: 30px;
           }
+          &--right{
+            margin-left: 40px;
+            h6{
+              font-size: 18px;
+            }
+            .h6{
+              font-size: 18px;
+              margin-left: 40px;
+            }
+          }
+          .active{
+            color: red;
+          }
         }
+
         .tab-total{
           margin-top: 20px;
           display: flex;
@@ -503,7 +522,7 @@
           span{
             margin-left: 15px;
             font-weight: 700;
-            font-size: 24px;
+            font-size: 20px;
             line-height: 29px;
             color: #72072D;
           }
@@ -594,6 +613,9 @@
             cursor: pointer;
           }
         }
+      }
+      &--third{
+        display: none;
       }
       &--four{
 
@@ -686,6 +708,9 @@
           }
         }
       }
+      &--five {
+        display: block;
+      }
     }
   }
 
@@ -702,6 +727,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-left: 0;
     p{
       margin-top: 0;
     }
@@ -726,9 +752,6 @@
       flex-direction: column;
       align-items: center;
     }
-  }
-  #basket .basket--third{
-    display: none;
   }
   #basket .basket--first--contacts {
     display: flex;
@@ -763,7 +786,7 @@
     margin-top: 5px;
   }
   #basket .basket--second--total{
-    width: 500px;
+    width: 95%;
     margin-top: 20px;
   }
   #basket .basket--second--pay--btn--two{
@@ -814,12 +837,15 @@
       display: flex;
       align-items: center;
     }
+    .two-block{
+      left: 0;
+    }
   }
 
 
 }
 
-@media (max-width: 577px){
+@media (max-width: 576px){
   #basket {
     .basket {
       //width: 576px;
@@ -833,8 +859,12 @@
           div {
             margin-left: 20px;
           }
+          .tabs--right{
+            margin-left: 40px;
+          }
         }
         .tab-total {
+
           p {
             font-size: 15px;
             span {
@@ -936,20 +966,38 @@
               width: 100%;
               font-size: 13px;
             }
-          }
-          &--btn {
             &--two {
               width: 100%;
               font-size: 13px;
+            }
+            &--third{
+              height: 40px;
+            }
+            &--fourth{
+              height: 40px;
             }
           }
         }
         &--total {
           margin-left: 3.9rem;
-          width: 95%;
+          width: 73%;
+          height: 80px;
         }
       }
     }
+  }
+  #basket .basket--first--contacts{
+    width: 61%;
+    margin: 0 auto;
+  }
+  #basket .basket--first--dost--blockta--secondCheck .two-block .textarea{
+    left: -110px;
+  }
+  #basket .basket--second--pay--third{
+    justify-content: center;
+  }
+  #basket .basket--second--pay--fourth{
+    justify-content: center;
   }
 }
 
@@ -967,10 +1015,12 @@
         }
       }
       &--first {
-        width: 450px;
+        width: 100%;
         &--contacts {
+          width: 70%;
           input {
-            width: 300px;
+            width: 100%;
+
           }
         }
         &--dost {
@@ -1017,25 +1067,54 @@
       &--second {
         display: flex;
         align-items: center;
-        width: 80%;
+        width: 100%;
         &--pay {
           text-align: center;
-          margin-left: 5.8rem;
-          width: 80%;
+          width: 100%;
+          margin-left: 0;
+          h1{
+            font-size: 17px;
+            margin-bottom: 15px;
+          }
           &--btn {
             &--one {
               width: 100%;
             }
-          }
-          &--btn {
             &--two {
               width: 100%;
+            }
+            &--third{
+              width: 100%;
+              height: 35px;
+              font-size: 14px;
+
+            }
+            &--fourth{
+              width: 100%;
+              height: 35px;
+              font-size: 14px;
+            }
+          }
+          &--third{
+            p{
+              font-size: 12px;
+            }
+            &--input{
+              margin-right: 5px;
+            }
+          }
+          &--fourth{
+            &--input{
+              margin-right: 5px;
+            }
+            p{
+              font-size: 12px;
             }
           }
         }
         &--total {
-          margin-left: 5.5rem;
-          width: 90%;
+          width: 100%;
+          margin-left: 0;
         }
       }
     }
@@ -1067,6 +1146,7 @@
     .basket {
       .tabs {
         .tab {
+          width: 100%;
           div {
             margin-left: 20px;
           }
@@ -1123,10 +1203,9 @@
       &--second {
         display: flex;
         align-items: center;
-        width: 80%;
+        width: 100%;
         &--pay {
           text-align: center;
-          margin-left: 5.8rem;
           width: 80%;
           &--btn {
             &--one {
@@ -1140,8 +1219,7 @@
           }
         }
         &--total {
-          margin-left: 5.5rem;
-          width: 90%;
+          width: 80%;
         }
       }
     }
@@ -1183,10 +1261,11 @@
         }
       }
       &--first {
-        width: 414px;
+        width: 100%;
         &--contacts {
+          width: 95%;
           input {
-            width: 300px;
+            width: 90%;
           }
         }
         &--dost {
@@ -1201,6 +1280,21 @@
                 justify-content: center;
                 &--label {
                   font-size: 15px;
+                }
+                &--then{
+                  select{
+                    position: absolute;
+                    top: 3rem;
+                    bottom: 0;
+                    left: 20px;
+                    right: 0;
+                    width: 240px;
+                    height: 40px;
+                    color: #999999;
+                    border: 1px solid #72072D;
+                    outline: none;
+                    margin: 10px 0;
+                  }
                 }
               }
             }
@@ -1233,25 +1327,27 @@
       &--second {
         display: flex;
         align-items: center;
-        width: 80%;
+        width: 100%;
         &--pay {
           text-align: center;
-          margin-left: 5.8rem;
-          width: 80%;
+          width:100%;
           &--btn {
             &--one {
               width: 100%;
             }
-          }
-          &--btn {
             &--two {
               width: 100%;
+            }
+            &--third{
+              width: 85%;
+            }
+            &--fourth{
+              width: 85%;
             }
           }
         }
         &--total {
-          margin-left: 5.5rem;
-          width: 90%;
+          width: 87%;
         }
       }
     }
@@ -1279,6 +1375,10 @@
   #basket .basket--product .basket--third--card--desc h1{
     width:182px;
   }
+  #basket .basket--first--dost--blockta--checks--then select{
+    width: 250px;
+    left: 20px;
+  }
 }
 
 @media (max-width: 375px){
@@ -1287,6 +1387,7 @@
     .basket {
       .tabs {
         margin-bottom: 0;
+
         .tab {
           a{
             h6{
@@ -1295,20 +1396,27 @@
           }
           div {
             margin-left: 20px;
+            h3{
+              font-size: 14px;
+            }
+            h6{
+              font-size: 14px;
+            }
           }
         }
         .tab-total {
           p {
             font-size: 15px;
-            span {
-              font-size: 16px;
-            }
+          }
+          span {
+            font-size: 16px;
           }
         }
       }
       &--first {
-        width: 320px;
+        width: 100%;
         &--contacts {
+          width: 90%;
           h1 {
             font-size: 18px;
 
@@ -1373,7 +1481,7 @@
       &--second {
         display: flex;
         align-items: center;
-        width: 80%;
+        width: 100%;
         &--pay {
           &--second {
             &--label {
@@ -1392,7 +1500,7 @@
             margin-bottom: 5px;
           }
           text-align: center;
-          margin-left: 3.9rem;
+          margin-left: 0;
           width: 100%;
           &--btn {
             &--one {
@@ -1408,13 +1516,15 @@
           }
         }
         &--total {
-          margin-left: 3.9rem;
-          width: 95%;
+
+          width: 90%;
         }
       }
     }
   }
-
+  #basket .basket--first--dost--blockta--checks--then select{
+    margin-left: 18px;
+  }
   #basket .basket--product .basket--third--card{
     width: 340px;
     align-items: flex-start;
@@ -1471,15 +1581,17 @@
         }
       }
       &--first {
-        width: 320px;
+        width: 100%;
         &--contacts {
+          width: 90%;
           h1 {
             font-size: 15px;
 
           }
           input {
-            width: 250px;
-            margin-left: 10px;
+            width: 100%;
+            margin-left:0 ;
+            height: 32px;
           }
         }
         &--dost {
@@ -1537,7 +1649,7 @@
       &--second {
         display: flex;
         align-items: center;
-        width: 80%;
+        width: 100%;
         &--pay {
           &--second {
             &--label {
@@ -1556,7 +1668,7 @@
             margin-bottom: 5px;
           }
           text-align: center;
-          margin-left: 3.9rem;
+          margin-left: 0;
           width: 100%;
           &--btn {
             &--one {
@@ -1572,11 +1684,17 @@
           }
         }
         &--total {
-          margin-left: 3.9rem;
-          width: 95%;
+          margin-left: 0;
+          width: 90%;
         }
       }
     }
+  }
+  #basket .basket--first--dost--blockta--secondCheck .two-block .textarea{
+    left: -100px;
+  }
+  #basket .basket--first--dost--blockta--checks--then select{
+    margin-left: 15px;
   }
   #basket .basket--product .basket--third--card--img img{
     width: 125px;

@@ -1,8 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./Faq.scss"
-import {AiOutlinePlus} from "react-icons/ai";
+import {AiOutlineClose, AiOutlinePlus} from "react-icons/ai";
 
 const About = () => {
+    const [one , setOne] = useState(false)
+    const [two , setTwo] = useState(false)
+    const [three , setThree] = useState(false)
+    const [four , setFour] = useState(false)
+
     return (
         <>
 
@@ -15,7 +20,7 @@ const About = () => {
                             <div className="questions--center__card--provide">
                                 <h1>What is an accordion in a website?</h1>
                                 <input type="checkbox" id="plus"/>
-                                <label htmlFor="plus"><AiOutlinePlus className="plus"/></label>
+                                <label htmlFor="plus" onClick={()=> setOne(!one)}> { one ? <AiOutlineClose className={"plus"}/> : <AiOutlinePlus className="plus"/>}</label>
                                 <div className="questions--center__card--provide__lorem">
                                     <p className="questions--center__card--provide__lorem--paragraph">
                                         What is an accordion in web design?
@@ -29,7 +34,7 @@ const About = () => {
                             <div className="questions--center__card--provide">
                                 <h1>What is an accordion in HTML?</h1>
                                 <input type="checkbox" id="plus2"/>
-                                <label htmlFor="plus2"><AiOutlinePlus className="plus"/></label>
+                                <label htmlFor="plus2" onClick={()=> setTwo(!two)}> {two ?   <AiOutlineClose className={"plus"}/> : <AiOutlinePlus className="plus"/>}</label>
                                 <div className="questions--center__card--provide__lorem">
                                     <p className="questions--center__card--provide__lorem--paragraph">
                                         Accordion. An accordion is used to show HTML content.
@@ -40,7 +45,7 @@ const About = () => {
                             <div className="questions--center__card--provide">
                                 <h1>Can you make an accordion without Javascript?</h1>
                                 <input type="checkbox" id="plus3"/>
-                                <label htmlFor="plus3"><AiOutlinePlus className="plus"/></label>
+                                <label htmlFor="plus3" onClick={()=> setThree(!three)}> {three ?   <AiOutlineClose className={"plus"}/> : <AiOutlinePlus className="plus"/>}</label>
                                 <div className="questions--center__card--provide__lorem">
                                     <p className="questions--center__card--provide__lorem--paragraph">
                                         To create an accordion in HTML the user can use the HTML5 details element.
@@ -51,7 +56,7 @@ const About = () => {
                             <div className="questions--center__card--provide2">
                                 <h1>Are accordions web accessible?</h1>
                                 <input type="checkbox" id="plus4"/>
-                                <label htmlFor="plus4"><AiOutlinePlus className="plus"/></label>
+                                <label htmlFor="plus4" onClick={() => setFour(!four)}>{four ?   <AiOutlineClose className={"plus"}/> : <AiOutlinePlus className="plus"/>}</label>
                                 <div className="questions--center__card--provide2__lorem">
                                     <p className="questions--center__card--provide2__lorem--paragraph">
                                         Accordions are also web structures that often require

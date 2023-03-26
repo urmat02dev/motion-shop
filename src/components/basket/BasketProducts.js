@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./Basket.scss"
 import {useDispatch, useSelector} from "react-redux";
 import {
@@ -8,7 +8,7 @@ import {
 } from "../../redux/ActionTypes";
 import {useNavigate} from "react-router-dom";
 
-const BasketProducts = () => {
+const BasketProducts = ({index}) => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     let basket = JSON.parse(localStorage.getItem("basket")) || []
@@ -43,7 +43,7 @@ const BasketProducts = () => {
         {
             basket.length ?
          basket.map((el,index)=>  {
-            return <div key={index} className="basket--third--card">
+            return <div key={index} className="basket--third--card" hidden={index === 0} >
                 <div className="basket--third--card--img">
                     <img src={el.image}   alt=""/></div>
                 <div className="basket--third--card--desc">
