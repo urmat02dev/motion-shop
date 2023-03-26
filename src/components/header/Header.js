@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import "./Header.scss"
 import {HiOutlineQuestionMarkCircle} from "react-icons/hi";
 import {IoIosPaper} from "react-icons/io";
@@ -6,13 +6,14 @@ import {SlBasket} from "react-icons/sl";
 import {BsSearch} from "react-icons/bs";
 import {NavLink, useNavigate} from "react-router-dom";
 import BurgerMenu from "./BurgerMenu";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {GET_INPUT} from "../../redux/ActionTypes";
 
 const Header = () => {
   const [burger, setBurger] = useState(false)
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  const {basket} = useSelector(state => state)
   const getSearch = (e) => {
     if (e.key === "Enter"){
         navigate("/search/product")
@@ -20,6 +21,10 @@ const Header = () => {
       e.target.value = ""
     }
   }
+  useEffect(() => {
+
+  },[])
+  console.log(basket)
     return (
         <>
           <BurgerMenu burger={burger} setBurger={setBurger}/>
@@ -56,7 +61,8 @@ const Header = () => {
                                         </NavLink>
                                     <NavLink to={"/basket"}>
                                         <SlBasket className='logo'/>
-                                        <h1>Корзина</h1>
+                                      <sup>{basket.length ? basket.length : null}</sup>
+                                        <h1>Корзина </h1>
                                     </NavLink>
                                 </div>
 

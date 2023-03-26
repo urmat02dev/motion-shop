@@ -60,7 +60,11 @@
         color: white;
         font-size: 30px;
       }
-
+      sup{
+        color: white;
+        font-size: 15px;
+        position: absolute;
+      }
       h1 {
         color: white;
         font-size: 16px;
@@ -229,6 +233,14 @@
           font-size: 30px;
           margin-bottom: 6px;
         }
+        sup{
+          color: #FF005C;
+          position: relative;
+          bottom: 20px;
+          left: 1px;
+          font-size: 13px;
+
+        }
       }
 
 
@@ -309,6 +321,13 @@
           color: #D118A8;
           font-size: 30px;
           margin-bottom: 5px;
+        }
+        sup{
+          position: absolute;
+          top: 12px;
+          right: 17px;
+          color: #FF005C;
+          font-size: 17px;
         }
       }
     }

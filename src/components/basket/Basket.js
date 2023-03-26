@@ -1,16 +1,47 @@
 import React, {useEffect, useState} from 'react';
 import "./Basket.scss"
 import {useDispatch, useSelector} from "react-redux";
-import {DELETE_FROM_BASKET} from "../../redux/ActionTypes";
+
 import BasketProducts from "./BasketProducts";
-import {NavLink} from "react-router-dom";
-import BasketBasket from "./BasketBasket";
-import BasketTitle from "./BasketTitle";
+import {NavLink, useNavigate} from "react-router-dom";
+import {
+    DECREASE_QUANTITY,
+    DELETE_FROM_BASKET,
+    INCREASE_QUANTITY
+} from "../../redux/ActionTypes";
 
 const Basket = () => {
-    const dispatch = useDispatch()
-    const {basket} = useSelector(state => state)
+    let basket = JSON.parse(localStorage.getItem("basket")) || []
+    const deleteBasket = (el) => {
+        let basket = JSON.parse(localStorage.getItem("basket")) || []
+        basket = basket.filter(ele=>ele.id !== el.id )
+        localStorage.setItem("basket",JSON.stringify(basket))
+        dispatch({type:DELETE_FROM_BASKET, payload: el.id})
 
+    }
+    const increaseQuantity = (el) => {
+        let basket = JSON.parse(localStorage.getItem("basket")) || []
+        basket = basket.map(ele=>ele.id === el.id ? {...ele,quantity:ele.quantity + 1} : ele)
+        dispatch({type:INCREASE_QUANTITY, payload:el.id})
+        localStorage.setItem("basket",JSON.stringify(basket))
+    }
+    const decreaseQuantity = (el) => {
+        let basket = JSON.parse(localStorage.getItem("basket")) || []
+        basket = basket.map(ele => {
+            if (ele.id === el.id){
+                if (ele.quantity > 1){
+                    return {...ele, quantity:ele.quantity - 1}
+                } else return ele
+            } else return ele
+        })
+        localStorage.setItem("basket",JSON.stringify(basket))
+        dispatch({type:DECREASE_QUANTITY, payload:el.id})
+    }
+    const {baskets} = useSelector(state => state)
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    const [index, setIndex] = useState(0)
+    const [adp, setApt] = useState(true)
     const [block, setBlock] = useState(false)
     const [block2, setBlock2] = useState(false)
     const [cash , setCash] = useState(false)
@@ -22,16 +53,38 @@ const Basket = () => {
     },0)
 
     useEffect(() => {
-        },[])
-
+        },[basket.length])
+    console.log(index)
     return (
         <>
             <div id="basket">
                 <h1 className="title">Оформление товара</h1>
                 <div className="container">
                     <div className="basket">
-                            <BasketTitle/>
-                        <div className="basket--together">
+                        <div className="tabs">
+                            <div className="tab">
+
+                                    <div className={"tab--left"} onClick={() => setIndex(0)}>
+                                        <h3 style={{
+                                            borderBottom:index === 0 ? "2px solid red" : "",
+                                        }}>Оформление</h3>
+                                    </div>
+
+
+                                    <div  className={"tab--right"} onClick={() => setIndex(1)}>
+                                        <h6 style={{
+                                            borderBottom:index === 1 ? "2px solid red" : "",
+                                        }}>| Что у меня в корзине?</h6>
+                                    </div>
+                            </div>
+                            <div className="tab-total">
+                                <div style={{
+                                    display:"flex",
+                                    alignItems:"center"
+                                }}><p>Общая сумма:</p> <span>{totalPrice} COM</span></div>
+                            </div>
+                        </div>
+                        <div className="basket--together" hidden={index ===1}>
                             <div className="basket--first">
                                 <div className="basket--first--contacts">
                                     <h1>Контактные данные</h1>
@@ -125,11 +178,87 @@ const Basket = () => {
 
                                 </div>
                             </div>
+
                         </div>
-                        <div className="basket--third">
-                            <BasketProducts/>
+                        <div className={"basket--five"} style={{
+                            display:index === 0 ? "none": "block"
+                        }}>
+                            {
+                                basket.length ?
+                                  basket.map((el,index)=>  {
+                                      return <div key={index} className="basket--third--card" hidden={index === 0} >
+                                          <div className="basket--third--card--img">
+                                              <img src={el.image}   alt=""/></div>
+                                          <div className="basket--third--card--desc">
+                                              <h1>{el.title}</h1>
+                                              <h2>Опции: <span>{el.size}, {el.color}</span></h2>
+                                              <h3>{el.price * el.quantity} СОМ</h3>
+                                              <div className="basket--third--card--count">
+
+                                                  <div className="count">
+                                                      <button onClick={() => decreaseQuantity(el)}>-</button>
+                                                  </div>
+                                                  <div>{el.quantity}</div>
+                                                  <div className="count">
+                                                      <button onClick={()=> increaseQuantity(el)}>+</button>
+                                                  </div>
+                                              </div>
+                                              <button className="basket--third--card--delete"
+                                                      onClick={() => deleteBasket(el)}>
+                                                  Удалить
+                                              </button>
+                                          </div>
+                                      </div>
+                                  })
+                                  : <div className={"basket--four"}>
+                                      <button onClick={() => navigate("/")}
+                                              className="basket--four--btn">
+                                          Добавить в товар
+                                          <div>+</div>
+                                      </button>
+                                  </div>
+                            }
                         </div>
-                    </div>
+                        <div className="basket--third" >
+                            {
+                                basket.length ?
+                                  basket.map((el,index)=>  {
+                                      return <div key={index} className="basket--third--card" hidden={index === 0} >
+                                          <div className="basket--third--card--img">
+                                              <img src={el.image}   alt=""/></div>
+                                          <div className="basket--third--card--desc">
+                                              <h1>{el.title}</h1>
+                                              <h2>Опции: <span>{el.size}, {el.color}</span></h2>
+                                              <h3>{el.price * el.quantity} СОМ</h3>
+                                              <div className="basket--third--card--count">
+
+                                                  <div className="count">
+                                                      <button onClick={() => decreaseQuantity(el)}>-</button>
+                                                  </div>
+                                                  <div>{el.quantity}</div>
+                                                  <div className="count">
+                                                      <button onClick={()=> increaseQuantity(el)}>+</button>
+                                                  </div>
+                                              </div>
+                                              <button className="basket--third--card--delete"
+                                                      onClick={() => deleteBasket(el)}>
+                                                  Удалить
+                                              </button>
+                                          </div>
+                                      </div>
+                                  })
+                                  : <div className={"basket--four"}>
+                                      <button onClick={() => navigate("/")}
+                                              className="basket--four--btn">
+                                          Добавить в товар
+                                          <div>+</div>
+                                      </button>
+                                  </div>
+                            }
+                        </div>
+
+                    </div >
+
                  </div>
             </div>
         </>
